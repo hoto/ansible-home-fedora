@@ -1,7 +1,0 @@
----
-- block:
-  - include: kubectl_installer.yml
-  - include: minikube_installer.yml
-  - include: kops_installer.yml
-  tags:
-  - kubernetes

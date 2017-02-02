@@ -1,5 +1,0 @@
----
-- name: Vagrant is present
-  apt:
-    deb: "{{ software.vagrant.url }}"
-  become: yes
