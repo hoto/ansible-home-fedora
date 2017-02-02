@@ -1,0 +1,2 @@
+[ubuntu-desktop]
+ansible_host=localhost

@@ -1,0 +1,32 @@
+---
+# This playbook installs intellij IDE
+# unfortunately there're no debian/ubuntu packages so
+# we download zip and unarchive it
+# in order to update your current installation you have to remove it manually
+# After update you'll probably have to run application manually from
+# ./bin/intellij.sh and re - generate desktopr entry / cmd - launcher (Tools
+# -> Create Desktop Entry) and re - import settings from ~/.WstormICXXX
+# directory
+
+- name: Check if there is any old installation
+  stat: path="{{ local_soft_dir }}/intellij/{{ software.intellij.version }}"
+  register: intellij_state
+
+- block:
+  - name: Download intellij tar
+    get_url: >
+      dest={{ temp_dir }}/{{ software.intellij.version }}.tar.gz
+      url="https://download.jetbrains.com/idea/{{ software.intellij.version }}.tar.gz"
+
+  - name: Create intellij folder
+    file: >
+      path={{ local_soft_dir }}/intellij/{{ software.intellij.version }}
+      state=directory
+
+  - name: Extract archive
+    unarchive: >
+      src={{ temp_dir }}/{{ software.intellij.version }}.tar.gz
+      dest={{ local_soft_dir }}/intellij/{{ software.intellij.version }}/
+
+  when: intellij_state.stat.exists == false
+  become: no

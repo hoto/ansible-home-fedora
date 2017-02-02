@@ -1,0 +1,28 @@
+---
+# https://github.com/lastpass/lastpass-cli
+- name: Clone lastpass-cli github repo
+  git:
+    repo: https://github.com/lastpass/lastpass-cli.git
+    dest: "{{ temp_dir }}/lastpass-cli"
+    accept_hostkey: yes
+
+- name: Install lastpass-cli dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - openssl
+    - libcurl4-openssl-dev
+    - libxml2
+    - libssl-dev
+    - libxml2-dev
+    - pinentry-curses
+    - xclip
+    - cmake
+  become: yes
+
+- name: Install lastpass-cli
+  make:
+    chdir: "{{ temp_dir }}/lastpass-cli"
+    target: install
+  become: yes

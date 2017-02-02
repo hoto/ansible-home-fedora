@@ -1,0 +1,30 @@
+---
+- name: Clone hoto/home-private repo
+  git: >
+    repo=git@bitbucket.org:hoto/home-private.git
+    accept_hostkey=yes
+    update=yes
+    dest={{ projects_dir }}/hoto/home-private
+
+- name: Create folders
+  file:
+    path: "{{ home_dir }}/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - .ssh
+    - .aws
+
+- name: Create symlinks
+  file: >
+    src={{ projects_dir }}/hoto/home-private/{{ item.src }}
+    dest={{ home_dir }}/{{ item.dest }}
+    state=link
+    mode=0600
+    owner={{ user }}
+    group={{ group }}
+    force=yes
+  with_items:
+    - { src: '.ssh/config', dest: '.ssh/config'}
+    - { src: '.aws/config', dest: '.aws/config'}
+    - { src: '.grconfig.json', dest: '.grconfig.json'}

@@ -1,0 +1,43 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+  become: yes
+
+- name: Install apt packages
+  apt: >
+    name={{ item }}
+    state=latest
+  with_items:
+    - htop
+    - git
+    - gitk
+    - xclip
+    - vim
+    - screen
+    - exfat-utils
+    - exfat-fuse
+    - tree
+    - baobab
+    - imwheel # killall imwheel; imwheel # ~/.imwheelrc
+    - redshift-gtk # for problems with geolocation: redshift -l list # ~/.config/redshift.conf
+    - ack-grep # http://beyondgrep.com/
+    - jq
+    - unzip
+    - vlc
+    - unity-tweak-tool
+    - autoconf # for arc icons
+    - dconf-editor
+    - python-pygments 
+    - python3
+    - python3-pip
+  become: yes
+
+- name: Install pip packages
+  pip: >
+    name={{ item }}
+    state=latest
+  with_items:
+    - aws-shell
+    - awscli
+    - Pygments

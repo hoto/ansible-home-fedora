@@ -1,0 +1,25 @@
+---
+- name: Download atom
+  get_url: >
+    url=https://atom.io/download/deb
+    dest={{ temp_dir }}/atom.deb
+
+- name: Install atom
+  apt: deb={{ temp_dir }}/atom.deb
+  become: yes
+
+- name: Install atom plugins
+  shell: apm install {{ item }}
+  with_items:
+    - eclipse-keybindings
+    - file-icons
+    - file-types
+    - highlight-selected
+    - language-docker
+    - language-dots
+    - language-typescript-grammars-only
+    - open-terminal-here
+    - git-status
+    - dbclick-tree-view
+    - language-ansible
+  tags: atom_plugins

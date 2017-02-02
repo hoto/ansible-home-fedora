@@ -1,0 +1,52 @@
+---
+- name: Clone hoto/home repo
+  git: >
+    repo=git@github.com:hoto/home.git
+    accept_hostkey=yes
+    update=yes
+    dest={{ projects_dir }}/hoto/home
+
+- name: Create folders
+  file:
+    path: "{{ home_dir }}/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - .atom
+    - .bash
+    - .bash/git-aware-prompt
+    - .config
+    - .config/autostart
+    - .vim/plugin
+    - .vim/snippets
+
+- name: Create symlinks
+  file:
+    src: "{{ projects_dir }}/hoto/home/{{ item }}"
+    dest: "{{ home_dir }}/{{ item }}"
+    state: link
+    mode: 0644
+    force: yes
+  with_items:
+    - .ackrc
+    - .atom/config.cson
+    - .atom/keymap.cson
+    - .bash/256colors2.pl
+    - .bash/colortest.py
+    - .bash/git-aware-prompt/colors.sh
+    - .bash/git-aware-prompt/main.sh
+    - .bash/git-aware-prompt/prompt.sh
+    - .bash/ps1.sh
+    - .bashrc
+    - .config/autostart/imwheel.desktop
+    - .config/autostart/redshift-gtk.desktop
+    - .config/autostart/setxkbmap.desktop
+    - .config/redshift.conf
+    - .gitattributes
+    - .gitignore_global
+    - .gitconfig
+    - .imwheelrc
+    - .screenrc
+    - .vim/plugin/vagrant.vim
+    - .vim/snippets/javascript.snippets
+    - .vimrc

@@ -1,0 +1,4 @@
+---
+- include: lastpass_cli_installer.yml
+  tags:
+    - lastpass

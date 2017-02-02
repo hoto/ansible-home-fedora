@@ -1,0 +1,4 @@
+---
+- include: home_installer.yml
+  tags:
+    - home

@@ -1,0 +1,22 @@
+---
+- name: Oracle java repository is present
+  apt_repository:
+    repo: 'ppa:webupd8team/java'
+    state: present
+    update_cache: yes
+  become: yes
+
+
+- name: Accept Java 8 License
+  debconf:
+    name: oracle-java8-installer
+    question: 'shared/accepted-oracle-license-v1-1'
+    value: 'true'
+    vtype: 'select'
+  become: yes
+
+- name: Java and JDK is installed
+  apt:
+    name: oracle-java8-installer
+    state: latest
+  become: yes

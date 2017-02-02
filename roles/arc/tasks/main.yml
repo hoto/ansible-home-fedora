@@ -1,0 +1,8 @@
+---
+- block:
+  - include: arc_theme_installer.yml
+  - include: moka_icons_installer.yml
+  - include: arc_icons_installer.yml
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version | float == 16.04
+  tags:
+    - arc

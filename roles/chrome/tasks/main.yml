@@ -1,0 +1,4 @@
+---
+- include: chrome_installer.yml
+  tags:
+    - chrome

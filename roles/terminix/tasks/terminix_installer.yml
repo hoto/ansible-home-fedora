@@ -1,0 +1,13 @@
+---
+- name: Terminix repository is present
+  apt_repository:
+    repo: 'ppa:webupd8team/terminix'
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Terminix is installed
+  apt:
+    name: terminix
+    state: latest
+  become: yes

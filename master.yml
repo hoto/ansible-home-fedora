@@ -1,0 +1,33 @@
+---
+- name: Personal Ubuntu Desktop provisioner
+  gather_facts: yes
+  hosts: localhost
+
+  roles:
+    - facts
+    - ping
+    - lastpass
+    - keybindings
+    - packages
+    - java
+    - arc
+    - terminix
+    - powerline_fonts
+    - home
+    - wallpaper
+    - vim
+    - googler
+    - inotify
+    - nodejs
+    - npm_global_modules
+    - docker
+    - docker_compose
+    - kubernetes
+    - peek
+    - atom
+    - softwaredir
+    - webstorm
+    - pycharm
+    - intellij
+    - virtualbox
+    - vagrant

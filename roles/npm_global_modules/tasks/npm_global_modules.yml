@@ -1,0 +1,12 @@
+---
+- name: Install npm global modules
+  npm: >
+    name={{ item }}
+    global=yes
+    state=latest
+  with_items:
+    - how2
+    - npm-check-updates # ncu
+    - nsp # node security check
+    - http-server
+    - git-run # gr mixu/gr (multiple git repository management tool)

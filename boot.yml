@@ -1,0 +1,12 @@
+---
+- name: Personal Ubuntu Desktop provisioner
+  gather_facts: yes
+  hosts: localhost
+
+  roles:
+    - facts
+    - ping
+    - lastpass
+    - keybindings
+    - packages
+    - chrome

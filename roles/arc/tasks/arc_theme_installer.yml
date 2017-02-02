@@ -1,0 +1,19 @@
+---
+- name: Arc repository key is installed
+  apt_key: 
+    url: "http://download.opensuse.org/repositories/home:Horst3180/x{{ ansible_distribution }}_{{ ansible_distribution_version }}/Release.key"
+  become: yes
+
+- name: Arc repository is present
+  apt_repository:
+    repo: "deb http://download.opensuse.org/repositories/home:/Horst3180/x{{ ansible_distribution }}_{{ ansible_distribution_version }}/ /"
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Arc theme is installed
+  apt: 
+    name: arc-theme
+    state: latest
+  become: yes
+
