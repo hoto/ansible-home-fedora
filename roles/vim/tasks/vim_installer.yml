@@ -1,15 +1,15 @@
 ---
-- name: Install Vim
-  apt: >
-    name=vim
-    state=latest
+- name: Vim is installed
+  dnf: 
+    name: vim-enhanced
+    state: latest
 
-- name: Clone Vundle repo
-  git: >
-    repo=https://github.com/VundleVim/Vundle.vim.git
-    accept_hostkey=yes
-    update=yes
-    dest={{ home_dir }}/.vim/bundle/Vundle.vim
+- name: Vundle repo is cloned to vim bundle directory
+  git: 
+    repo: "https://github.com/VundleVim/Vundle.vim.git"
+    accept_hostkey: yes
+    update: yes
+    dest: "{{ home_dir }}/.vim/bundle/Vundle.vim"
 
-- name: Install Vim plugins
+- name: Vim plugins are installed
   shell: vim +PluginInstall +qall
