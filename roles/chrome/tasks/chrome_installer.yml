@@ -1,30 +1,16 @@
 ---
-- block:
-  - name: Ensure Google linux signing key is present
-    apt_key:
-      url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+- name: Chrome repo is added
+  copy: 
+    src: google-chrome.repo
+    dest: /etc/yum.repos.d/
+  become: yes
+
+- name: Chrome signing key is imported
+    rpm_key: 
+      key: "https://dl-ssl.google.com/linux/linux_signing_key.pub"
       state: present
 
-  - name: Ensure previous repository for Chrome is absent, as Google removed the x86 distribution
-    apt_repository:
-      repo: 'deb http://dl.google.com/linux/chrome/deb/ stable main'
-      state: absent
-
-  - name: Ensure Chrome repo present, using a workaround for missing x86 distribution'
-    copy:
-      content: 'deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main'
-      dest: '/etc/apt/sources.list.d/google-chrome.list'
-    register: google_repo
-
-  - name: Update cache
-    apt:
-      update_cache: yes
-    when: google_repo.changed
-
-  - name: Chrome is present
-    apt:
-      name: google-chrome-stable
-      state: latest
-      update_cache: yes
-
+- name: Chrome is installed
+  dnf: 
+    name: google-chrome-stable
   become: yes
