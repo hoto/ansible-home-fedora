@@ -2,7 +2,7 @@
 user: "{{ ansible_user_id }}"              # your user
 group: "{{ user }}"                        # your user's primary group
 home_dir: "/home/{{ user }}"               # your user's homedir
-projects_dir: "{{ home_dir }}/git"         # folder with your (git) projects
+projects_dir: "{{ home_dir }}/projects"         # folder with your (git) projects
 local_soft_dir: "{{ home_dir }}/software"  # where to save local installations of software (webstorm, pycharm etc.)
 temp_dir: /tmp                             # temporary dir for downoaded files
 
