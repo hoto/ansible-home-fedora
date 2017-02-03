@@ -1,6 +1,0 @@
----
-- name: Override default wallpaper with my own
-  copy:
-    src: "{{ projects_dir }}/hoto/home/.wallpapers/wallpaper.png"
-    dest: /usr/share/backgrounds/warty-final-ubuntu.png
-  become: yes # wallpapers are managed by root

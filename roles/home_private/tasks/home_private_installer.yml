@@ -1,10 +1,10 @@
 ---
 - name: Clone hoto/home-private repo
-  git: >
-    repo=git@bitbucket.org:hoto/home-private.git
-    accept_hostkey=yes
-    update=yes
-    dest={{ projects_dir }}/hoto/home-private
+  git: 
+    repo: git@bitbucket.org:hoto/home-private.git
+    accept_hostkey: yes
+    update: yes
+    dest: "{{ projects_dir }}/hoto/home-private"
 
 - name: Create folders
   file:

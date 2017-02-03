@@ -1,4 +1,0 @@
----
-- include: terminix_installer.yml
-  tags:
-    - terminix
