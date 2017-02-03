@@ -1,0 +1,6 @@
+---
+- include: intellij_installer.yml
+  tags:
+  - intellij
+  - jetbrains
+  - installation

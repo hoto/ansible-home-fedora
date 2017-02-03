@@ -1,0 +1,23 @@
+---
+- name: Check if there is any old installation
+  stat: path: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}"
+  register: pycharm_state
+
+- block:
+  - name: Download pycharm tar
+    get_url:
+      dest: "{{ temp_dir }}/{{ software.pycharm.version }}.tar.gz"
+      url: "https://download.jetbrains.com/python/{{ software.pycharm.version }}.tar.gz"
+
+  - name: Create pycharm folder
+    file:
+      path: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}"
+      state: directory
+
+  - name: Extract archive
+    unarchive:
+      src: "{{ temp_dir }}/{{ software.pycharm.version }}.tar.gz"
+      dest: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}/"
+
+  when: pycharm_state.stat.exists == false
+  become: no

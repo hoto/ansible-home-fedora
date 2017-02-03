@@ -13,23 +13,24 @@ Generate ssh key:
 
     ssh-keygen -C <your_emai_here>
 
-Install laspass and ansible
+Install ansible
 
-    sudo dnf install -y lastpass-cli
     sudo dnf install -y libselinux-python python-dnf ansible
 
 Go to github and clone this repo via https:
 
     git clone https://github.com/hoto/ansible-home-fedora.git
 
-Test Ansible then run all initial setup roles:
+Test Ansible then install chrome:
 
     ansible localhost -m ping
-    ansible-playbook init.yml --tags facts
-    ansible-playbook init.yml -K
+    ansible-playbook chrome.yml --tags facts
+    ansible-playbook chrome.yml -K
 
-Use lastpass to log in to chrome, github and bitbucket (add your ssh key)
+Use lastpass to log in to chrome.
+Add ssh key to github, bitbucket and gitlab.
 
+    sudo dnf install -y lastpass-cli
     lpass login <email>
     lpass show
 
@@ -45,11 +46,11 @@ Run webstorm, intellij and pycharm from terminal and set desktop and commandline
         
 Install private semi secure configs:
 
-        ansible-playbook private_home.yml
+        ansible-playbook secure.yml
 
 Manually change terminal setting to use Deja Vu Sans Mono font.
 
-Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
+Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
 
 
 ### Private 
@@ -58,12 +59,12 @@ Go to my work git repo and add ssh key there.
 
 Clone all git project:
 
-        ansible-playbook private_projects.yml --ask-vault-pass
+        ansible-playbook projects.yml --ask-vault-pass
         
 To encrypt/decrypt projects list:
 
-        ansible-vault encrypt roles/git_projects/tasks/git_projects_cloner.yml
-        ansible-vault decrypt roles/git_projects/tasks/git_projects_cloner.yml
+        ansible-vault encrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
+        ansible-vault decrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
 
 
 ## TODO

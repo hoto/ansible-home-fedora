@@ -16,14 +16,14 @@
     - .aws
 
 - name: Create symlinks
-  file: >
-    src={{ projects_dir }}/hoto/home-private/{{ item.src }}
-    dest={{ home_dir }}/{{ item.dest }}
-    state=link
-    mode=0600
-    owner={{ user }}
-    group={{ group }}
-    force=yes
+  file:
+    src: "{{ projects_dir }}/hoto/home-private/{{ item.src }}"
+    dest: "{{ home_dir }}/{{ item.dest }}"
+    state: link
+    mode: 0600
+    owner: "{{ user }}"
+    group: "{{ group }}"
+    force: yes
   with_items:
     - { src: '.ssh/config', dest: '.ssh/config'}
     - { src: '.aws/config', dest: '.aws/config'}

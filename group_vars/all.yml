@@ -13,7 +13,7 @@ software:
   webstorm:
     version: "WebStorm-2016.3.3"
   intellij:
-    version: "ideaIC-2016.3.3"
+    version: "ideaIC-2016.3.4"
   pycharm:
     version: "pycharm-community-2016.3.3"
   docker_compose:
