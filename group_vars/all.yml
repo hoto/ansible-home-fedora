@@ -15,7 +15,7 @@ software:
   intellij:
     version: "ideaIC-2016.3.3"
   pycharm:
-    version: "pycharm-community-2016.3.2"
+    version: "pycharm-community-2016.3.3"
   docker_compose:
     version: "1.9.0"
   kubernetes:
