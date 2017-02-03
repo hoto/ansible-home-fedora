@@ -1,0 +1,4 @@
+---
+- include: vlc_installer.yml
+  tags:
+    - vlc
