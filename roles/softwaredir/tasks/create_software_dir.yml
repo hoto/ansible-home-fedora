@@ -1,7 +1,0 @@
----
-- name: Create directory for software
-  file: >
-    path={{ local_soft_dir }}
-    state=directory
-    owner={{ user }}
-    group={{ group }}

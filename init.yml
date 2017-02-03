@@ -6,6 +6,4 @@
   roles:
     - facts
     - ping
-    - lastpass
-    - packages
     - chrome

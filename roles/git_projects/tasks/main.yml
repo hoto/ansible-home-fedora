@@ -1,4 +1,0 @@
----
-- include: git_projects_cloner.yml
-  tags:
-    - git_projects

@@ -6,20 +6,6 @@
   roles:
     - facts
     - ping
-    - lastpass
-    - packages
-    - terminix
-    - powerline_fonts
-    - home
-    - wallpaper
     - vim
-    - inotify
-    - nodejs
-    - npm_global_modules
-    - docker
-    - docker_compose
-    - peek
-    - softwaredir
-    - webstorm
-    - pycharm
-    - intellij
+    - home
+    - powerline_fonts

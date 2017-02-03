@@ -1,6 +1,0 @@
----
-- include: webstorm_installer.yml
-  tags:
-  - webstorm
-  - jetbrains
-  - installation

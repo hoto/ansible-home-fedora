@@ -13,10 +13,10 @@ Generate ssh key:
 
     ssh-keygen -C <your_emai_here>
 
-Install git and ansible:
+Install laspass and ansible
 
-    sudo apt install git
-    sudo dnf install ansible
+    sudo dnf install -y lastpass-cli
+    sudo dnf install -y libselinux-python python-dnf ansible
 
 Go to github and clone this repo via https:
 
@@ -74,3 +74,4 @@ To encrypt/decrypt projects list:
 * OBS https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
 * task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * remove bookmarst from /home/andrzej/.config/gtk-3.0/bookmarks
+* ubunt://ask.fedoraproject.org/en/question/55652/how-to-see-desktop-files-and-folders/ 

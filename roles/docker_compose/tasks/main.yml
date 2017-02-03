@@ -1,4 +1,0 @@
----
-- include: docker_compose_installer.yml
-  tags:
-    - docker_compose

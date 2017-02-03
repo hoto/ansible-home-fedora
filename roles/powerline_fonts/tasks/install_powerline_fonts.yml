@@ -1,10 +1,10 @@
 ---
 - name: Git clone fonts
-  git: >
-    repo=https://github.com/hoto/deja-vu-sans-mono-font.git
-    accept_hostkey=yes
-    update=yes
-    dest="{{ temp_dir }}/powerline-fonts"
+  git: 
+    repo: https://github.com/hoto/deja-vu-sans-mono-font.git
+    accept_hostkey: yes
+    update: yes
+    dest: "{{ temp_dir }}/powerline-fonts"
 
 - name: Install Deja Vu Sans Mono Powerline font
   shell: bash install.sh

@@ -1,6 +1,0 @@
----
-- include: pycharm_installer.yml
-  tags:
-  - pycharm
-  - installation
-  - jetbrains

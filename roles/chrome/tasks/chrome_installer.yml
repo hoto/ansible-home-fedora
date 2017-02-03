@@ -5,10 +5,10 @@
     dest: /etc/yum.repos.d/
   become: yes
 
-- name: Chrome signing key is imported
-    rpm_key: 
-      key: "https://dl-ssl.google.com/linux/linux_signing_key.pub"
-      state: present
+  #- name: Chrome signing key is imported
+  #rpm_key: 
+  #key: "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+  #state: present
 
 - name: Chrome is installed
   dnf: 

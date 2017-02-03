@@ -1,9 +1,0 @@
----
-- include: create_software_dir.yml
-  tags:
-  - gitkraken
-  - jetbrains
-  - installation
-  - webstorm
-  - pycharm
-  - intellij

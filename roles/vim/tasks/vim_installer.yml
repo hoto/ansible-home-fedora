@@ -3,6 +3,7 @@
   dnf: 
     name: vim-enhanced
     state: latest
+  become: yes
 
 - name: Vundle repo is cloned to vim bundle directory
   git: 
