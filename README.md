@@ -75,3 +75,6 @@ To encrypt/decrypt projects list:
 * task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * remove bookmarst from /home/andrzej/.config/gtk-3.0/bookmarks
 * ubunt://ask.fedoraproject.org/en/question/55652/how-to-see-desktop-files-and-folders/ 
+* sudo dnf install nautilus-open-terminal   
+* sudo dnf install gnome-tweak-tool   
+* https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/ 
