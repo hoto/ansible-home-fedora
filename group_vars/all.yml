@@ -17,3 +17,8 @@ software:
     version: "pycharm-community-2016.3.2"
   docker_compose:
     version: "1.10.0"
+  kubernetes:
+    minikube:
+      version: "v0.15.0"
+    kops:
+      version: "v1.4.4"

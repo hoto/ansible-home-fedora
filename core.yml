@@ -24,6 +24,7 @@
     - gitk
     - docker
     - docker_compose
+    - kubernetes
     - atom
     - webstorm
     - intellij
