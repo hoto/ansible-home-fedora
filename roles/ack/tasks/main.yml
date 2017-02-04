@@ -1,0 +1,8 @@
+---
+- name: Ack is present
+  dnf:
+    name: ack
+    state: latest
+  tags:
+    - ack
+  become: yes
