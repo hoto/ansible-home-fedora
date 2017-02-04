@@ -17,6 +17,7 @@
     - nodejs
     - gr
     - aws_cli
+    - peek
     - docker
     - webstorm
     - vlc

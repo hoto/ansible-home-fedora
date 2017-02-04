@@ -1,0 +1,31 @@
+---
+# https://github.com/phw/peek
+
+- name: Peek repo is cloned
+  git:
+    repo: git@github.com:phw/peek.git
+    dest: '{{ temp_dir }}/peek'
+    version: v0.7.2
+    force: yes
+    depth: 1
+    
+- name: Peek dependencies are present
+  dnf:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - vala
+    - gtk3-devel
+    - ffmpeg
+  become: yes
+
+- name: Peek is built
+  shell: 'cmake -DCMAKE_INSTALL_PREFIX=/usr ../peek && make'
+  args:
+    chdir: '{{ temp_dir }}/peek'
+
+- name: Peek is present
+  make:
+    target: install
+    chdir: '{{ temp_dir }}/peek'
+  become: yes
