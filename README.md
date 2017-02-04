@@ -75,9 +75,8 @@ To encrypt/decrypt projects list:
 * OBS https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
 * task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * remove bookmarst from /home/andrzej/.config/gtk-3.0/bookmarks
-* ubunt://ask.fedoraproject.org/en/question/55652/how-to-see-desktop-files-and-folders/ 
-* sudo dnf install nautilus-open-terminal   
-* sudo dnf install gnome-tweak-tool   
+* https://ask.fedoraproject.org/en/question/55652/how-to-see-desktop-files-and-folders/
+* sudo dnf install nautilus-open-terminal
 * https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/ 
-* https://github.com/horst3180/arc-icon-theme (clone repo then move `Arc` folder to `/usr/share/icons` don't install moka)
 * terminix-dark.json do `~/.config/terminix/schemes/terminix-dark.json` jako symlink do `home`
+* redshift
