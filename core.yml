@@ -6,6 +6,7 @@
   roles:
     - facts
     - ping
+    - keybindings
     - vim
     - gnome_tweak_tools
     - redshift
