@@ -42,7 +42,7 @@
     - .config/autostart/ignore-lid-switch-tweak.desktop
     - .config/autostart/imwheel.desktop
     - .config/autostart/setxkbmap.desktop
-    - .config/terminix/terminix-dark.json
+    - .config/terminix/schemes/terminix-dark.json
     - .config/redshift.conf
     - .gitattributes
     - .gitignore_global
