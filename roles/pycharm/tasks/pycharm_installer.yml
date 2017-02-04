@@ -1,6 +1,7 @@
 ---
 - name: Check if there is any old installation
-  stat: path: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}"
+  stat:
+    path: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}"
   register: pycharm_state
 
 - block:
@@ -20,4 +21,3 @@
       dest: "{{ local_soft_dir }}/pycharm/{{ software.pycharm.version }}/"
 
   when: pycharm_state.stat.exists == false
-  become: no
