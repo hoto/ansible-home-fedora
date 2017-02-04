@@ -1,0 +1,4 @@
+---
+- include: nodejs_installer.yml
+  tags:
+    - nodejs

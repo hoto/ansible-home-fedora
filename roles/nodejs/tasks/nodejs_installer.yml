@@ -1,0 +1,6 @@
+---
+- name: Nodejs and npm is present
+  dnf:
+    name: nodejs
+    state: latest
+  become: yes
