@@ -1,4 +1,5 @@
 ---
+# http://www.thelinuxrain.com/articles/redshift-functionality-on-fedora-25-gnome-wayland-yes-its-possible
 - name: Redshift Gnome copr repo is enabled
   shell: dnf copr enable -y mystro256/gnome-redshift
   become: yes
