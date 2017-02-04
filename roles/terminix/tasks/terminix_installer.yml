@@ -3,7 +3,6 @@
   copy:
     src: heikoada-terminix-fedora-25.repo
     dest: /etc/yum.repos.d/heikoada-terminix-fedora-25.repo
-    mode: 600
   become: yes
 
 - name: Terminix is present

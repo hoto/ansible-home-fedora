@@ -1,0 +1,66 @@
+---
+# https://www.virtualbox.org/wiki/Linux_Downloads
+- name: Download Virtualbox installer
+  get_url:
+    url: 'http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo'
+    dest: '/etc/yum.repos.d/virtualbox.repo'
+  become: yes
+
+- name: Download repokey
+  get_url:
+    url: 'https://www.virtualbox.org/download/oracle_vbox.asc'
+    dest: '{{ temp_dir }}/virtualbox.asc'
+
+- name: Import repokey
+  shell: rpm --import {{ temp_dir }}/virtualbox.asc
+  become: yes
+
+- name: Update kernel to the latest version
+  dnf:
+    name: 'kernel*'
+    state: latest
+  become: yes
+
+- name: Install required packages
+  dnf:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - binutils
+    - gcc
+    - make
+    - patch
+    - libgomp
+    - glibc-headers
+    - glibc-devel
+    - kernel-headers
+    - kernel-devel
+    - dkms
+  become: yes
+
+- name: VirtualBox is present
+  dnf:
+    name: 'VirtualBox-5.1'
+    state: latest
+  become: yes
+
+- name: Update VirtualBox driver
+  shell: /usr/sbin/rcvboxdrv setup
+  become: yes
+
+- name: Get current vbox version
+  shell: rpm -qa | grep -i VirtualBox | cut -d '_' -f 1 | cut -d '-' -f 3
+  register: vbox_version
+
+- name: Download Extension Pack
+  get_url:
+    url: 'http://download.virtualbox.org/virtualbox/{{ vbox_version.stdout }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack'
+    dest: '{{ temp_dir }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack'
+
+- name: Install Extension Pack
+  shell: vboxmanage extpack install {{ temp_dir }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack
+  become: yes
+
+- name: Add my user to vbox group (this is needed e.g. for sharing USB devices)
+  command: usermod -a -G vboxusers {{ user }}
+  become: yes
