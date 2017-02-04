@@ -5,7 +5,6 @@
   git:
     repo: git@github.com:phw/peek.git
     dest: '{{ temp_dir }}/peek'
-    version: v0.7.2
     force: yes
     depth: 1
     
