@@ -1,0 +1,4 @@
+---
+- include: vagrant_installer.yml
+  tags:
+    - vagrant

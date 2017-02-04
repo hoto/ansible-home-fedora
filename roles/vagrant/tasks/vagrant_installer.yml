@@ -1,0 +1,5 @@
+---
+- name: Vagrant is present
+  dnf:
+    name: "{{ software.vagrant.url }}"
+  become: yes
