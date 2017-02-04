@@ -79,3 +79,5 @@ To encrypt/decrypt projects list:
 * sudo dnf install nautilus-open-terminal   
 * sudo dnf install gnome-tweak-tool   
 * https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/ 
+* https://github.com/horst3180/arc-icon-theme (clone repo then move `Arc` folder to `/usr/share/icons` don't install moka)
+* terminix-dark.json do `~/.config/terminix/schemes/terminix-dark.json` jako symlink do `home`

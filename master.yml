@@ -7,6 +7,8 @@
     - facts
     - ping
     - vim
+    - gnome_tweak_tools
+    - arc_icons
     - home
     - powerline_fonts
     - terminix

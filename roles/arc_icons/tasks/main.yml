@@ -1,0 +1,5 @@
+---
+- block:
+  - include: arc_icons_installer.yml
+  tags:
+    - arc_icons

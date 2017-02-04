@@ -1,0 +1,16 @@
+---
+- name: Arc icons repository is cloned
+  git:
+    repo: 'https://github.com/horst3180/arc-icon-theme'
+    dest: '{{ temp_dir }}/arc-icon-theme'
+    depth: 1
+    force: yes
+    accept_hostkey: yes
+    update: yes
+
+- name: Arc icons are present
+  synchronize:
+    src: '{{ temp_dir }}/arc-icon-theme/Arc/'
+    dest: '/usr/share/icons/Arc'
+  become: yes
+
