@@ -1,14 +1,14 @@
 ---
 # https://github.com/kubernetes/minikube
-- block:
-  - name: Download minikube
-    get_url:
-      url: https://storage.googleapis.com/minikube/releases/{{ software.kubernetes.minikube.version }}/minikube-linux-amd64
-      dest: /usr/local/bin/minikube
-
-  - name: Minikube permissions are set
-    file:
-      path: /usr/local/bin/minikube
-      mode: 0755
-
+- name: Minikube is present
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/{{ software.kubernetes.minikube.version }}/minikube-linux-amd64
+    dest: /usr/local/bin/minikube
   become: yes
+
+- name: Minikube permissions are set
+  file:
+    path: /usr/local/bin/minikube
+    mode: 0755
+  become: yes
+

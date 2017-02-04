@@ -19,6 +19,6 @@ software:
     version: "1.10.0"
   kubernetes:
     minikube:
-      version: "v0.15.0"
+      version: "v0.16.0"
     kops:
       version: "v1.4.4"
