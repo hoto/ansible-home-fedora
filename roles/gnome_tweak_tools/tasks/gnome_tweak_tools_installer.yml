@@ -3,3 +3,4 @@
   dnf:
     name: gnome-tweak-tool
     state: latest
+  become: yes
