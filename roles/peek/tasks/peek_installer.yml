@@ -18,13 +18,18 @@
     - ffmpeg
   become: yes
 
+- name: Peek build dir is present
+  file:
+    path: "{{ temp_dir }}/peek/build"
+    state: "directory"
+
 - name: Peek is built
-  shell: 'cmake -DCMAKE_INSTALL_PREFIX=/usr ../peek && make'
+  shell: 'cmake -DCMAKE_INSTALL_PREFIX=/usr ../ && make'
   args:
-    chdir: '{{ temp_dir }}/peek'
+    chdir: '{{ temp_dir }}/peek/build'
 
 - name: Peek is present
   make:
     target: install
-    chdir: '{{ temp_dir }}/peek'
+    chdir: '{{ temp_dir }}/peek/build'
   become: yes
