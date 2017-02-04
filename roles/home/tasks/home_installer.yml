@@ -18,6 +18,7 @@
     - .config
     - .config/autostart
     - .config/terminix
+    - .config/terminix/schemes
     - .vim/plugin
     - .vim/snippets
 
