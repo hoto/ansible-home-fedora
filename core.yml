@@ -23,6 +23,7 @@
     - aws_cli
     - gitk
     - docker
+    - docker_compose
     - atom
     - webstorm
     - intellij

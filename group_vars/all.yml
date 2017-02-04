@@ -15,3 +15,5 @@ software:
     version: "ideaIC-2016.3.4"
   pycharm:
     version: "pycharm-community-2016.3.2"
+  docker_compose:
+    version: "1.10.0"
