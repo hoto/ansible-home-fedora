@@ -1,0 +1,11 @@
+---
+- name: Redshift Gnome copr repo is enabled
+  shell: dnf copr enable -y mystro256/gnome-redshift
+  become: yes
+
+# logout and enable it gnome-tweak-tools (Extentions)
+- name: Redshift Gnome is present
+  dnf:
+    name: gnome-shell-extension-redshift
+    state: latest
+  become: yes

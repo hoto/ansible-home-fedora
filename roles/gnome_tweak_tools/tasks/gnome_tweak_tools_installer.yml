@@ -1,0 +1,5 @@
+---
+- name: Gnome tweak tools is present
+  dnf:
+    name: gnome-tweak-tool
+    state: latest
