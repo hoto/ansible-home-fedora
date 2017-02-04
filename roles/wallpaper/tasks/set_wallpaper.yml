@@ -1,0 +1,10 @@
+---
+# cat /usr/share/backgrounds/f25/default/f25.xml
+- name: Override default wallpaper with my own
+  copy:
+    src: "{{ projects_dir }}/hoto/home/.wallpapers/wallpaper.png"
+    dest: '{{ item }}'
+  with_items:
+    - '/usr/share/backgrounds/f25/default/tv-wide/f25.png'
+    - '/usr/share/backgrounds/f25/default/wide/f25.png'
+  become: yes
