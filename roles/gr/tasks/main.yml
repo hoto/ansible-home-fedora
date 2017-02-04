@@ -1,0 +1,4 @@
+---
+- include: gr_installer.yml
+  tags:
+    - gr

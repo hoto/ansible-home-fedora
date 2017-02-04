@@ -1,0 +1,6 @@
+---
+# https://github.com/mixu/gr
+- name: mixu/gr is installed
+  npm:
+    name: git-run
+    global: yes
