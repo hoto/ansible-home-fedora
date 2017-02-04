@@ -1,0 +1,4 @@
+---
+- include: docker_installer.yml
+  tags:
+    - docker

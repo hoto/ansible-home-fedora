@@ -1,0 +1,38 @@
+---
+# https://docs.docker.com/engine/installation/linux/fedora/#/install-using-the-repository
+- name: Dnf plugins core is present
+  dnf:
+    name: dnf-plugins-core
+  become: yes
+
+- name: Docker repo is added
+  copy:
+    src: docker.repo
+    dest: /etc/yum.repos.d/
+  become: yes
+
+- name: Update the dnf package index
+  shell: dnf makecache fast
+  become: yes
+
+- name: Docker is present
+  dnf:
+    name: docker-engine
+    state: latest
+  become: yes
+
+- name: Docker group is present
+  group:
+    name: docker
+    state: present
+  become: yes
+
+- name: My user is in the docker group
+  shell: usermod -a -G docker {{ user }}
+  become: yes
+
+- name: Restart Docker service
+  service:
+    name: docker
+    state: restarted
+  become: yes
