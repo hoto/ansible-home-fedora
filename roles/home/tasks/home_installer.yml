@@ -17,6 +17,7 @@
     - .bash/git-aware-prompt
     - .config
     - .config/autostart
+    - .config/terminix
     - .vim/plugin
     - .vim/snippets
 
@@ -38,9 +39,10 @@
     - .bash/git-aware-prompt/prompt.sh
     - .bash/ps1.sh
     - .bashrc
+    - .config/autostart/ignore-lid-switch-tweak.desktop
     - .config/autostart/imwheel.desktop
-    - .config/autostart/redshift-gtk.desktop
     - .config/autostart/setxkbmap.desktop
+    - .config/terminix/terminix-dark.json
     - .config/redshift.conf
     - .gitattributes
     - .gitignore_global

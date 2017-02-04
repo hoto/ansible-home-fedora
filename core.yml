@@ -1,5 +1,5 @@
 ---
-- name: Personal Ubuntu Desktop provisioner
+- name: Personal Fedora 25 provisioner
   gather_facts: yes
   hosts: localhost
 
