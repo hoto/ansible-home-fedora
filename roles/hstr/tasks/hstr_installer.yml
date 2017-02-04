@@ -1,0 +1,7 @@
+---
+# https://github.com/dvorka/hstr
+- name: Hstr (history suggest box ) is present
+  dnf:
+    name: hstr
+    state: latest
+  become: yes

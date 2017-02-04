@@ -7,6 +7,7 @@
     - facts
     - ping
     - keybindings
+    - hstr
     - vim
     - wallpaper
     - gnome_tweak_tools

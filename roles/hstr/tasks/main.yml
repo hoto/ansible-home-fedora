@@ -1,0 +1,4 @@
+---
+- include: hstr_installer.yml
+  tags:
+    - hstr
