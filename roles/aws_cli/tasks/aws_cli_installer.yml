@@ -1,0 +1,6 @@
+---
+- name: AWS cli is present
+  pip:
+    name: awscli
+    state: latest
+  become: yes

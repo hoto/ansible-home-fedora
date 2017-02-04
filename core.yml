@@ -16,6 +16,7 @@
     - terminix
     - nodejs
     - gr
+    - aws_cli
     - docker
     - webstorm
     - vlc
