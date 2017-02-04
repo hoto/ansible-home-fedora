@@ -1,0 +1,4 @@
+---
+- include: gitk_installer.yml
+  tags:
+    - gitk

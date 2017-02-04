@@ -1,0 +1,6 @@
+---
+- name: Gitk is present
+  dnf:
+    name: gitk
+    state: latest
+  become: yes
