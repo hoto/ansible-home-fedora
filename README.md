@@ -36,7 +36,7 @@ Add ssh key to github, bitbucket and gitlab.
 
 Run core roles:
 
-        ansible-playbook master.yml -K
+        ansible-playbook core.yml -K
 
 Run webstorm, intellij and pycharm from terminal and set desktop and commandline entries:
 
