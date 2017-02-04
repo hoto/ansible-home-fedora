@@ -1,0 +1,4 @@
+---
+- include: htop_installer.yml
+  tags:
+    - htop

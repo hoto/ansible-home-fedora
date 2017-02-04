@@ -1,0 +1,6 @@
+---
+- name: Htop is present
+  dnf:
+    name: htop
+    state: latest
+  become: yes
