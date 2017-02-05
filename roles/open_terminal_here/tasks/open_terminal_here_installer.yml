@@ -1,6 +1,0 @@
----
-- name: Open terminal here is present
-  dnf:
-    name: nautilus-open-terminal
-    state: latest
-  become: yes
