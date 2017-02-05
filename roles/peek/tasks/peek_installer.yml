@@ -16,6 +16,8 @@
     - vala
     - gtk3-devel
     - ffmpeg
+    - ImageMagick
+    - ImageMagick-devel
   become: yes
 
 - name: Peek build dir is present
