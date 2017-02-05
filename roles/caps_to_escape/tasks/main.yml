@@ -1,0 +1,4 @@
+---
+- include: set_caps_to_escape.yml
+  tags:
+    - caps_to_escape

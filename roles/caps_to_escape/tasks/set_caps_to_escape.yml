@@ -1,0 +1,8 @@
+---
+# This is for external keyboards, there is also en entry in ~/.bashrc and there is an autostart entry.
+# gnome-tweak-tools -v => Typing => Caps Lock key behavior
+- name: Map capslock to escape
+  shell: gsettings set org.gnome.desktop.input-sources xkb-options "{{ item }}"
+  with_items:
+    - "['caps:escape']"
+
