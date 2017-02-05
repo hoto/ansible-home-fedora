@@ -10,3 +10,9 @@
     name: terminix
     state: latest
   become: yes
+
+- name: Open terminix here plugin is present
+  dnf:
+    name: terminix-nautilus
+    state: latest
+  become: yes
