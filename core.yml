@@ -8,6 +8,7 @@
     - ping
     - keybindings
     - caps_to_escape
+    - show_icons_on_desktop
     - hstr
     - ack
     - htop

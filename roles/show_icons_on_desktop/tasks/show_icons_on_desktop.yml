@@ -1,0 +1,15 @@
+---
+# gnome-tweak-tools -v => Desktop =
+- name: Turn off home, network, trah, volumes desktop icons
+  shell: gsettings set org.gnome.nautilus.desktop {{ item }} false
+  with_items:
+    - home-icon-visible
+    - network-icon-visible
+    - trash-icon-visible
+    - volumes-visible
+
+
+- name: Turn on desktop icons
+  shell: gsettings set org.gnome.desktop.background show-desktop-icons true
+
+
