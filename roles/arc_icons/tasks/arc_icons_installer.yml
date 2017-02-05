@@ -16,4 +16,3 @@
 
 - name: Arc icons are in use
   shell: gsettings set org.gnome.desktop.interface icon-theme Arc
-  tags: dupa
