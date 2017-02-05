@@ -1,0 +1,4 @@
+---
+- include: open_terminal_here_installer.yml
+  tags:
+    - open_terminal_here
