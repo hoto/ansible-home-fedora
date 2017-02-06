@@ -15,4 +15,6 @@
     - alphabotsec.vscode-eclipse-keybindings
     - file-icons.file-icons
     - timonwong.ansible-autocomplete
+    - jprestidge.theme-material-theme
+    - akamud.vscode-theme-onedark
   tags: vsc_extenstions
