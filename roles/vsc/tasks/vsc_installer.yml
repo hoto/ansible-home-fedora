@@ -12,5 +12,7 @@
 - name: Visual Studio Code extenstions are present
   shell: code --install-extension {{ item }}
   with_items:
-    - robertohuertasm.vscode-icons
-  tags: dupa
+    - alphabotsec.vscode-eclipse-keybindings
+    - file-icons.file-icons
+    - timonwong.ansible-autocomplete
+  tags: vsc_extenstions
