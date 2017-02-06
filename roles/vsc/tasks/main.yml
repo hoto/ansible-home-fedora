@@ -1,0 +1,4 @@
+---
+- include: vsc_installer.yml
+  tags:
+    - vsc

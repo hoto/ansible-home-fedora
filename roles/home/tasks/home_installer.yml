@@ -17,6 +17,7 @@
     - .bash/git-aware-prompt
     - .config
     - .config/autostart
+    - .config/Code/User
     - .config/terminix
     - .config/terminix/schemes
     - .vim/plugin
@@ -41,14 +42,12 @@
     - .bash/ps1.sh
     - .bashrc
     - .config/autostart/ignore-lid-switch-tweak.desktop
-    - .config/autostart/imwheel.desktop
     - .config/autostart/setxkbmap.desktop
+    - .config/Code/User/settings.json
     - .config/terminix/schemes/terminix-dark.json
-    - .config/redshift.conf
     - .gitattributes
     - .gitignore_global
     - .gitconfig
-    - .imwheelrc
     - .screenrc
     - .vim/plugin/vagrant.vim
     - .vim/snippets/javascript.snippets

@@ -1,0 +1,16 @@
+---
+- name: Visual Studio Code prm is present
+  get_url:
+    url: "https://vscode-update.azurewebsites.net/latest/linux-rpm-x64/stable"
+    dest: "{{ temp_dir }}/visual_studio_code.rpm"
+
+- name: Visual Studio Code is present
+  dnf:
+    name: "{{ temp_dir }}/visual_studio_code.rpm"
+  become: yes
+
+- name: Visual Studio Code extenstions are present
+  shell: code --install-extension {{ item }}
+  with_items:
+    - robertohuertasm.vscode-icons
+  tags: dupa

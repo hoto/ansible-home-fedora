@@ -28,6 +28,7 @@
     - docker_compose
     - kubernetes
     - atom
+    - vsc
     - webstorm
     - intellij
     - pycharm
