@@ -1,0 +1,7 @@
+---
+# https://www.cyberciti.biz/faq/centos-fedora-redhat-install-iftop-bandwidth-monitoring-tool/
+- name: Iftop is present
+  dnf:
+    name: iftop
+    state: latest
+  become: yes
