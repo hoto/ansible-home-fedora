@@ -14,6 +14,7 @@
     - htop
     - iftop
     - vim
+    - pygments
     - wallpaper
     - gnome_tweak_tools
     - redshift
