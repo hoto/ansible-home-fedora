@@ -1,24 +1,8 @@
 ---
 # https://docs.docker.com/engine/installation/linux/fedora/#/install-using-the-repository
-- name: Dnf plugins core is present
-  dnf:
-    name: dnf-plugins-core
-  become: yes
-
-- name: Docker repo is added
-  copy:
-    src: docker.repo
-    dest: /etc/yum.repos.d/
-  become: yes
-
-- name: Update the dnf package index
-  shell: dnf makecache fast
-  become: yes
-
 - name: Docker is present
   dnf:
-    name: docker-engine
-    state: latest
+    name: docker
   become: yes
 
 - name: Docker group is present
