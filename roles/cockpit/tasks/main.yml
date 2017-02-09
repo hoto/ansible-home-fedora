@@ -1,0 +1,4 @@
+---
+- include: cockpit_installer.yml
+  tags:
+    - cockpit

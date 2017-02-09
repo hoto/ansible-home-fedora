@@ -1,0 +1,15 @@
+---
+# https://fedoramagazine.org/cockpit-overview/
+# localhost:9090
+- name: Fedora Cockpit is present
+  dnf:
+    name: cockpit
+    state: latest
+  become: yes
+
+- name: Cockpit is enabled
+  systemd:
+    name: cockpit.socket
+    enabled: yes
+    state: started
+  become: yes
