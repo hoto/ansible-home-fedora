@@ -26,6 +26,7 @@
     - gr
     - aws_cli
     - gitk
+    - cockpit
     - docker
     - docker_compose
     - kubernetes
