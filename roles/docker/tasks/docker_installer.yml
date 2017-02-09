@@ -20,3 +20,11 @@
     name: docker
     state: restarted
   become: yes
+
+- name: Docker service is started
+  systemd:
+    name: docker
+    enabled: yes
+    daemon_reload: yes
+    state: started
+  become: yes
