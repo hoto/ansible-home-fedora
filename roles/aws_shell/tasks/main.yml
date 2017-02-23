@@ -1,0 +1,4 @@
+---
+- include: aws_shell_installer.yml
+  tags:
+    - aws_shell

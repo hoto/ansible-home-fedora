@@ -25,6 +25,7 @@
     - nodejs
     - gr
     - aws_cli
+    - aws_shell
     - gitk
     - cockpit
     - docker
