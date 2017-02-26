@@ -1,0 +1,13 @@
+---
+# http://negativo17.org/spotify-client/
+- name: Spotify repo is added 
+  get_url: 
+    url: 'http://negativo17.org/repos/fedora-spotify.repo'
+    dest: '/etc/yum.repos.d/fedora-spotify.repo'
+  become: yes
+
+- name: Spotify is present
+  dnf:
+    name: spotify-client
+    state: latest
+  become: yes

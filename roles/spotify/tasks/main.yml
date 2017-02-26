@@ -1,0 +1,4 @@
+---
+- include: spotify_installer.yml
+  tags:
+    - spotify
