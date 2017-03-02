@@ -1,0 +1,6 @@
+---
+- name: Tmux is present
+  dnf:
+    name: tmux
+    state: latest
+  become: yes

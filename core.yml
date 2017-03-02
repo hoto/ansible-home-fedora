@@ -12,6 +12,7 @@
     - hstr
     - ack
     - htop
+    - tmux
     - iftop
     - vim
     - pygments

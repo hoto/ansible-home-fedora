@@ -1,0 +1,4 @@
+---
+- include: tmux_installer.yml
+  tags:
+    - tmux
