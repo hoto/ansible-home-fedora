@@ -52,3 +52,4 @@
     - .vim/plugin/vagrant.vim
     - .vim/snippets/javascript.snippets
     - .vimrc
+    - .tmux.conf
