@@ -68,6 +68,7 @@ To encrypt/decrypt projects list:
 
 
 ## TODO
+* change peek playbook to use new installer https://github.com/phw/peek#fedora
 * terminix config, where is it? gsettgins?
 * Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
 * shortcut for terminix ctrl alt t instead of default terminal
