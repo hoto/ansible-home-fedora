@@ -1,0 +1,4 @@
+---
+- include: yarn_installer.yml
+  tags:
+    - yarn

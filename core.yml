@@ -24,6 +24,7 @@
     - powerline_fonts
     - terminix
     - nodejs
+    - yarn
     - gr
     - aws_cli
     - aws_shell
