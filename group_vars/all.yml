@@ -10,7 +10,7 @@ software:
   nodejs:
     config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
   webstorm:
-    version: 'WebStorm-2016.3.3'
+    version: 'WebStorm-2016.3.4'
   intellij:
     version: 'ideaIC-2016.3.4'
   pycharm:
