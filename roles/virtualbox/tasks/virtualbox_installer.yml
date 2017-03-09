@@ -15,11 +15,11 @@
   shell: rpm --import {{ temp_dir }}/virtualbox.asc
   become: yes
 
-- name: Update kernel to the latest version
-  dnf:
-    name: 'kernel*'
-    state: latest
-  become: yes
+#- name: Update kernel to the latest version
+#  dnf:
+#    name: 'kernel*'
+#    state: latest
+#  become: yes
 
 - name: Install required packages
   dnf:
