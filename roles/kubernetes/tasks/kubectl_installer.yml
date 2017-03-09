@@ -9,15 +9,14 @@
   shell: cat {{ temp_dir }}/kubectl_latest_stable_version.txt
   register: kubectl_latest
 
-- block:
-  - name: Download kubectl
-    get_url:
-      url: https://storage.googleapis.com/kubernetes-release/release/{{ kubectl_latest.stdout }}/bin/linux/amd64/kubectl
-      dest: /usr/local/bin/kubectl
+- name: Download kubectl
+  get_url:
+    url: https://storage.googleapis.com/kubernetes-release/release/{{ kubectl_latest.stdout }}/bin/linux/amd64/kubectl
+    dest: /usr/local/bin/kubectl
+  become: yes
 
-  - name: Kubectl permissions are set
-    file:
-      path: /usr/local/bin/kubectl
-      mode: 0755
-
+- name: Kubectl permissions are set
+  file:
+    path: /usr/local/bin/kubectl
+    mode: 0755
   become: yes

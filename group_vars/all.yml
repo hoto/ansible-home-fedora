@@ -19,9 +19,9 @@ software:
     version: '1.10.0'
   kubernetes:
     minikube:
-      version: 'v0.16.0'
+      url: 'https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64'
     kops:
-      version: 'v1.4.4'
+      url: 'https://github.com/kubernetes/kops/releases/download/1.5.1/kops-linux-amd64'
   virtualbox:
     version: 'VirtualBox-5.1'
   vagrant:

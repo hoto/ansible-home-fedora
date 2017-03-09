@@ -2,9 +2,8 @@
 # https://github.com/kubernetes/kops
 - name: Kops (Kubernetes Operations) is present
   get_url:
-    url: https://github.com/kubernetes/kops/releases/download/{{ software.kubernetes.kops.version }}/kops-linux-amd64
+    url: "{{ software.kubernetes.kops.url }}"
     dest: /usr/local/bin/kops
-    checksum: sha256:bf13825a0cdad0455b88bf9e99143c3b76f9dd30fab416461ca8de8d81cb78a1
   become: yes
 
 - name: Kops permissions are set

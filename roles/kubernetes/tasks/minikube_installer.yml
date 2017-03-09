@@ -2,7 +2,7 @@
 # https://github.com/kubernetes/minikube
 - name: Minikube is present
   get_url:
-    url: https://storage.googleapis.com/minikube/releases/{{ software.kubernetes.minikube.version }}/minikube-linux-amd64
+    url: "{{ software.kubernetes.minikube.url }}"
     dest: /usr/local/bin/minikube
   become: yes
 
