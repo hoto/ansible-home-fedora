@@ -12,6 +12,7 @@
     - hstr
     - ack
     - htop
+    - xbacklight
     - tmux
     - iftop
     - vim

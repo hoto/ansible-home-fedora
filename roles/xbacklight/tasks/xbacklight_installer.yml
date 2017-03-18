@@ -1,0 +1,6 @@
+---
+- name: Xbacklight is present
+  dnf:
+    name: xbacklight
+    state: latest
+  become: yes
