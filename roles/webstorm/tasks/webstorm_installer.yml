@@ -7,7 +7,7 @@
   - name: Download webstorm tar
     get_url: >
       dest={{ temp_dir }}/{{ software.webstorm.version }}.tar.gz
-      url="https://download.jetbrains.com/webstorm/{{ software.webstorm.version }}.tar.gz"
+      url="{{ software.webstorm.url }}"
 
   - name: Create webstorm folder
     file: >
