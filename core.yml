@@ -23,7 +23,7 @@
     - arc_icons
     - home
     - powerline_fonts
-    - terminix
+    - tilix
     - nodejs
     - yarn
     - gr
@@ -42,5 +42,4 @@
     - vlc
     - vagrant
     - spotify
-    - virtualbox
     - peek

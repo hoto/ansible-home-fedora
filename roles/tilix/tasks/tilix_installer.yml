@@ -1,0 +1,27 @@
+---
+# https://github.com/gnunn1/tilix
+- name: Terminix/Tilix repo is added
+  copy:
+    src: heikoada-terminix.repo
+    dest: /etc/yum.repos.d/heikoada-terminix.repo
+  become: yes
+
+- name: Tilix is present
+  dnf:
+    name: tilix
+    state: latest
+  become: yes
+
+- name: Open Tilix here plugin is present
+  dnf:
+    name: tilix-nautilus
+    state: latest
+  become: yes
+
+- name: Tilix custom configuration file is in tmp folder
+  copy:
+    src: tilix.dconf
+    dest: /tmp/tilix.dconf
+
+- name: Tilix custom configuration is loaded
+  shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf

@@ -1,0 +1,14 @@
+[/]
+copy-on-select=true
+focus-follow-mouse=true
+terminal-title-style='small'
+paste-strip-first-char=false
+theme-variant='dark'
+warn-vte-config-issue=false
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+use-theme-colors=true
+palette=['#2E3436', '#CC0000', '#4E9A06', '#C4A000', '#3465A4', '#75507B', '#06979A', '#D3D7CF', '#555753', '#EF2929', '#8AE234', '#FCE94F', '#729FCF', '#AD7FA8', '#34E2E2', '#EEEEEC']
+use-system-font=false
+visible-name='dark'
+font='DejaVu Sans Mono for Powerline 13'

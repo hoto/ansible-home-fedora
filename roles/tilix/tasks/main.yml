@@ -1,0 +1,4 @@
+---
+- include: tilix_installer.yml
+  tags:
+    - tilix
