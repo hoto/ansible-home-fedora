@@ -1,0 +1,22 @@
+---
+- name: Check if there is any old installation
+  stat: path="{{ local_soft_dir }}/gogland/{{ software.gogland.version }}"
+  register: gogland_state
+
+- block:
+  - name: Download goglang tar
+    get_url: >
+      url="{{ software.gogland.url }}"
+      dest={{ temp_dir }}/{{ software.gogland.version }}.tar.gz
+
+  - name: Create gogland folder
+    file: >
+      path={{ local_soft_dir }}/gogland/{{ software.gogland.version }}
+      state=directory
+
+  - name: Extract archive
+    unarchive: >
+      src={{ temp_dir }}/{{ software.gogland.version }}.tar.gz
+      dest={{ local_soft_dir }}/gogland/{{ software.gogland.version }}/
+
+  when: gogland_state.stat.exists == false

@@ -1,0 +1,6 @@
+---
+- include: gogland_installer.yml
+  tags:
+  - gogland
+  - jetbrains
+  - installation
