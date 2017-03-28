@@ -17,7 +17,7 @@ software:
   pycharm:
     version: 'pycharm-community-2016.3.2'
   docker_compose:
-    version: '1.10.0'
+    version: '1.11.2'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64'
