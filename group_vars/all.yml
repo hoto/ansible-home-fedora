@@ -18,7 +18,7 @@ software:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64'
     kops:
-      url: 'https://github.com/kubernetes/kops/releases/download/1.5.1/kops-linux-amd64'
+      url: 'https://github.com/kubernetes/kops/releases/download/1.5.3/kops-linux-amd64'
   nodejs:
     config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
   pycharm:
