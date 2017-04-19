@@ -1,0 +1,8 @@
+---
+- name: Root PS1 is in red (so it's easier to notice)
+  lineinfile:
+    dest: /root/.bashrc
+    line: PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    state: present
+  become: yes
+

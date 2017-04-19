@@ -6,6 +6,7 @@
   roles:
     - facts
     - ping
+    - red_root
     - keybindings
     - caps_to_escape
     - show_icons_on_desktop
