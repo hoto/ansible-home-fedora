@@ -3,7 +3,7 @@
   dnf:
     name: docker
     state: latest
-  register: docker_is_present
+  notify: Restart docker
   become: yes
 
 - name: Docker group is present
@@ -17,13 +17,6 @@
     name: '{{ user }}'
     groups: docker
     append: yes
-  become: yes
-
-- name: Restart Docker service if docker was changed
-  service:
-    name: docker
-    state: restarted
-  when: docker_is_present.changed == True
   become: yes
 
 - name: Docker service is started
