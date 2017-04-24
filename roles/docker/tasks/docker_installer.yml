@@ -1,8 +1,9 @@
 ---
-# https://docs.docker.com/engine/installation/linux/fedora/#/install-using-the-repository
 - name: Docker is present
   dnf:
     name: docker
+    state: latest
+  register: docker_is_present
   become: yes
 
 - name: Docker group is present
@@ -11,14 +12,18 @@
     state: present
   become: yes
 
-- name: My user is in the docker group
-  shell: usermod -a -G docker {{ user }}
+- name: Current user is in the docker group
+  user:
+    name: '{{ user }}'
+    groups: docker
+    append: yes
   become: yes
 
-- name: Restart Docker service
+- name: Restart Docker service if docker was changed
   service:
     name: docker
     state: restarted
+  when: docker_is_present.changed == True
   become: yes
 
 - name: Docker service is started
