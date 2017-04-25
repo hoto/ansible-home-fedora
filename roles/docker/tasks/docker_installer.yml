@@ -1,9 +1,16 @@
 ---
 - name: Docker is present
   dnf:
+    name: '{{ docker.dnf.version }}'
+    state: present
+  register: docker_installation
+  become: yes
+
+- name: Restart docker if installation changed
+  service:
     name: docker
-    state: latest
-  notify: Restart docker
+    state: restarted
+  when: docker_installation.changed == true
   become: yes
 
 - name: Docker group is present
