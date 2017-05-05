@@ -30,6 +30,7 @@
     - gr
     - aws_cli
     - aws_shell
+    - virtualenv
     - gitk
     - cockpit
     - docker

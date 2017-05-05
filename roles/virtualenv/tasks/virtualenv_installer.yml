@@ -1,0 +1,6 @@
+---
+- name: Virtualenv for python is present
+  pip:
+    name: virtualenv
+    state: latest
+  become: yes
