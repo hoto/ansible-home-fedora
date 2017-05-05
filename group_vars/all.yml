@@ -22,7 +22,7 @@ software:
   nodejs:
     config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
   pycharm:
-    version: 'pycharm-community-2016.3.3'
+    version: 'pycharm-community-2017.1.2'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.rpm'
   virtualbox:
