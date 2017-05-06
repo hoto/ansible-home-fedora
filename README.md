@@ -38,7 +38,7 @@ Add ssh key to github, bitbucket and gitlab.
 
 Run core roles:
 
-        ansible-playbook core.yml -K
+        ansible-playbook 02_core.yml -K
 
 Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
 
@@ -56,13 +56,13 @@ Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do 
 
 Install private semi secure configs:
 
-        ansible-playbook secure.yml
+        ansible-playbook 03_secure.yml
 
 Go to my work git repo and add ssh key there.
 
 Clone all git project:
 
-        ansible-playbook projects.yml --ask-vault-pass
+        ansible-playbook 04_projects.yml --ask-vault-pass
 
 To encrypt/decrypt projects list:
 
