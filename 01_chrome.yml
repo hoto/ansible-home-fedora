@@ -1,0 +1,8 @@
+---
+- name: Chrome installer
+  gather_facts: yes
+  hosts: local
+
+  roles:
+    - facts
+    - chrome

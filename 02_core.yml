@@ -1,7 +1,7 @@
 ---
 - name: Personal Fedora 25 provisioner
   gather_facts: yes
-  hosts: localhost
+  hosts: local
 
   roles:
     - facts
@@ -17,7 +17,8 @@
     - tmux
     - iftop
     - vim
-    - pygments
+    - virtualenv
+    - pygmentize
     - wallpaper
     - gnome_tweak_tools
     - redshift
@@ -30,7 +31,6 @@
     - gr
     - aws_cli
     - aws_shell
-    - virtualenv
     - gitk
     - cockpit
     - docker

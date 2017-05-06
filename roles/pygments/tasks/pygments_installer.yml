@@ -1,6 +1,0 @@
----
-- name: Pygments is present
-  dnf:
-    name: python-pygments
-    state: latest
-  become: yes

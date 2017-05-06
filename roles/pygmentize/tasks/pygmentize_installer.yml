@@ -1,0 +1,7 @@
+---
+- name: Pygmentize is present
+  pip:
+    name: Pygments
+    state: latest
+    virtualenv: '{{ virtualenv.envs_dir }}/pygmentize'
+  # become: yes

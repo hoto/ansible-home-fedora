@@ -1,30 +1,26 @@
 # Ansible playbooks for my Fedora 25
 
-### Before we start
+Playbooks that bootstrap my many laptops so that I can go and sip tea while the Ansible is doing all the tedious work.
 
-`-K` is short for `--ask-become-pass` is used only with tasks that needs root privileged.
+### Introduction
 
-Ansible will escalate privileges by `becoming` another user (root) whenever it's required, so it will use your user by default.
+Argument `-K` is short for `--ask-become-pass` and is used only with tasks that needs root privileged (almost all of them).
+When requested Ansible will escalate privileges by *becoming* another user (in this case root) whenever it's required.
 
-
-### Start (Chrome + ssh keys)
+### Install Ansible, Chrome, setup ssh keys and lastpass
 
 Install ansible
 
     sudo dnf install -y libselinux-python python-dnf ansible
     ansible localhost -m ping
 
-Go to github and clone this repo via https:
+Clone this repo:
 
     git clone https://github.com/hoto/ansible-home-fedora.git
 
-Check if gathered facts are correct:
-
-    ansible-playbook chrome.yml --tags facts
-
 Install chrome:
 
-    ansible-playbook chrome.yml -K
+    ansible-playbook 01_chrome.yml -K
 
 Generate ssh key:
 
@@ -38,45 +34,45 @@ Use lastpass and log in to chrome.
 
 Add ssh key to github, bitbucket and gitlab.
 
-### Core stuff
+### Install core libraries and software
 
 Run core roles:
 
         ansible-playbook core.yml -K
 
-Run webstorm, intellij and pycharm and set desktop and commandline launchers:
+Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
 
         ./software/webstorm/.../bin/webstorm.sh
         ./software/pycharm/.../bin/pycharm.sh
         ./software/intellij/.../bin/idea.sh
-        
-Install private semi secure configs:
 
-        ansible-playbook secure.yml
+### Setup some stuff manually
 
 Manually change terminal setting to use Deja Vu Sans Mono font.
 
 Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
 
+### This will work only if you are me
 
-### Private stuff (won't work for you)
+Install private semi secure configs:
+
+        ansible-playbook secure.yml
 
 Go to my work git repo and add ssh key there.
 
 Clone all git project:
 
         ansible-playbook projects.yml --ask-vault-pass
-        
+
 To encrypt/decrypt projects list:
 
         ansible-vault encrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
         ansible-vault decrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
 
-
 ## TODO
-* Change peek playbook to use new installer https://github.com/phw/peek#fedora
-* Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
-* Change `ctrl + alt + t` to Tilix
-* OBS video capture -> https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
+* Automate: Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
+* Make `ctrl + alt + t` open Tilix
+* Install OBS video capture software -> https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
 * task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * Alt + mouse click -> move window, https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/
+* Change terminal font using gsettings maybe?

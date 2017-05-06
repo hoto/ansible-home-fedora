@@ -6,6 +6,9 @@ projects_dir: '{{ home_dir }}/projects'    # folder with your (git) projects
 local_soft_dir: '{{ home_dir }}/software'  # where to save local installations of software (webstorm, pycharm etc.)
 temp_dir: /tmp                             # temporary dir for downoaded files
 
+virtualenv:
+  envs_dir: '{{ home_dir }}/envs'
+
 software:
   docker_compose:
     version: '1.11.2'
