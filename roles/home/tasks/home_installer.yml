@@ -49,7 +49,6 @@
     - .gitignore_global
     - .gitconfig
     - .screenrc
-    - .vim/plugin/kubernetes.vim
     - .vim/plugin/vagrant.vim
     - .vim/snippets/javascript.snippets
     - .vimrc
