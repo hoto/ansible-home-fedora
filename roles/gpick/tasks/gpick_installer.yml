@@ -1,0 +1,7 @@
+---
+# advanced color picker http://www.gpick.org/
+- name: gpick is present
+  dnf:
+    name: gpick
+    state: latest
+  become: yes
