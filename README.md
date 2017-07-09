@@ -72,7 +72,7 @@ To encrypt/decrypt projects list:
 ## TODO
 * Automate: Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
 * Make `ctrl + alt + t` open Tilix
-* Install OBS video capture software -> https://github.com/jp9000/obs-studio/wiki/Install-Instructions#linux
 * task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * Alt + mouse click -> move window, https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/
 * Change terminal font using gsettings maybe?
+* Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
