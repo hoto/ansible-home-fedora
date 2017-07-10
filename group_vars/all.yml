@@ -16,7 +16,7 @@ software:
     version: 'gogland-171.3780.106'
     url: 'https://download.jetbrains.com/go/gogland-171.3780.106.tar.gz'
   intellij:
-    version: 'ideaIC-2017.1.4'
+    version: 'ideaIC-2017.1.5'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
