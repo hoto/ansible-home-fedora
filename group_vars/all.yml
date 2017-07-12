@@ -27,7 +27,7 @@ software:
   pycharm:
     version: 'pycharm-community-2017.1.4'
   vagrant:
-    url: 'https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.rpm'
+    url: 'https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.1'
   webstorm:
