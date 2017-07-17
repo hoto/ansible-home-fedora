@@ -16,7 +16,7 @@ software:
     version: 'gogland-171.3780.106'
     url: 'https://download.jetbrains.com/go/gogland-171.3780.106.tar.gz'
   intellij:
-    version: 'ideaIC-2017.1.4'
+    version: 'ideaIC-2017.1.5'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
@@ -27,7 +27,7 @@ software:
   pycharm:
     version: 'pycharm-community-2017.1.4'
   vagrant:
-    url: 'https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.rpm'
+    url: 'https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.1'
   webstorm:
