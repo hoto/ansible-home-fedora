@@ -31,5 +31,5 @@ software:
   virtualbox:
     version: 'VirtualBox-5.1'
   webstorm:
-    version: 'WebStorm-2017.1.4'
-    url: 'https://download.jetbrains.com/webstorm/WebStorm-2017.1.4.tar.gz'
+    version: 'WebStorm-2017.2'
+    url: 'https://download.jetbrains.com/webstorm/WebStorm-2017.2.tar.gz'
