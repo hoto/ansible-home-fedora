@@ -1,32 +1,54 @@
 ---
-- name: Docker is present
+# this repo have latest docker
+- name: Marcin Skarbek fedora copr dnf repo is enabled
+  get_url:
+    url: 'https://copr.fedorainfracloud.org/coprs/mskarbek/k8s/repo/fedora-25/mskarbek-k8s-fedora-25.repo'
+    dest: '/etc/yum.repos.d/mskarbek-k8s-fedora-25.repo'
+  become: yes
+  register: mskarbek_repo
+
+- name: dnf update
   dnf:
-    name: '{{ docker.dnf.version }}'
-    state: present
-  register: docker_installation
+    name: '*'
+    state: latest
   become: yes
+  when: mskarbek_repo.changed == true
 
-- name: Restart docker if installation changed
-  service:
-    name: docker
-    state: restarted
-  when: docker_installation.changed == true
-  become: yes
-
-- name: Docker group is present
+- name: docker group is present
   group:
     name: docker
     state: present
   become: yes
 
-- name: Current user is in the docker group
+- name: current user is in the docker group
   user:
     name: '{{ user }}'
     groups: docker
     append: yes
   become: yes
 
-- name: Docker service is started
+- name: docker is present
+  dnf:
+    name: docker
+    state: present
+  register: docker_installation
+  become: yes
+
+- name: docker storage setup service is masked, it's not needed with zfs
+  service:
+    name: docker-storage-setup
+    state: stopped
+    masked: yes
+  become: yes
+
+- name: restart docker service if installation changed
+  service:
+    name: docker
+    state: restarted
+  when: docker_installation.changed == true
+  become: yes
+
+- name: docker service is started
   systemd:
     name: docker
     enabled: yes
