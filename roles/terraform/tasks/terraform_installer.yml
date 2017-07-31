@@ -1,0 +1,30 @@
+---
+- name: unzip is present
+  dnf:
+    name: unzip
+    state: present
+  become: yes
+
+#- name: terraform is present
+#  get_url:
+#    url: '{{ software.terraform.url }}'
+#    dest: '/tmp/terraform.zip'
+
+- name: terraform is unzipped
+  unarchive:
+    src: '/tmp/terraform.zip'
+    dest: '/tmp'
+    creates: '/tmp/terraform'
+    remote_src: True
+
+- name: terraform binary is in path
+  copy:
+    src: '/tmp/terraform'
+    dest: '/usr/local/bin/terraform'
+  become: yes
+
+- name: terraform is executable
+  file:
+    path: '/usr/local/bin/terraform'
+    mode: 0755
+  become: yes

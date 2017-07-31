@@ -1,0 +1,4 @@
+---
+- include: terraform_installer.yml
+  tags:
+  - terraform

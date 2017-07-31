@@ -26,6 +26,8 @@ software:
     config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
   pycharm:
     version: 'pycharm-community-2017.2'
+  terraform:
+    url: 'https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm'
   virtualbox:
