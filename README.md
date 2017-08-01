@@ -20,7 +20,7 @@ Clone this repo:
 
 Install chrome:
 
-    ansible-playbook 01_chrome.yml -K
+    ansible-playbook chrome.yml -K
 
 Generate ssh key:
 
@@ -38,7 +38,7 @@ Add ssh key to github, bitbucket and gitlab.
 
 Run core roles:
 
-        ansible-playbook 02_core.yml -K
+        ansible-playbook software.yml -K
 
 Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
 
@@ -56,7 +56,7 @@ Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do 
 
 Install private semi secure configs:
 
-        ansible-playbook 03_secure.yml
+        ansible-playbook private.yml
 
 Go to my work git repo and add ssh key there.
 

@@ -16,6 +16,7 @@
     - xbacklight
     - tmux
     - iftop
+    - ncdu
     - vim
     - virtualenv
     - pygmentize

@@ -1,7 +1,0 @@
----
-- name: Clone my git projects
-  gather_facts: yes
-  hosts: local
-
-  roles:
-    - clone_git_projects

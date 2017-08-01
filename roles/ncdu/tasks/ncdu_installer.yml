@@ -1,0 +1,6 @@
+---
+- name: ncdu is present
+  dnf:
+    name: ncdu
+    state: latest
+  become: yes

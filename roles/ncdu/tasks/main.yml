@@ -1,0 +1,4 @@
+---
+- include: ncdu_installer.yml
+  tags:
+    - ncud
