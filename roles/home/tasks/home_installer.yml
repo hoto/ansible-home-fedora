@@ -1,7 +1,7 @@
 ---
 - name: Clone hoto/home repo
   git: 
-    repo: git@github.com:hoto/home.git
+    repo: https://github.com/hoto/home.git
     accept_hostkey: yes
     update: yes
     dest: "{{ projects_dir }}/hoto/home"

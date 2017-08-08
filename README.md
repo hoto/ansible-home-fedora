@@ -1,4 +1,4 @@
-# Ansible playbooks for my Fedora 25
+# Ansible playbooks for my Fedora 26
 
 Playbooks that bootstrap my many laptops so that I can go and sip tea while the Ansible is doing all the tedious work.
 
@@ -54,20 +54,9 @@ Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do 
 
 ### This will work only if you are me
 
-Install private semi secure configs:
+Install private stuff
 
         ansible-playbook private.yml
-
-Go to my work git repo and add ssh key there.
-
-Clone all git project:
-
-        ansible-playbook 04_projects.yml --ask-vault-pass
-
-To encrypt/decrypt projects list:
-
-        ansible-vault encrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
-        ansible-vault decrypt roles/clone_git_projects/tasks/git_projects_cloner.yml
 
 ## TODO
 * Automate: Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'

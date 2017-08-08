@@ -1,5 +1,5 @@
 ---
-- name: Personal Fedora 25 provisioner
+- name: Personal Fedora 26 provisioner
   gather_facts: yes
   hosts: local
 
@@ -13,7 +13,6 @@
     - hstr
     - ack
     - htop
-    - xbacklight
     - tmux
     - iftop
     - ncdu
@@ -22,7 +21,6 @@
     - pygmentize
     - wallpaper
     - gnome_tweak_tools
-    - redshift
     - arc_icons
     - home
     - powerline_fonts
@@ -33,11 +31,8 @@
     - aws_cli
     - aws_shell
     - gitk
-    - cockpit
     - docker
     - docker_compose
-    - kubernetes
-    - atom
     - vsc
     - webstorm
     - intellij
@@ -45,7 +40,5 @@
     - gogland
     - vlc
     - gpick
-    - vagrant
     - spotify
     - peek
-    - terraform

@@ -1,3 +1,0 @@
----
-dependencies:
-  - { role: 'gnome_tweak_tools' }

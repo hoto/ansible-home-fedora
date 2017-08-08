@@ -1,4 +1,0 @@
----
-- include: redshift_installer.yml
-  tags:
-    - redshift

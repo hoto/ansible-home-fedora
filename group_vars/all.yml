@@ -11,7 +11,7 @@ virtualenv:
 
 software:
   docker_compose:
-    version: '1.13.0'
+    version: '1.15.0'
   gogland:
     version: 'gogland-171.3780.106'
     url: 'https://download.jetbrains.com/go/gogland-171.3780.106.tar.gz'
