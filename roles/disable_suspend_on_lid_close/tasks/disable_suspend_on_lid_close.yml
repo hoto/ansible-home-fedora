@@ -1,0 +1,23 @@
+# Start: `gnome-tweak-tools -v` then check terminal output for values
+---
+- name: power button action does nothing
+  shell: gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothing
+
+- name: lid switch and suspend key does nothing
+  lineinfile:
+    dest: /etc/systemd/logind.conf
+    regexp: '{{item.setting}}'
+    line: '{{item.setting}}={{item.value}}'
+  with_items:
+    - { setting: HandleSuspendKey, value: ignore }
+    - { setting: HandleLidSwitch, value: lock }
+    - { setting: HandlePowerKey, value: ignore }
+  register: logind_file
+  become: yes
+
+- name: restart logind
+  service:
+    name: systemd-logind
+    state: restarted
+  when: logind_file.changed
+  become: yes

@@ -49,7 +49,6 @@ Manually run jetbrain software and set desktop and commandline launchers from `T
 ### Setup some stuff manually
 
 * Manually change terminal setting to use Deja Vu Sans Mono font.
-* Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
 
 ### This will work only if you are me
 
@@ -58,7 +57,6 @@ Setup my home
         ansible-playbook home.yml
 
 ## TODO
-* Automate: Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
 * Make `ctrl + alt + t` open Tilix
 * Task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * Alt + mouse click -> move window, https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/
