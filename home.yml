@@ -1,7 +1,8 @@
 ---
-- name: Setup semi secure stuff
+- name: Setup my home
   gather_facts: yes
   hosts: local
 
   roles:
+    - home
     - home_private

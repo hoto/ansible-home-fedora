@@ -48,20 +48,19 @@ Manually run jetbrain software and set desktop and commandline launchers from `T
 
 ### Setup some stuff manually
 
-Manually change terminal setting to use Deja Vu Sans Mono font.
-
-Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
+* Manually change terminal setting to use Deja Vu Sans Mono font.
+* Turn off suspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'.
 
 ### This will work only if you are me
 
-Install private stuff
+Setup my home
 
-        ansible-playbook private.yml
+        ansible-playbook home.yml
 
 ## TODO
 * Automate: Turn off susspend when lid is closed Start -> Power -> 'When lid is closed -> do nothing'
 * Make `ctrl + alt + t` open Tilix
-* task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
+* Task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
 * Alt + mouse click -> move window, https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/
 * Change terminal font using gsettings maybe?
 * Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
