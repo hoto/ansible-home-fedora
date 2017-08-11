@@ -1,0 +1,4 @@
+# Start: `gnome-tweak-tools -v` then check terminal output for values
+---
+- name: date is shown in the top bar
+  shell: gsettings set org.gnome.desktop.interface clock-show-date true

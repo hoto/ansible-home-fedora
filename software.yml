@@ -12,6 +12,7 @@
     - show_icons_on_desktop
     - enable_fedora_extensions
     - disable_suspend_on_lid_close
+    - top_bar_show_date
     - hstr
     - ack
     - htop
