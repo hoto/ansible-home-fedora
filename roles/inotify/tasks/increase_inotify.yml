@@ -1,7 +1,7 @@
 ---
 # For Jetbrains IDEs
 # details aboout this operation: https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
-- name: Increase inotify limit
+- name: inotify limit is increased
   sysctl:
     sysctl_file: /etc/sysctl.d/60-jetbrains.conf
     name: fs.inotify.max_user_watches

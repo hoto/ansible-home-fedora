@@ -1,5 +1,5 @@
 ---
-- name: Create directory for software
+- name: directory for software is present
   file:
     path: "{{ local_soft_dir }}"
     state: "directory"

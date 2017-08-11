@@ -1,23 +1,8 @@
 ---
-- name: Check if there is any old installation
-  stat:
-    path: "{{ local_soft_dir }}/gogland/{{ software.gogland.version }}"
-  register: gogland_state
-
-- block:
-  - name: Download goglang tar
-    get_url:
-      dest: "{{ temp_dir }}/{{ software.gogland.version }}.tar.gz"
-      url: "https://download.jetbrains.com/go/{{ software.gogland.version }}.tar.gz"
-
-  - name: Create gogland folder
-    file:
-      path: "{{ local_soft_dir }}/gogland/{{ software.gogland.version }}"
-      state: directory
-
-  - name: Extract archive
-    unarchive:
-      src: "{{ temp_dir }}/{{ software.gogland.version }}.tar.gz"
-      dest: "{{ local_soft_dir }}/gogland/{{ software.gogland.version }}/"
-
-  when: gogland_state.stat.exists == false
+- name: gogland is present
+  include_role:
+    name: generic_jetbrains
+  vars:
+    software_name: 'gogland'
+    software_version: '{{ software.gogland.version }}'
+    software_url: 'https://download.jetbrains.com/go/{{ software.gogland.version }}.tar.gz'

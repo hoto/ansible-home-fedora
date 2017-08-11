@@ -1,0 +1,23 @@
+---
+- name: '{{ software_version }} already exist'
+  stat:
+    path: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
+  register: sofware_installation_dir
+
+- block:
+  - name: '{{ software_name }} tar is present'
+    get_url:
+      dest: '{{ temp_dir }}/{{ software_version }}.tar.gz'
+      url: '{{ software_url }}'
+
+  - name: '{{ software_name }} folder is present'
+    file:
+      path: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
+      state: directory
+
+  - name: '{{ software_name }} archive is unarchived'
+    unarchive:
+      src: '{{ temp_dir }}/{{ software_version }}.tar.gz'
+      dest: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}/'
+
+  when: sofware_installation_dir.stat.exists == false
