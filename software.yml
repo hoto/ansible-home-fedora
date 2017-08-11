@@ -10,6 +10,7 @@
     - keybindings
     - caps_to_escape
     - show_icons_on_desktop
+    - enable_fedora_extensions
     - hstr
     - ack
     - htop

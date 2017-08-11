@@ -1,0 +1,4 @@
+# Start: `gnome-tweak-tools -v` then check terminal output for values
+---
+- name: desktop icons are visible
+  shell: gsettings set org.gnome.shell enabled-extensions "['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org']"

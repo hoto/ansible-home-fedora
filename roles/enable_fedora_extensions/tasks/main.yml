@@ -1,0 +1,4 @@
+---
+- include: fedora_extension_enabler.yml
+  tags:
+    - enable_fedora_extensions
