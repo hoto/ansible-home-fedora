@@ -13,8 +13,7 @@ software:
   docker_compose:
     version: '1.15.0'
   gogland:
-    version: 'gogland-171.3780.106'
-    url: 'https://download.jetbrains.com/go/gogland-171.3780.106.tar.gz'
+    version: 'gogland-172.3757.46'
   intellij:
     version: 'ideaIC-2017.2.1'
   kubernetes:
