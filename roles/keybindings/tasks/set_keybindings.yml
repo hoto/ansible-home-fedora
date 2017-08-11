@@ -4,8 +4,8 @@
 # list all keys:
 # gsettings list-keys org.gnome.desktop.wm.keybindings
 # list all values:
-# gsettings list-keys org.gnome.desktop.wm.keybindings | xargs -L 1 gsettings get org.gnome.desktop.wm.keybindings
-- name: Remove unused keybindings/shortcuts part1
+# gsettings list-recursively org.gnome.desktop.wm.keybindings
+- name: remove unused keybindings/shortcuts part1
   shell: gsettings set org.gnome.desktop.wm.keybindings {{ item }}
   with_items:
     - activate-window-menu []
@@ -90,8 +90,8 @@
 # list all keys:
 # gsettings list-keys org.gnome.settings-daemon.plugins.media-keys
 # list all values:
-# gsettings list-keys org.gnome.settings-daemon.plugins.media-keys | xargs -L 1 gsettings get org.gnome.settings-daemon.plugins.media-keys
-- name: Remove unused keybindings/shortcuts part2
+# gsettings list-recursively org.gnome.settings-daemon.plugins.media-keys
+- name: semove unused keybindings/shortcuts part2
   shell: gsettings set org.gnome.settings-daemon.plugins.media-keys {{ item }}
   with_items:
     - home '<Super>e'
@@ -104,3 +104,13 @@
     - on-screen-keyboard []
     - increase-text-size []
     - toggle-contrast []
+
+- name: terminal shortcut is set part1
+  shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/{{ item.key }} "{{ item.value }}"
+  with_items:
+    - { key: name, value: "'tilix'"}
+    - { key: binding, value: "'<Primary><Alt>t'"}
+    - { key: command, value: "'tilix'"}
+
+- name: terminal shortcut is set part2
+  shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"

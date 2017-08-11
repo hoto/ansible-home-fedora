@@ -57,8 +57,6 @@ Setup my home
         ansible-playbook home.yml
 
 ## TODO
-* Make `ctrl + alt + t` open Tilix
 * Task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
-* Alt + mouse click -> move window, https://ask.fedoraproject.org/en/question/8267/alt-drag-to-move-windows-does-not-work-in-fedora-18/
 * Change terminal font using gsettings maybe?
 * Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
