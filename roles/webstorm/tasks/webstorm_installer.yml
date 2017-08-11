@@ -1,22 +1,23 @@
 ---
 - name: Check if there is any old installation
-  stat: path="{{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}"
+  stat:
+    path: "{{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}"
   register: webstorm_state
 
 - block:
   - name: Download webstorm tar
-    get_url: >
-      dest={{ temp_dir }}/{{ software.webstorm.version }}.tar.gz
-      url="{{ software.webstorm.url }}"
+    get_url:
+      dest: "{{ temp_dir }}/{{ software.webstorm.version }}.tar.gz"
+      url: "https://download.jetbrains.com/webstorm/{{ software.webstorm.version }}.tar.gz"
 
   - name: Create webstorm folder
-    file: >
-      path={{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}
-      state=directory
+    file:
+      path: "{{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}"
+      state: directory
 
   - name: Extract archive
-    unarchive: >
-      src={{ temp_dir }}/{{ software.webstorm.version }}.tar.gz
-      dest={{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}/
+    unarchive:
+      src: "{{ temp_dir }}/{{ software.webstorm.version }}.tar.gz"
+      dest: "{{ local_soft_dir }}/webstorm/{{ software.webstorm.version }}/"
 
   when: webstorm_state.stat.exists == false
