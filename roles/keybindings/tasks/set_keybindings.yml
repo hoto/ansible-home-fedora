@@ -105,12 +105,21 @@
     - increase-text-size []
     - toggle-contrast []
 
-- name: terminal shortcut is set part1
+- name: tilix shortcut is set part1
   shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/{{ item.key }} "{{ item.value }}"
   with_items:
     - { key: name, value: "'tilix'"}
     - { key: binding, value: "'<Primary><Alt>t'"}
     - { key: command, value: "'tilix'"}
 
-- name: terminal shortcut is set part2
+- name: tilix shortcut is set part2
   shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+
+# dconf is available in ansbile 2.4
+#- name: tilix shortcut is set
+#  dconf:
+#    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+#    value: "[('name', 'tilix'), ('binding', '<Primary><Alt>t'), ('command', 'tilix')]"
+#    state: present
+#  tags:
+#    - dupa
