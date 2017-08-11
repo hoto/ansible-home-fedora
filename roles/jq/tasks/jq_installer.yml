@@ -1,0 +1,6 @@
+---
+- name: jq is present
+  dnf:
+    name: jq
+    state: latest
+  become: yes

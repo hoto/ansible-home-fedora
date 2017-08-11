@@ -1,0 +1,4 @@
+---
+- include: jq_installer.yml
+  tags:
+    - jq
