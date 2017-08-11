@@ -1,5 +1,5 @@
 ---
-- name: '{{ software_version }} already exist'
+- name: '{{ software_name }} already exist'
   stat:
     path: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
   register: sofware_installation_dir

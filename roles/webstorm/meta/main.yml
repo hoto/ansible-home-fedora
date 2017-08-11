@@ -1,4 +1,0 @@
----
-dependencies:
-  - { role: 'inotify' }
-  - { role: 'softwaredir' }

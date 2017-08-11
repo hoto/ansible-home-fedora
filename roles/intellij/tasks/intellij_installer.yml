@@ -1,25 +1,8 @@
 ---
-- name: Check if there is any old installation
-  stat:
-    path: "{{ local_soft_dir }}/intellij/{{ software.intellij.version }}"
-  register: intellij_state
-
-- block:
-
-  - name: Download intellij tar
-    get_url:
-      dest: "{{ temp_dir }}/{{ software.intellij.version }}.tar.gz"
-      url: "https://download.jetbrains.com/idea/{{ software.intellij.version }}.tar.gz"
-
-  - name: Create intellij folder
-    file:
-      path: "{{ local_soft_dir }}/intellij/{{ software.intellij.version }}"
-      state: directory
-
-  - name: Extract archive
-    unarchive:
-      src: "{{ temp_dir }}/{{ software.intellij.version }}.tar.gz"
-      dest: "{{ local_soft_dir }}/intellij/{{ software.intellij.version }}/"
-
-  when: intellij_state.stat.exists == false
-
+- name: intellij is present
+  include_role:
+    name: generic_jetbrains
+  vars:
+    software_name: 'intellij'
+    software_version: '{{ software.intellij.version }}'
+    software_url: 'https://download.jetbrains.com/idea/{{ software.intellij.version }}.tar.gz'
