@@ -1,0 +1,6 @@
+# gsettings list-recursively
+# gnome-tweak-tools -v
+---
+- name: show minimize button on windows
+  shell: gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,close"
+

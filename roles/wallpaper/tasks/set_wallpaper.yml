@@ -1,4 +1,5 @@
 ---
+# we could use `dconf dump / | grep -C 5 "/desktop/"`
 # cat /usr/share/backgrounds/f26/default/f26.xml
 - name: Override default wallpaper with my own
   copy:

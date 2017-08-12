@@ -1,0 +1,4 @@
+---
+- include: show_minimize_button.yml
+  tags:
+    - show_minimize_button

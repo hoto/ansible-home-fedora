@@ -9,6 +9,7 @@
     - red_root
     - keybindings
     - caps_to_escape
+    - show_minimize_button
     - show_icons_on_desktop
     - enable_fedora_extensions
     - disable_suspend_on_lid_close
