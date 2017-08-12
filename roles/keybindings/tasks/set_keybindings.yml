@@ -1,10 +1,5 @@
 ---
-# Start -> Keyboard -> Shortcuts
-# Use dconf-editor or:
-# list all keys:
-# gsettings list-keys org.gnome.desktop.wm.keybindings
-# list all values:
-# gsettings list-recursively org.gnome.desktop.wm.keybindings
+# gsettings list-recursively | keybindings
 - name: remove unused keybindings/shortcuts part1
   shell: gsettings set org.gnome.desktop.wm.keybindings {{ item }}
   with_items:
@@ -81,16 +76,12 @@
     - switch-windows-backward  []
     - toggle-above  []
     - toggle-fullscreen  []
-    - toggle-maximized []
+    - toggle-maximized "['<Super>Up']"
     - toggle-on-all-workspaces []
     - toggle-shaded []
-    - unmaximize []
+    - unmaximize "['<Super>Down']"
 
-# Start -> Keyboard -> Shortcuts
-# list all keys:
-# gsettings list-keys org.gnome.settings-daemon.plugins.media-keys
-# list all values:
-# gsettings list-recursively org.gnome.settings-daemon.plugins.media-keys
+# gsettings list-recursively | grep media-keys
 - name: semove unused keybindings/shortcuts part2
   shell: gsettings set org.gnome.settings-daemon.plugins.media-keys {{ item }}
   with_items:
@@ -114,12 +105,3 @@
 
 - name: tilix shortcut is set part2
   shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-
-# dconf is available in ansbile 2.4
-#- name: tilix shortcut is set
-#  dconf:
-#    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-#    value: "[('name', 'tilix'), ('binding', '<Primary><Alt>t'), ('command', 'tilix')]"
-#    state: present
-#  tags:
-#    - dupa

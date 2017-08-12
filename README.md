@@ -58,7 +58,5 @@ Setup my home:
         ansible-playbook home.yml
 
 ## TODO
-* Task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
+* Task to force cloning this, home, home-private projects but with ssh -> `home_ssh.yml`
 * Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
-* Win+^ <- maximize window
-* show all buttons in window tabs (minimize)
