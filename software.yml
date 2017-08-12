@@ -27,6 +27,7 @@
     - gnome_tweak_tools
     - arc_icons
     - powerline_fonts
+    - terminal_config
     - tilix
     - nodejs
     - yarn

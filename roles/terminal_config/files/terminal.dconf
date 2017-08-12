@@ -1,0 +1,8 @@
+[/]
+schema-version=uint32 3
+
+[profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+use-system-font=false
+visible-name='dark'
+font='DejaVu Sans Mono for Powerline 13'
+

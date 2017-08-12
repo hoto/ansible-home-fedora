@@ -1,0 +1,4 @@
+---
+- include: terminal_configurator.yml
+  tags:
+    - terminal_config

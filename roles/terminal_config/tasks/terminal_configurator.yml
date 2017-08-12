@@ -1,0 +1,8 @@
+---
+- name: terminal custom configuration file is present
+  copy:
+    src: terminal.dconf
+    dest: /tmp/terminal.dconf
+
+- name: terminal custom configuration is loaded
+  shell: dconf load /org/gnome/terminal/legacy/ < /tmp/terminal.dconf

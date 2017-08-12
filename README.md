@@ -40,23 +40,25 @@ Run core roles:
 
         ansible-playbook software.yml -K
 
-Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
+### Setup some stuff manually
+
+* Manually change terminal setting to use Deja Vu Sans Mono font.
+
+* Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
 
         ./software/webstorm/.../bin/webstorm.sh
         ./software/pycharm/.../bin/pycharm.sh
         ./software/intellij/.../bin/idea.sh
 
-### Setup some stuff manually
-
-* Manually change terminal setting to use Deja Vu Sans Mono font.
 
 ### This will work only if you are me
 
-Setup my home
+Setup my home:
 
         ansible-playbook home.yml
 
 ## TODO
 * Task to force cloning this project but with ssh origin instead of https? remove .git or use ansible force?
-* Change terminal font using gsettings maybe?
 * Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
+* Win+^ <- maximize window
+* show all buttons in window tabs (minimize)
