@@ -1,0 +1,6 @@
+---
+- name: yubikey-personalization-gui is present
+  dnf:
+    name: yubikey-personalization-gui
+    state: latest
+  become: yes

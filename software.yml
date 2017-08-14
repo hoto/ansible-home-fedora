@@ -17,6 +17,7 @@
     - hstr
     - ack
     - htop
+    - yubikey_personalization_gui
     - jq
     - tmux
     - iftop

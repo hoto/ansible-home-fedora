@@ -1,0 +1,4 @@
+---
+- include: yubikey_installer.yml
+  tags:
+    - yubikey
