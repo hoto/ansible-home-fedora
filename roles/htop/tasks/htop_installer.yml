@@ -1,5 +1,5 @@
 ---
-- name: Htop is present
+- name: htop is present
   dnf:
     name: htop
     state: latest

@@ -1,0 +1,7 @@
+# for pendrives
+---
+- name: fuse-exfat is present
+  dnf:
+    name: fuse-exfat
+    state: latest
+  become: yes

@@ -1,0 +1,4 @@
+---
+- include: fuse_exfat.yml
+  tags:
+    - exfat

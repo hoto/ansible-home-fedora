@@ -15,6 +15,7 @@
     - disable_suspend_on_lid_close
     - top_bar_show_date
     - hstr
+    - fuse_exfat
     - ack
     - htop
     - yubikey_personalization_gui
