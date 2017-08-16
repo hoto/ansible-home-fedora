@@ -2,8 +2,8 @@
 # this repo have latest docker
 - name: Marcin Skarbek fedora copr dnf repo is enabled
   get_url:
-    url: 'https://copr.fedorainfracloud.org/coprs/mskarbek/k8s/repo/fedora-25/mskarbek-k8s-fedora-25.repo'
-    dest: '/etc/yum.repos.d/mskarbek-k8s-fedora-25.repo'
+    url: 'https://copr.fedorainfracloud.org/coprs/mskarbek/k8s/repo/fedora-26/mskarbek-k8s-fedora-26.repo'
+    dest: '/etc/yum.repos.d/mskarbek-k8s-fedora-26.repo'
   become: yes
   register: mskarbek_repo
 
