@@ -15,7 +15,7 @@ software:
   gogland:
     version: 'gogland-172.3757.46'
   intellij:
-    version: 'ideaIC-2017.2.1'
+    version: 'ideaIC-2017.2.2'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
@@ -32,4 +32,4 @@ software:
   virtualbox:
     version: 'VirtualBox-5.1'
   webstorm:
-    version: 'WebStorm-2017.2.1'
+    version: 'WebStorm-2017.2.2'
