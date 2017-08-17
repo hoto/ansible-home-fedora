@@ -3,6 +3,7 @@
 - name: power button action does nothing
   shell: gsettings set org.gnome.settings-daemon.plugins.power power-button-action nothing
 
+# you will need to reboot for this to take effect
 - name: lid switch and suspend key does nothing
   lineinfile:
     dest: /etc/systemd/logind.conf
@@ -12,12 +13,4 @@
     - { setting: HandleSuspendKey, value: ignore }
     - { setting: HandleLidSwitch, value: lock }
     - { setting: HandlePowerKey, value: ignore }
-  register: logind_file
-  become: yes
-
-- name: restart logind
-  service:
-    name: systemd-logind
-    state: restarted
-  when: logind_file.changed
   become: yes
