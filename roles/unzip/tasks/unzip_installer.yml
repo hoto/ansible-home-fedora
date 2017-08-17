@@ -1,0 +1,6 @@
+---
+- name: unzip is present
+  dnf:
+    name: unzip
+    state: latest
+  become: yes

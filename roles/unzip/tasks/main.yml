@@ -1,0 +1,4 @@
+---
+- include: unzip_installer.yml
+  tags:
+    - unzip

@@ -1,0 +1,4 @@
+---
+- include: gradle_installer.yml
+  tags:
+  - gradle

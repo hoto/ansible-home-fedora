@@ -1,0 +1,34 @@
+---
+- name: gradle zip is present
+  get_url:
+    url: 'https://services.gradle.org/distributions/gradle-{{ software.gradle.version }}-bin.zip'
+    dest: '/tmp/gradle.zip'
+
+- name: gradle folder exist
+  file:
+    path: '/opt/gradle'
+    state: directory
+  become: yes
+
+- name: gradle is unzipped
+  unarchive:
+    src: '/tmp/gradle.zip'
+    dest: '/opt/gradle/'
+    creates: '/opt/gradle/gradle-{{ software.gradle.version }}'
+    remote_src: True
+  become: yes
+
+- name: gradle is executable
+  file:
+    path: '/opt/gradle/gradle-{{ software.gradle.version }}/bin/gradle'
+    mode: 0755
+  become: yes
+
+- name: gradle is in path
+  file:
+    src: "/opt/gradle/gradle-{{ software.gradle.version }}/bin/gradle"
+    dest: "/usr/local/bin/gradle"
+    state: link
+    mode: 0755
+    force: yes
+  become: yes

@@ -1,10 +1,4 @@
 ---
-- name: unzip is present
-  dnf:
-    name: unzip
-    state: present
-  become: yes
-
 - name: terraform is present
   get_url:
     url: '{{ software.terraform.url }}'
