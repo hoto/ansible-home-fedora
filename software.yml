@@ -32,6 +32,7 @@
     - terminal_config
     - tilix
     - nodejs
+    - nvm
     - yarn
     - gr
     - aws_cli
@@ -40,7 +41,6 @@
     - docker
     - docker_compose
     #- vsc
-    #- fuse_exfat
     - webstorm
     - intellij
     - pycharm
@@ -49,3 +49,4 @@
     - gpick
     - spotify
     - peek
+    - fuse_exfat
