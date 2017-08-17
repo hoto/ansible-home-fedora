@@ -1,5 +1,5 @@
 ---
-- name: Chrome installer
+- name: installs chrome
   gather_facts: yes
   hosts: local
 

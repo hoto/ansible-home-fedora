@@ -1,0 +1,6 @@
+---
+- name: lastpass is present
+  dnf:
+    name: lastpass-cli
+    state: latest
+  become: yes

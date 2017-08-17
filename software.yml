@@ -1,11 +1,12 @@
 ---
-- name: Personal Fedora 26 provisioner
+- name: installs my many software
   gather_facts: yes
   hosts: local
 
   roles:
     - facts
     - ping
+    - lastpass
     - red_root
     - keybindings
     - caps_to_escape
