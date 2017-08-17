@@ -1,0 +1,4 @@
+---
+- include: java_installer.yml
+  tags:
+    - java

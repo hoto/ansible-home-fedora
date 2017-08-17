@@ -1,0 +1,12 @@
+---
+- name: java is present
+  dnf:
+    name: java-1.8.0-openjdk
+    state: latest
+  become: yes
+
+- name: jdk is present
+  dnf:
+    name: java-1.8.0-openjdk-devel
+    state: latest
+  become: yes
