@@ -3,6 +3,7 @@
   get_url:
     url: '{{ software.terraform.url }}'
     dest: '/tmp/terraform.zip'
+    validate_certs: False
 
 - name: terraform is unzipped
   unarchive:
