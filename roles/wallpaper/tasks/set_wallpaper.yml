@@ -1,9 +1,14 @@
 ---
+- name: my wallpaper is present
+  get_url:
+    url: 'https://github.com/hoto/home/raw/fedora/.wallpapers/wallpaper.png'
+    dest: '{{ temp_dir }}/wallpaper.png'
+
 # we could use `dconf dump / | grep -C 5 "/desktop/"`
 # cat /usr/share/backgrounds/f26/default/f26.xml
-- name: Override default wallpaper with my own
+- name: default wallpaper is overwritten with my own
   copy:
-    src: '{{ projects_dir }}/hoto/home/.wallpapers/wallpaper.png'
+    src: '{{ temp_dir }}/wallpaper.png'
     dest: '{{ item }}'
   with_items:
     - '/usr/share/backgrounds/f26/default/tv-wide/f26.png'
