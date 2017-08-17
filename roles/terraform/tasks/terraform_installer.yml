@@ -5,10 +5,10 @@
     state: present
   become: yes
 
-#- name: terraform is present
-#  get_url:
-#    url: '{{ software.terraform.url }}'
-#    dest: '/tmp/terraform.zip'
+- name: terraform is present
+  get_url:
+    url: '{{ software.terraform.url }}'
+    dest: '/tmp/terraform.zip'
 
 - name: terraform is unzipped
   unarchive:

@@ -26,7 +26,7 @@ software:
   pycharm:
     version: 'pycharm-community-2017.1.5'
   terraform:
-    url: 'https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip'
+    url: 'https://releases.hashicorp.com/terraform/0.10.2/terraform_0.10.2_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.rpm'
   virtualbox:
