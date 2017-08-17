@@ -1,0 +1,7 @@
+---
+- name: sets remote to ssl for my home git repos
+  gather_facts: yes
+  hosts: local
+
+  roles:
+    - home_ssl_override

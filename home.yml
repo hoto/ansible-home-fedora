@@ -1,8 +1,7 @@
 ---
-- name: Setup my home
+- name: setups my home
   gather_facts: yes
   hosts: local
 
   roles:
-    - home
-    - home_private
+    - home_https

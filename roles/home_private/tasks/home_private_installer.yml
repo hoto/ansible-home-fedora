@@ -1,12 +1,12 @@
 ---
-- name: Clone hoto/home-private repo
-  git: 
+- name: my home-private repo is cloned
+  git:
     repo: git@bitbucket.org:hoto/home-private.git
     accept_hostkey: yes
     update: yes
     dest: "{{ projects_dir }}/hoto/home-private"
 
-- name: Create folders
+- name: folders for my configs are present
   file:
     path: "{{ home_dir }}/{{ item }}"
     state: directory
@@ -15,7 +15,7 @@
     - .ssh
     - .aws
 
-- name: Create symlinks
+- name: symlinks to my configs are present
   file:
     src: "{{ projects_dir }}/hoto/home-private/{{ item.src }}"
     dest: "{{ home_dir }}/{{ item.dest }}"

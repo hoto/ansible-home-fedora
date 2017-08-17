@@ -1,18 +1,10 @@
-# Ansible playbooks for my Fedora 26
+# Ansible playbooks for my Fedora 26 laptops
+Playbooks that bootstrap my many fedora laptops so that I can go and sip tea while the ansible is doing all the tedious work.
 
-Playbooks that bootstrap my many laptops so that I can go and sip tea while the Ansible is doing all the tedious work.
+### Start
+Install ansible and dependencies:
 
-### Introduction
-
-Argument `-K` is short for `--ask-become-pass` and is used only with tasks that needs root privileged (almost all of them).
-When requested Ansible will escalate privileges by *becoming* another user (in this case root) whenever it's required.
-
-### Install Ansible, Chrome, setup ssh keys and lastpass
-
-Install ansible
-
-    sudo dnf install -y libselinux-python python-dnf ansible
-    ansible localhost -m ping
+    sudo dnf install ansible python-dnf libselinux-python
 
 Clone this repo:
 
@@ -22,41 +14,27 @@ Install chrome:
 
     ansible-playbook chrome.yml -K
 
+Install software:
+
+    ansible-playbook software.yml -K
+
+### Setup some stuff manually
 Generate ssh key:
 
     ssh-keygen -C <your_email_here>
+    
+Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
 
-Use lastpass and log in to chrome.
+    ./software/webstorm/.../bin/webstorm.sh
+    ./software/pycharm/.../bin/pycharm.sh
+    ./software/intellij/.../bin/idea.sh
 
-    sudo dnf install -y lastpass-cli
-    lpass login <email>
-    lpass ls
-
-Add ssh key to github, bitbucket and gitlab.
-
-### Install core libraries and software
-
-Run core roles:
-
-        ansible-playbook software.yml -K
-
-### Setup some stuff manually
-
-* Manually change terminal setting to use Deja Vu Sans Mono font.
-
-* Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
-
-        ./software/webstorm/.../bin/webstorm.sh
-        ./software/pycharm/.../bin/pycharm.sh
-        ./software/intellij/.../bin/idea.sh
-
-
-### This will work only if you are me
-
+### You don't want to do this unless you are me
 Setup my home:
 
-        ansible-playbook home.yml
+    ansible-playbook home.yml
+        
+Add ssh key to github, bitbucket and gitlab.
+Then override git https with ssl remotes:
 
-## TODO
-* Task to force cloning this, home, home-private projects but with ssh -> `home_ssh.yml`
-* Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
+    ansible-playbook home_ssl.yml
