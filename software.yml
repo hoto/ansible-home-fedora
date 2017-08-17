@@ -15,7 +15,6 @@
     - disable_suspend_on_lid_close
     - top_bar_show_date
     - hstr
-    - fuse_exfat
     - ack
     - htop
     - yubikey_personalization_gui
@@ -40,7 +39,8 @@
     - gitk
     - docker
     - docker_compose
-    - vsc
+    #- vsc
+    #- fuse_exfat
     - webstorm
     - intellij
     - pycharm

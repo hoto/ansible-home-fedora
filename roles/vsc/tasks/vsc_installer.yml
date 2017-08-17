@@ -12,7 +12,7 @@
 - name: Visual Studio Code extenstions are present
   shell: code --install-extension {{ item }}
   with_items:
-    - alphabotsec.vscode-eclipse-keybindings
+    #    - alphabotsec.vscode-eclipse-keybindings
     - file-icons.file-icons
     - timonwong.ansible-autocomplete
     - jprestidge.theme-material-theme

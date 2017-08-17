@@ -30,7 +30,7 @@ Use lastpass and log in to chrome.
 
     sudo dnf install -y lastpass-cli
     lpass login <email>
-    lpass show
+    lpass ls
 
 Add ssh key to github, bitbucket and gitlab.
 
@@ -60,3 +60,7 @@ Setup my home:
 ## TODO
 * Task to force cloning this, home, home-private projects but with ssh -> `home_ssh.yml`
 * Make gimp more like photoshop http://lifehacker.com/how-to-make-the-gimp-work-more-like-photoshop-1551318983 https://github.com/draekko/gimp-cc-themes
+* fix relogin issue on this:
+	TASK [disable_suspend_on_lid_close : restart logind] *********************************************************************
+	skipping: [localhost]
+* fix symlinks are being created before home is cloned, wtf
