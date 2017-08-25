@@ -42,7 +42,7 @@
     - gitk
     - docker
     - docker_compose
-    #- vsc
+    - vsc
     - webstorm
     - intellij
     - pycharm
