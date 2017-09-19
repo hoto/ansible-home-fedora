@@ -1,0 +1,35 @@
+---
+#- name: gimp is present
+#  dnf:
+#    name: gimp
+#    state: latest
+#  become: yes
+
+- name: get installed gimp version
+  shell: gimp --version | awk '{ print $NF }' | cut -d . -f 1,2
+  register: gimp_version
+
+- name: set gimp home path
+  set_fact:
+    gimp_home: '{{ home_dir }}/.gimp-{{ gimp_version.stdout }}'
+
+- name: set gimp menurc path
+  set_fact:
+    gimp_menurc: '{{ gimp_home }}/menurc'
+
+
+- name: backup existing menurc
+  copy:
+    src: '{{ gimp_menurc }}'
+    dest: '{{ gimp_menurc }}_backup'
+
+- name: remove menurc
+  file:
+    path: '{{ gimp_menurc}}'
+    state: absent
+
+# http://epierce.freeshell.org/gimp/ps-menurc
+- name: set PS shortcuts
+  copy:
+    src: 'menurc'
+    dest: '{{ gimp_menurc }}'
