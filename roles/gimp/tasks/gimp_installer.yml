@@ -1,35 +1,26 @@
 ---
-#- name: gimp is present
-#  dnf:
-#    name: gimp
-#    state: latest
-#  become: yes
-
-- name: get installed gimp version
-  shell: gimp --version | awk '{ print $NF }' | cut -d . -f 1,2
-  register: gimp_version
+- name: gimp is present
+  dnf:
+    name: gimp
+    state: latest
+  become: yes
 
 - name: set gimp home path
   set_fact:
-    gimp_home: '{{ home_dir }}/.gimp-{{ gimp_version.stdout }}'
+    gimp_home: '{{ home_dir }}/.gimp-2.8'
 
-- name: set gimp menurc path
-  set_fact:
-    gimp_menurc: '{{ gimp_home }}/menurc'
+- name: backup existing gimp home
+  synchronize:
+    src: '{{ gimp_home }}/'
+    dest: '{{ gimp_home}}.backup.{{ ansible_date_time.iso8601_micro }}'
 
+- name: clone doctormo/GimpPs repo
+  git:
+    repo: 'https://github.com/doctormo/GimpPs.git'
+    dest: '{{ temp_dir }}/GimpPs'
+    depth: 1
 
-- name: backup existing menurc
-  copy:
-    src: '{{ gimp_menurc }}'
-    dest: '{{ gimp_menurc }}_backup'
-
-- name: remove menurc
-  file:
-    path: '{{ gimp_menurc}}'
-    state: absent
-
-# http://epierce.freeshell.org/gimp/ps-menurc
-- name: set PS shortcuts
-  copy:
-    src: 'menurc'
-    dest: '{{ gimp_menurc }}'
+- name: override gimp home directory with doctormo/GimpPs repo
+  synchronize:
+    src: '{{ temp_dir }}/GimpPs/'
+    dest: '{{ gimp_home }}'
