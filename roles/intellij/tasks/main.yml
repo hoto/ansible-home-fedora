@@ -1,5 +1,5 @@
 ---
-- include: intellij_installer.yml
+- import_tasks: intellij_installer.yml
   tags:
   - intellij
   - jetbrains

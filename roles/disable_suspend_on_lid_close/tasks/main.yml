@@ -1,4 +1,4 @@
 ---
-- include: disable_suspend_on_lid_close.yml
+- import_tasks: disable_suspend_on_lid_close.yml
   tags:
     - disable_suspend_on_lid_close

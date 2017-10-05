@@ -1,4 +1,4 @@
 ---
-- include: show_minimize_button.yml
+- import_tasks: show_minimize_button.yml
   tags:
     - show_minimize_button

@@ -1,4 +1,4 @@
 ---
-- include: tmux_installer.yml
+- import_tasks: tmux_installer.yml
   tags:
     - tmux

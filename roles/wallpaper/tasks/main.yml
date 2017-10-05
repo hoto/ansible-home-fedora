@@ -1,4 +1,4 @@
 ---
-- include: set_wallpaper.yml
+- import_tasks: set_wallpaper.yml
   tags:
     - wallpaper

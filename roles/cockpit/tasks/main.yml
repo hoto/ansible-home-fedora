@@ -1,4 +1,4 @@
 ---
-- include: cockpit_installer.yml
+- import_tasks: cockpit_installer.yml
   tags:
     - cockpit

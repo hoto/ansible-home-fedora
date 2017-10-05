@@ -1,4 +1,4 @@
 ---
-- include: gnome_tweak_tools_installer.yml
+- import_tasks: gnome_tweak_tools_installer.yml
   tags:
     - gnome_tweak_tools

@@ -1,4 +1,4 @@
 ---
-- include: home_private_installer.yml
+- import_tasks: home_private_installer.yml
   tags:
     - home_private

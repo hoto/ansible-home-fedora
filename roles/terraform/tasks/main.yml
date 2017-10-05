@@ -1,4 +1,4 @@
 ---
-- include: terraform_installer.yml
+- import_tasks: terraform_installer.yml
   tags:
   - terraform

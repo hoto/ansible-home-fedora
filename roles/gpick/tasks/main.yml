@@ -1,4 +1,4 @@
 ---
-- include: gpick_installer.yml
+- import_tasks: gpick_installer.yml
   tags:
     - gpick

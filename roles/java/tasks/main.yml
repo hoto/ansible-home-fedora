@@ -1,4 +1,4 @@
 ---
-- include: java_installer.yml
+- import_tasks: java_installer.yml
   tags:
     - java

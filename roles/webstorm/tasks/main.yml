@@ -1,5 +1,5 @@
 ---
-- include: webstorm_installer.yml
+- import_tasks: webstorm_installer.yml
   tags:
   - webstorm
   - jetbrains

@@ -1,5 +1,5 @@
 ---
-  - include: increase_inotify.yml
+  - import_tasks: increase_inotify.yml
     tags:
     - inotify
     - configuration

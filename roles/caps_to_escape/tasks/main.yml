@@ -1,4 +1,4 @@
 ---
-- include: set_caps_to_escape.yml
+- import_tasks: set_caps_to_escape.yml
   tags:
     - caps_to_escape

@@ -1,5 +1,5 @@
 ---
-- include: gogland_installer.yml
+- import_tasks: gogland_installer.yml
   tags:
   - gogland
   - jetbrains

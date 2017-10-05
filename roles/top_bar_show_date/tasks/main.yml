@@ -1,4 +1,4 @@
 ---
-- include: top_bar_show_date.yml
+- import_tasks: top_bar_show_date.yml
   tags:
     - top_bar_show_date

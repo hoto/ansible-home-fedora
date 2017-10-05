@@ -1,4 +1,4 @@
 ---
-- include: chrome_installer.yml
+- import_tasks: chrome_installer.yml
   tags:
     - chrome

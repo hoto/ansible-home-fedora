@@ -1,4 +1,4 @@
 ---
-- include: install_atom.yml
+- import_tasks: install_atom.yml
   tags:
     - atom

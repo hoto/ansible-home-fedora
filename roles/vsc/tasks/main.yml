@@ -1,4 +1,4 @@
 ---
-- include: vsc_installer.yml
+- import_tasks: vsc_installer.yml
   tags:
     - vsc

@@ -1,4 +1,4 @@
 ---
-- include: peek_installer.yml
+- import_tasks: peek_installer.yml
   tags:
     - peek

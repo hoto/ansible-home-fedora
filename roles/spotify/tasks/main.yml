@@ -1,4 +1,4 @@
 ---
-- include: spotify_installer.yml
+- import_tasks: spotify_installer.yml
   tags:
     - spotify

@@ -1,4 +1,4 @@
 ---
-- include: lastpass_installer.yml
+- import_tasks: lastpass_installer.yml
   tags:
     - lastpass

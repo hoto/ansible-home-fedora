@@ -1,5 +1,5 @@
 ---
 - block:
-  - include: arc_icons_installer.yml
+  - import_tasks: arc_icons_installer.yml
   tags:
     - arc_icons

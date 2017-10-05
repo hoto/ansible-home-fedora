@@ -1,4 +1,4 @@
 ---
-- include: red_root_installer.yml
+- import_tasks: red_root_installer.yml
   tags:
     - red_root

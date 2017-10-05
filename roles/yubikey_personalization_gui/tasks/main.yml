@@ -1,4 +1,4 @@
 ---
-- include: yubikey_installer.yml
+- import_tasks: yubikey_installer.yml
   tags:
     - yubikey

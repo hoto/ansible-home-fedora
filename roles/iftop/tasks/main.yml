@@ -1,4 +1,4 @@
 ---
-- include: iftop_installer.yml
+- import_tasks: iftop_installer.yml
   tags:
     - iftop

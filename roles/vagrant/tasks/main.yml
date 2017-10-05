@@ -1,4 +1,4 @@
 ---
-- include: vagrant_installer.yml
+- import_tasks: vagrant_installer.yml
   tags:
     - vagrant

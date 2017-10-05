@@ -1,5 +1,5 @@
 ---
-- include: pycharm_installer.yml
+- import_tasks: pycharm_installer.yml
   tags:
   - pycharm
   - installation

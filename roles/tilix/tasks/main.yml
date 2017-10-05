@@ -1,4 +1,4 @@
 ---
-- include: tilix_installer.yml
+- import_tasks: tilix_installer.yml
   tags:
     - tilix

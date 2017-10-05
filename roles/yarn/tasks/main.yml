@@ -1,4 +1,4 @@
 ---
-- include: yarn_installer.yml
+- import_tasks: yarn_installer.yml
   tags:
     - yarn

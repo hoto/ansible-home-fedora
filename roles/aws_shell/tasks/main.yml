@@ -1,4 +1,4 @@
 ---
-- include: aws_shell_installer.yml
+- import_tasks: aws_shell_installer.yml
   tags:
     - aws_shell

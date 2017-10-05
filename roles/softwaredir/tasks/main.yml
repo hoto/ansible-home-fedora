@@ -1,5 +1,5 @@
 ---
-- include: create_software_dir.yml
+- import_tasks: create_software_dir.yml
   tags:
   - gitkraken
   - jetbrains

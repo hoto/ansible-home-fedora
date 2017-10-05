@@ -1,4 +1,4 @@
 ---
-- include: xbacklight_installer.yml
+- import_tasks: xbacklight_installer.yml
   tags:
     - xbacklight

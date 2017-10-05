@@ -1,4 +1,4 @@
 ---
-- include: htop_installer.yml
+- import_tasks: htop_installer.yml
   tags:
     - htop

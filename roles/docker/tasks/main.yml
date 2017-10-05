@@ -1,4 +1,4 @@
 ---
-- include: docker_installer.yml
+- import_tasks: docker_installer.yml
   tags:
     - docker

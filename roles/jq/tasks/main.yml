@@ -1,4 +1,4 @@
 ---
-- include: jq_installer.yml
+- import_tasks: jq_installer.yml
   tags:
     - jq

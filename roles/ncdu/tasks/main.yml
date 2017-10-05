@@ -1,4 +1,4 @@
 ---
-- include: ncdu_installer.yml
+- import_tasks: ncdu_installer.yml
   tags:
     - ncud

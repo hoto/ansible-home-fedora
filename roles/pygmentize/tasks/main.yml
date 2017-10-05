@@ -1,4 +1,4 @@
 ---
-- include: pygmentize_installer.yml
+- import_tasks: pygmentize_installer.yml
   tags:
     - pygmentize

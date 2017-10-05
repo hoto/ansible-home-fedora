@@ -1,4 +1,4 @@
 ---
-- include: unzip_installer.yml
+- import_tasks: unzip_installer.yml
   tags:
     - unzip

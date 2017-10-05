@@ -1,4 +1,4 @@
 ---
-- include: set_keybindings.yml
+- import_tasks: set_keybindings.yml
   tags:
     - keybindings

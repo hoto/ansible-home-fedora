@@ -1,4 +1,4 @@
 ---
-- include: gradle_installer.yml
+- import_tasks: gradle_installer.yml
   tags:
   - gradle

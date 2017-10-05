@@ -1,4 +1,4 @@
 ---
-- include: install_powerline_fonts.yml
+- import_tasks: install_powerline_fonts.yml
   tags:
     - fonts

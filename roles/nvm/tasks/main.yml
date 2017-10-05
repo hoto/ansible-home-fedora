@@ -1,4 +1,4 @@
 ---
-- include: nvm_installer.yml
+- import_tasks: nvm_installer.yml
   tags:
     - nvm

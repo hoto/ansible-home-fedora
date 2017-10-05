@@ -1,4 +1,4 @@
 ---
-- include: hstr_installer.yml
+- import_tasks: hstr_installer.yml
   tags:
     - hstr

@@ -1,4 +1,4 @@
 ---
-- include: gimp_installer.yml
+- import_tasks: gimp_installer.yml
   tags:
     - gimp

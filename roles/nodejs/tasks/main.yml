@@ -1,4 +1,4 @@
 ---
-- include: nodejs_installer.yml
+- import_tasks: nodejs_installer.yml
   tags:
     - nodejs

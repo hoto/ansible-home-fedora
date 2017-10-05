@@ -1,4 +1,4 @@
 ---
-- include: home_installer.yml
+- import_tasks: home_installer.yml
   tags:
     - home
