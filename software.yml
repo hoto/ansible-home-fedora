@@ -53,6 +53,7 @@
     - peek
     - fuse_exfat
     - gradle
+    - mvn
     - terraform
     - java
     - gimp

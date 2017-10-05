@@ -1,0 +1,34 @@
+---
+- name: mvn zip is present
+  get_url:
+    url: 'http://apache.mirrors.nublue.co.uk/maven/maven-3/{{ software.mvn.version }}/binaries/apache-maven-{{ software.mvn.version }}-bin.zip'
+    dest: '/tmp/mvn.zip'
+
+- name: mvn folder exist
+  file:
+    path: '/opt/mvn'
+    state: directory
+  become: yes
+
+- name: mvn is unzipped
+  unarchive:
+    src: '/tmp/mvn.zip'
+    dest: '/opt/mvn/'
+    creates: '/opt/mvn/apache-maven-{{ software.mvn.version }}'
+    remote_src: True
+  become: yes
+
+- name: mvn is executable
+  file:
+    path: '/opt/mvn/apache-maven-{{ software.mvn.version }}/bin/mvn'
+    mode: 0755
+  become: yes
+
+- name: mvn is in path
+  file:
+    src: "/opt/mvn/apache-maven-{{ software.mvn.version }}/bin/mvn"
+    dest: "/usr/local/bin/mvn"
+    state: link
+    mode: 0755
+    force: yes
+  become: yes
