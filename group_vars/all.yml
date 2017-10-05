@@ -17,7 +17,7 @@ software:
   gradle:
     version: '4.1'
   intellij:
-    version: 'ideaIC-2017.2.4'
+    version: 'ideaIC-2017.2.5'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
