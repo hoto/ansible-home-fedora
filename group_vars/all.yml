@@ -15,7 +15,7 @@ software:
   gogland:
     version: 'gogland-172.3757.46'
   gradle:
-    version: '4.1'
+    version: '4.2.1'
   intellij:
     version: 'ideaIC-2017.2.5'
   kubernetes:
