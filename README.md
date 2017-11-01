@@ -38,3 +38,6 @@ Add ssh key to github, bitbucket and gitlab.
 Then override git https with ssl remotes:
 
     ansible-playbook home_ssl.yml
+
+### TODO:
+- .ideavimrc symlink

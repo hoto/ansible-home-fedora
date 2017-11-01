@@ -29,6 +29,8 @@ software:
     version: '3.5.0'
   pycharm:
     version: 'pycharm-community-2017.1.5'
+  rider:
+    version: 'Rider-2017.2'
   terraform:
     url: 'https://releases.hashicorp.com/terraform/0.10.2/terraform_0.10.2_linux_amd64.zip'
   vagrant:
