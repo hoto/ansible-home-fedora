@@ -44,6 +44,7 @@
     - docker_compose
     - vsc
     - webstorm
+    - java
     - intellij
     - pycharm
     - gogland
@@ -56,6 +57,5 @@
     - gradle
     - mvn
     - terraform
-    - java
     - gimp
     - atom
