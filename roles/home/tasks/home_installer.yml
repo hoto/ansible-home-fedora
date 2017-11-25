@@ -48,6 +48,7 @@
     - .gitattributes
     - .gitignore_global
     - .gitconfig
+    - .ideavimrc
     - .screenrc
     - .vim/plugin/vagrant.vim
     - .vim/snippets/javascript.snippets
