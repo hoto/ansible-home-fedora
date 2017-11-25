@@ -1,7 +1,7 @@
 ---
 - name: my wallpaper is present
   get_url:
-    url: 'https://github.com/hoto/home/raw/fedora/.wallpapers/wallpaper.png'
+    url: 'https://i.imgur.com/RWQKEw5.jpg'
     dest: '{{ temp_dir }}/wallpaper.png'
 
 # we could use `dconf dump / | grep -C 5 "/desktop/"`

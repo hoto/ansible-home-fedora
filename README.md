@@ -4,7 +4,7 @@ Playbooks that bootstrap my many fedora laptops so that I can go and sip tea whi
 ### Start
 Generate ssh key:
 
-    ssh-keygen -C <your_email_here>
+    ssh-keygen -o -a 100 -t ed25519 -C $USER@$HOSTNAME
     
 Add ssh key to bitbucket and github.
 
