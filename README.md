@@ -8,7 +8,7 @@ Install ansible and dependencies:
 
 Clone this repo:
 
-    git clone https://github.com/hoto/ansible-home-fedora.git
+    git clone git@bitbucket.org:hoto/ansible-home-fedora.git
 
 Install chrome:
 
@@ -23,21 +23,19 @@ Generate ssh key:
 
     ssh-keygen -C <your_email_here>
     
-Manually run jetbrain software and set desktop and commandline launchers from `Tools` menu:
+Manually run jetbrains software and set desktop and commandline launchers from `Tools` menu:
 
     ./software/webstorm/.../bin/webstorm.sh
     ./software/pycharm/.../bin/pycharm.sh
     ./software/intellij/.../bin/idea.sh
 
 ### You don't want to do this unless you are me
-Setup my home:
+Clone and setup my home:
 
     ansible-playbook home.yml
         
 Add ssh key to github, bitbucket and gitlab.
-Then override git https with ssl remotes:
-
-    ansible-playbook home_ssl.yml
 
 ### TODO:
 - .ideavimrc symlink
+- add shortcuts for jetbrains 

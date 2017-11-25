@@ -1,7 +1,8 @@
 ---
-- name: setups my home
+- name: clones and setups my home
   gather_facts: yes
   hosts: local
 
   roles:
-    - home_https
+    - home
+    - home_private

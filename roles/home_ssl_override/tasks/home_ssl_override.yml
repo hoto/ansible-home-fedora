@@ -1,8 +1,0 @@
----
-- name: set git remote origin to ssl for my repos
-  shell: git remote remove origin && git remote add origin {{ item.origin }}
-  args:
-    chdir: "{{ projects_dir }}/hoto/{{ item.name }}"
-  with_items:
-    - { name: 'home', origin: 'git@github.com:hoto/home.git'}
-    - { name: 'ansible-home-fedora', origin: 'git@github.com:hoto/ansible-home-fedora.git'}
