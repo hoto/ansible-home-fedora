@@ -1,9 +1,10 @@
 # Ansible playbooks for my Fedora 26 laptops
-Playbooks that bootstrap my many fedora laptops so that I can go and sip tea while the ansible is doing all the tedious work.
+Playbooks that bootstrap my many fedora laptops so that I can go and sip yorkshire tea while the ansible is doing all the tedious work.
 
 ### Start
-Generate ssh key:
+Generate ssh keys:
 
+    ssh-keygen -o -a 100 -C $USER@$HOSTNAME
     ssh-keygen -o -a 100 -t ed25519 -C $USER@$HOSTNAME
     
 Add ssh key to bitbucket and github.
@@ -23,7 +24,7 @@ Install chrome:
 Clone and setup my home:
 
     ansible-playbook home.yml
-    
+
 Install software:
 
     ansible-playbook software.yml -K
@@ -35,3 +36,8 @@ Manually run jetbrains software and set desktop and commandline launchers from `
     ./software/webstorm/.../bin/webstorm.sh
     ./software/pycharm/.../bin/pycharm.sh
 
+TODO:
+- create shortcut for all jetbrains programms
+- update symlinks for jetbrains programms
+- download latest jetbrains programs https://www.jetbrains.com/updates/updates.xml
+- fix wallpaper so it does not know what fedora version im using
