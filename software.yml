@@ -45,12 +45,6 @@
     - docker
     - docker_compose
     - vsc
-    - webstorm
-    - java
-    - idea
-    - pycharm
-    - goland
-    - rider
     - vlc
     - gpick
     - spotify
@@ -59,5 +53,12 @@
     - gradle
     - mvn
     - terraform
+    - webstorm
+    - java
+    - idea
+    - pycharm
+    - goland
+    - rider
+    - datagrip
     - gimp
     - atom

@@ -1,0 +1,5 @@
+---
+- import_tasks: datagrip_installer.yml
+  tags:
+  - datagrip
+  - jetbrains

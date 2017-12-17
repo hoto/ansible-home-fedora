@@ -20,7 +20,7 @@ software:
     kops:
       url: 'https://github.com/kubernetes/kops/releases/download/1.5.3/kops-linux-amd64'
   nodejs:
-    config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
+    config_prefix: '{{ home_dir }}/.npm-global/'
   mvn:
     version: '3.5.2'
   terraform:
@@ -30,6 +30,10 @@ software:
   virtualbox:
     version: 'VirtualBox-5.1'
 
+  # Jetbrains
+  datagrip:
+    version: 'datagrip-2017.3.2'
+    config_dir: '.DataGrip2017.3'
   goland:
     version: 'goland-2017.3'
     config_dir: '.GoLand2017.3'

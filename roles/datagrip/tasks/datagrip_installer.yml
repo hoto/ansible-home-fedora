@@ -1,0 +1,10 @@
+---
+- name: datagrip is present
+  include_role:
+    name: generic_jetbrains
+  vars:
+    software_human_name: 'DataGrip'
+    software_name: 'datagrip'
+    software_config_dir: '{{ software.datagrip.config_dir }}'
+    software_version: '{{ software.datagrip.version }}'
+    software_url: 'https://download.jetbrains.com/datagrip/{{ software.datagrip.version }}.tar.gz'
