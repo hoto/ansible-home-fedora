@@ -5,20 +5,25 @@
     state: latest
   become: yes
 
-- name: set gimp home path
-  set_fact:
-    gimp_home: '{{ home_dir }}/.gimp-2.8'
-
-- name: backup existing gimp home
-  synchronize:
-    src: '{{ gimp_home }}/'
-    dest: '{{ gimp_home}}.backup.{{ ansible_date_time.iso8601_micro }}'
-
 - name: clone doctormo/GimpPs repo
   git:
     repo: 'https://github.com/doctormo/GimpPs.git'
     dest: '{{ temp_dir }}/GimpPs'
     depth: 1
+
+- name: set gimp home path
+  set_fact:
+    gimp_home: '{{ home_dir }}/.gimp-2.8'
+
+- name: make sure gimp home exist
+  file:
+    path: '{{ gimp_home }}'
+    state: directory
+
+- name: backup existing gimp home
+  synchronize:
+    src: '{{ gimp_home }}/'
+    dest: '{{ gimp_home }}.backup.{{ ansible_date_time.iso8601_micro }}'
 
 - name: override gimp home directory with doctormo/GimpPs repo
   synchronize:
