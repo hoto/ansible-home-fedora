@@ -1,9 +1,4 @@
 ---
-- name: software bin dir is present
-  file:
-    path: '{{ local_soft_dir }}/bin'
-    state: directory
-
 - name: set install dir
   set_fact:
     install_dir: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
@@ -40,12 +35,15 @@
     set_fact:
       exact_install_dir: '{{ extracted_content.files[0].path }}'
 
-  - name: update symlink to latest version
+  - name: create symlink in /usr/local/bin
     file:
       src: '{{ exact_install_dir }}/bin/{{ software_name }}.sh'
-      dest: '{{ local_soft_dir }}/bin/{{ software_name }}'
+      dest: '/usr/local/bin/{{ software_name }}'
       state: link
       mode: 0644
       force: yes
+    become: yes
 
   when: already_exists.stat.exists == false
+
+
