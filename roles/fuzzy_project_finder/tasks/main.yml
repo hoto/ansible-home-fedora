@@ -1,0 +1,4 @@
+---
+- import_tasks: fuzzy_project_finder_installer.yml
+  tags:
+    - fuzzy_project_finder
