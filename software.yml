@@ -6,6 +6,7 @@
   roles:
     - facts
     - ping
+    - vim
     - lastpass
     - ovpn
     - red_root
@@ -25,7 +26,6 @@
     - tmux
     - iftop
     - ncdu
-    - vim
     - virtualenv
     - pygmentize
     - wallpaper

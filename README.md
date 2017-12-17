@@ -29,17 +29,9 @@ Install software:
 
     ansible-playbook software.yml -K
 
-### Setup jetbrains
-Manually run jetbrains software and set desktop and commandline launchers from `Tools` menu:
-
-    ./software/intellij/.../bin/idea.sh
-    ./software/webstorm/.../bin/webstorm.sh
-    ./software/pycharm/.../bin/pycharm.sh
-
 TODO:
-- create shortcut for all jetbrains programms
-- update symlinks for jetbrains programms
 - download latest jetbrains programs https://www.jetbrains.com/updates/updates.xml
+- clone repositories for jetbrains programs using git
 - fix wallpaper so it does not know what fedora version im using
 - add desktop to explorer bookmarks and remove others /home/andrzej.rehmann/.config/gtk-3.0/bookmars
 - /home/andrzej.rehmann/.config/gtk-3.0/user-dirs.dirs
