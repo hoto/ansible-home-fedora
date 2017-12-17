@@ -3,6 +3,7 @@
   include_role:
     name: generic_jetbrains
   vars:
+    software_human_name: 'Rider'
     software_name: 'rider'
     software_version: '{{ software.rider.version }}'
     software_url: 'https://download.jetbrains.com/resharper/JetBrains.{{ software.rider.version }}.tar.gz'

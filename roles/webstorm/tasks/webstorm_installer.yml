@@ -3,6 +3,7 @@
   include_role:
     name: generic_jetbrains
   vars:
+    software_human_name: 'WebStorm'
     software_name: 'webstorm'
     software_version: '{{ software.webstorm.version }}'
     software_url: 'https://download.jetbrains.com/webstorm/{{ software.webstorm.version }}.tar.gz'

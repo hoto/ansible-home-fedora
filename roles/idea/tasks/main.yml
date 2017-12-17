@@ -1,0 +1,5 @@
+---
+- import_tasks: idea_installer.yml
+  tags:
+  - idea
+  - jetbrains

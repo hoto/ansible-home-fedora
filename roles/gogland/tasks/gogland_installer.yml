@@ -3,6 +3,7 @@
   include_role:
     name: generic_jetbrains
   vars:
+    software_human_name: 'GoLand'
     software_name: 'goland'
     software_version: '{{ software.gogland.version }}'
     software_url: 'https://download.jetbrains.com/go/{{ software.gogland.version }}.tar.gz'

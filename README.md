@@ -41,5 +41,6 @@ TODO:
 - update symlinks for jetbrains programms
 - download latest jetbrains programs https://www.jetbrains.com/updates/updates.xml
 - fix wallpaper so it does not know what fedora version im using
-- add desktop to explorer bookmarks
+- add desktop to explorer bookmarks and remove others /home/andrzej.rehmann/.config/gtk-3.0/bookmars
+- /home/andrzej.rehmann/.config/gtk-3.0/user-dirs.dirs
 - enable night light 
