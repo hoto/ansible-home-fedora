@@ -6,7 +6,7 @@
 - name: 'check current {{ software_version }} installation'
   stat:
     path: '{{ install_dir }}'
-  register: already_exists
+  register: current_installation
 
 - block:
   - name: '{{ software_name }} tar is present'
@@ -49,9 +49,13 @@
       src: entry.desktop
       dest: '/usr/share/applications/{{ software_name }}.desktop'
     become: yes
+    
+  - name: 'settings repository for {{ software_name }} is cloned'
+    git:
+      repo: 'git@bitbucket.org:hoto/{{ software_name }}-settings-repository.git'
+      dest: '{{ home_dir }}/{{ software_config_dir }}/config/settingsRepository/repository'
+      update: no
+      depth: 1
 
-  when: already_exists.stat.exists == false
-
-
-
+  when: current_installation.stat.exists == false
 

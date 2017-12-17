@@ -1,0 +1,10 @@
+---
+- name: goland is present
+  include_role:
+    name: generic_jetbrains
+  vars:
+    software_human_name: 'GoLand'
+    software_name: 'goland'
+    software_config_dir: '{{ software.goland.config_dir }}'
+    software_version: '{{ software.goland.version }}'
+    software_url: 'https://download.jetbrains.com/go/{{ software.goland.version }}.tar.gz'

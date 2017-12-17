@@ -30,7 +30,6 @@ Install software:
     ansible-playbook software.yml -K
 
 TODO:
-- download latest jetbrains programs https://www.jetbrains.com/updates/updates.xml
 - clone repositories for jetbrains programs using git
 - fix wallpaper so it does not know what fedora version im using
 - add desktop to explorer bookmarks and remove others /home/andrzej.rehmann/.config/gtk-3.0/bookmars

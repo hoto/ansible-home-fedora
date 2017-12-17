@@ -12,12 +12,8 @@ virtualenv:
 software:
   docker_compose:
     version: '1.17.1'
-  gogland:
-    version: 'goland-2017.3'
   gradle:
     version: '4.3.1'
-  intellij:
-    version: 'ideaIC-2017.3.1'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
@@ -27,15 +23,25 @@ software:
     config_prefix: '{{ home_dir }}/.npm-global/'   # directory for global installations, so it does not require sudo to install
   mvn:
     version: '3.5.2'
-  pycharm:
-    version: 'pycharm-community-2017.3.1'
-  rider:
-    version: 'Rider-2017.2.1'
   terraform:
     url: 'https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.1'
+
+  goland:
+    version: 'goland-2017.3'
+    config_dir: '.GoLand2017.3'
+  idea:
+    version: 'ideaIC-2017.3.1'
+    config_dir: '.IdeaIC2017.3'
+  pycharm:
+    version: 'pycharm-community-2017.3.1'
+    config_dir: '.PyCharmCE2017.3'
+  rider:
+    version: 'Rider-2017.2.1'
+    config_dir: '.Rider2017.2'
   webstorm:
     version: 'WebStorm-2017.3.1'
+    config_dir: '.WebStorm2017.3'

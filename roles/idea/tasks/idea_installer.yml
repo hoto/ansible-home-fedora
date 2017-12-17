@@ -5,5 +5,6 @@
   vars:
     software_human_name: 'IntelliJ IDEA'
     software_name: 'idea'
-    software_version: '{{ software.intellij.version }}'
+    software_config_dir: '{{ software.idea.config_dir }}'
+    software_version: '{{ software.idea.version }}'
     software_url: 'https://download.jetbrains.com/idea/{{ software.intellij.version }}.tar.gz'
