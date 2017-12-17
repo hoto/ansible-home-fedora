@@ -7,6 +7,7 @@
     - facts
     - ping
     - lastpass
+    - ovpn
     - red_root
     - keybindings
     - caps_to_escape

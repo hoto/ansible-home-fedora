@@ -1,0 +1,4 @@
+---
+- import_tasks: ovpn_installer.yml
+  tags:
+    - ovpn

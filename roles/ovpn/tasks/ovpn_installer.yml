@@ -1,0 +1,23 @@
+---
+- name: vpn config is present
+  get_url:
+    url: 'https://files.ovpn.com/fedora/ovpn-de-tcp.zip'
+    dest: '/tmp/ovpn-de-tcp.zip'
+
+- name: tmp vpn config exists
+  file:
+    path: '/tmp/ovpn-de-tcp'
+    state: directory
+
+- name: vpn config is unzipped
+  unarchive:
+    src: '/tmp/ovpn-de-tcp.zip'
+    dest: '/tmp/ovpn-de-tcp'
+    remote_src: yes
+
+- name: vpn configs are present
+  copy:
+    src: '/tmp/ovpn-de-tcp/config/'
+    dest: '/etc/openvpn/'
+  become: yes
+
