@@ -5,3 +5,9 @@
     state: "directory"
     owner: "{{ user }}"
     group: "{{ group }}"
+
+- name: software bin dir is present
+  file:
+    path: '{{ local_soft_dir }}/bin'
+    state: directory
+

@@ -2,8 +2,3 @@
   - import_tasks: increase_inotify.yml
     tags:
     - inotify
-    - configuration
-    - installation
-    - jetbrains
-    - webstorm
-    - pycharm

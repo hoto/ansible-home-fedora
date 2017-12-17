@@ -2,5 +2,4 @@
 - import_tasks: pycharm_installer.yml
   tags:
   - pycharm
-  - installation
   - jetbrains

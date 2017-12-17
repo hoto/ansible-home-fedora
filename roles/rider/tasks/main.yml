@@ -2,3 +2,4 @@
 - import_tasks: rider_installer.yml
   tags:
   - rider
+  - jetbrains

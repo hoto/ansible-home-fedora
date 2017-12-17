@@ -1,8 +1,17 @@
 ---
-- name: '{{ software_name }} already exist'
+- name: software bin dir is present
+  file:
+    path: '{{ local_soft_dir }}/bin'
+    state: directory
+
+- name: set install dir
+  set_fact:
+    install_dir: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
+
+- name: 'check current {{ software_version }} installation'
   stat:
-    path: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
-  register: sofware_installation_dir
+    path: '{{ install_dir }}'
+  register: already_exists
 
 - block:
   - name: '{{ software_name }} tar is present'
@@ -12,12 +21,31 @@
 
   - name: '{{ software_name }} folder is present'
     file:
-      path: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}'
+      path: '{{ install_dir }}'
       state: directory
 
   - name: '{{ software_name }} archive is unarchived'
     unarchive:
       src: '{{ temp_dir }}/{{ software_version }}.tar.gz'
-      dest: '{{ local_soft_dir }}/{{ software_name }}/{{ software_version }}/'
+      dest: '{{ install_dir }}/'
 
-  when: sofware_installation_dir.stat.exists == false
+  - name: find extracted folder name
+    find:
+      paths: '{{ install_dir }}'
+      file_type: directory
+      recurse: no
+    register: extracted_content
+
+  - name: set exact install dir
+    set_fact:
+      exact_install_dir: '{{ extracted_content.files[0].path }}'
+
+  - name: update symlink to latest version
+    file:
+      src: '{{ exact_install_dir }}/bin/{{ software_name }}.sh'
+      dest: '{{ local_soft_dir }}/bin/{{ software_name }}'
+      state: link
+      mode: 0644
+      force: yes
+
+  when: already_exists.stat.exists == false

@@ -3,6 +3,6 @@
   include_role:
     name: generic_jetbrains
   vars:
-    software_name: 'intellij'
+    software_name: 'idea'
     software_version: '{{ software.intellij.version }}'
     software_url: 'https://download.jetbrains.com/idea/{{ software.intellij.version }}.tar.gz'
