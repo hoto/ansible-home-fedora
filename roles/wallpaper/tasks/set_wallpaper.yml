@@ -5,12 +5,12 @@
     dest: '{{ temp_dir }}/wallpaper.png'
 
 # we could use `dconf dump / | grep -C 5 "/desktop/"`
-# cat /usr/share/backgrounds/f26/default/f26.xml
+# cat /usr/share/backgrounds/f27/default/f27.xml
 - name: default wallpaper is overwritten with my own
   copy:
     src: '{{ temp_dir }}/wallpaper.png'
     dest: '{{ item }}'
   with_items:
-    - '/usr/share/backgrounds/f26/default/tv-wide/f26.png'
-    - '/usr/share/backgrounds/f26/default/wide/f26.png'
+    - '/usr/share/backgrounds/f27/default/tv-wide/f27.png'
+    - '/usr/share/backgrounds/f27/default/wide/f27.png'
   become: yes
