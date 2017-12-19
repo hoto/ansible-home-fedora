@@ -1,0 +1,4 @@
+---
+- import_tasks: mc_installer.yml
+  tags:
+    - mc

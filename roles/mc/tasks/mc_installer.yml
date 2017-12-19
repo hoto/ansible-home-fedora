@@ -1,0 +1,6 @@
+---
+- name: mc is present
+  dnf:
+    name: mc
+    state: latest
+  become: yes
