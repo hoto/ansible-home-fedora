@@ -28,7 +28,7 @@ software:
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm'
   virtualbox:
-    version: 'VirtualBox-5.1'
+    version: 'VirtualBox-5.2'
 
   # Jetbrains
   datagrip:

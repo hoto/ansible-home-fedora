@@ -34,7 +34,7 @@
 
 - name: VirtualBox is present
   dnf:
-    name: 'VirtualBox-5.1'
+    name: '{{ software.virtualbox.version }}'
     state: latest
   become: yes
 
