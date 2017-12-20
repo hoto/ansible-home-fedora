@@ -52,7 +52,7 @@
     dest: '{{ temp_dir }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack'
 
 - name: Install Extension Pack
-  shell: vboxmanage extpack install {{ temp_dir }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack
+  shell: yes | vboxmanage extpack install {{ temp_dir }}/Oracle_VM_VirtualBox_Extension_Pack-{{ vbox_version.stdout }}.vbox-extpack
   become: yes
 
 - name: Add my user to vbox group (this is needed e.g. for sharing USB devices)
