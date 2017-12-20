@@ -1,8 +1,14 @@
+# you will need to log off to apply those changes
 ---
 - name: user-dirs.dirs are setup
   copy:
     src: user-dirs.dirs
     dest: '{{ home_dir }}/.config/user-dirs.dirs'
+
+- name: user-dirs.conf is setup
+  copy:
+    src: user-dirs.conf
+    dest: '{{ home_dir }}/.config/user-dirs.conf'
 
 - name: bookmarks are setup
   copy:
