@@ -1,0 +1,4 @@
+---
+- import_tasks: bookmarks.yml
+  tags:
+    - bookmarks

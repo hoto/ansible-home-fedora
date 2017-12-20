@@ -1,0 +1,10 @@
+---
+- name: user-dirs.dirs are setup
+  copy:
+    src: user-dirs.dirs
+    dest: '{{ home_dir }}/.config/user-dirs.dirs'
+
+- name: bookmarks are setup
+  copy:
+    src: bookmarks
+    dest: '{{ home_dir }}/.config/gtk-3.0/bookmarks'
