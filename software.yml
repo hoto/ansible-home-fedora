@@ -6,6 +6,7 @@
   roles:
     - facts
     - ping
+    - remove_folders
     - vim
     - lastpass
     - ovpn

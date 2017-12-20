@@ -1,0 +1,11 @@
+---
+- name: remove unused folders from home directory
+  file:
+    path: '{{ home_dir }}/{{ item }}'
+    state: absent
+  with_items:
+    - Documents
+    - Music
+    - Public
+    - Templates
+    - Videos

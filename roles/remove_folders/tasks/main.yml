@@ -1,0 +1,4 @@
+---
+- import_tasks: remove_folders.yml
+  tags:
+    - remove_folders
