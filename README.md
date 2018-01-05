@@ -34,3 +34,4 @@ TODO:
 - add desktop to explorer bookmarks and remove others /home/andrzej.rehmann/.config/gtk-3.0/bookmars
 - /home/andrzej.rehmann/.config/gtk-3.0/user-dirs.dirs
 - enable night light 
+- install slack app
