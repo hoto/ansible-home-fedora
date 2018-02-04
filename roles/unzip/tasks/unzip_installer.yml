@@ -1,6 +1,13 @@
 ---
-- name: unzip is present
-  dnf:
+- name: unzip is present [fedora]
+  homebrew:
     name: unzip
     state: latest
   become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: unzip is present [mac]
+  homebrew:
+    name: unzip
+    state: latest
+  when: ansible_os_family == 'Darwin'
