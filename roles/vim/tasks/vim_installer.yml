@@ -1,11 +1,12 @@
 ---
-- name: Vim is installed
-  dnf: 
+- name: vim is installed
+  dnf:
     name: vim-enhanced
     state: latest
   become: yes
+  when: ansible_os_family == 'RedHat'
 
-- name: Vundle repo is cloned to vim bundle directory
+- name: vundle repo is cloned to vim bundle directory
   git: 
     repo: "https://github.com/VundleVim/Vundle.vim.git"
     accept_hostkey: yes

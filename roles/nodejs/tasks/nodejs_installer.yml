@@ -6,7 +6,7 @@
   become: yes
   when: ansible_os_family == 'RedHat'
 
-- name: node and npm is present [macos]
+- name: node and npm is present [mac]
   homebrew:
     name: nodejs
     state: latest
