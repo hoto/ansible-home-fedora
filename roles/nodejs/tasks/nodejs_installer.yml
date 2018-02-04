@@ -1,13 +1,20 @@
 ---
-- name: Nodejs and npm is present
+- name: node and npm is present [fedora]
   dnf:
     name: nodejs
     state: latest
   become: yes
+  when: ansible_os_family == 'RedHat'
 
-- name: Set npm global save directory
+- name: node and npm is present [macos]
+  homebrew:
+    name: nodejs
+    state: latest
+  when: ansible_os_family == 'Darwin'
+
+- name: set npm global save directory
   command: npm config set prefix {{ software.nodejs.config_prefix }} --global
   become: yes
 
-- name: Force saving exact versions
+- name: force saving exact versions
   command: npm config set save-exact=true
