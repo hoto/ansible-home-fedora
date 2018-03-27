@@ -39,8 +39,8 @@ software:
     version: 'goland-2017.3'
     config_dir: '.GoLand2017.3'
   idea:
-    version: 'ideaIC-2017.3.1'
-    config_dir: '.IdeaIC2017.3'
+    version: 'ideaIC-2018.1'
+    config_dir: '.IdeaIC2018.1'
   pycharm:
     version: 'pycharm-community-2017.3.1'
     config_dir: '.PyCharmCE2017.3'
@@ -51,5 +51,5 @@ software:
     version: 'RubyMine-2017.3'
     config_dir: '.RubyMine2017.3'
   webstorm:
-    version: 'WebStorm-2017.3.1'
-    config_dir: '.WebStorm2017.3'
+    version: 'WebStorm-2018.1'
+    config_dir: '.WebStorm2018.1'
