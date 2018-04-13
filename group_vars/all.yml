@@ -12,7 +12,7 @@ virtualenv:
 
 software:
   docker_compose:
-    version: '1.20.1'
+    version: '1.21.0'
   gradle:
     version: '4.3.1'
   kubernetes:
@@ -42,8 +42,8 @@ software:
     version: 'ideaIC-2018.1'
     config_dir: '.IdeaIC2018.1'
   pycharm:
-    version: 'pycharm-community-2017.3.1'
-    config_dir: '.PyCharmCE2017.3'
+    version: 'pycharm-community-2018.1.1'
+    config_dir: '.PyCharmCE2018.1'
   rider:
     version: 'Rider-2017.2.1'
     config_dir: '.Rider2017.2'
