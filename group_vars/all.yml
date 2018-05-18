@@ -27,7 +27,7 @@ software:
   terraform:
     url: 'https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_linux_amd64.zip'
   vagrant:
-    url: 'https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm'
+    url: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.2'
 
