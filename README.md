@@ -37,3 +37,4 @@ TODO:
 - install slack app
 - showing icons on desktop does not work for fedora 28 anymore, fix it
 - change the  initial login fedora icon to text https://fedoramagazine.org/howto-change-the-plymouth-theme/
+- symlinks for desktop and downloads
