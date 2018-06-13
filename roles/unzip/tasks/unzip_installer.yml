@@ -1,6 +1,6 @@
 ---
 - name: unzip is present [fedora]
-  homebrew:
+  dnf:
     name: unzip
     state: latest
   become: yes

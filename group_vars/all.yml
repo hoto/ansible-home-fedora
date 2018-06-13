@@ -12,7 +12,7 @@ virtualenv:
 
 software:
   docker_compose:
-    version: '1.21.0'
+    version: '1.21.2'
   gradle:
     version: '4.7'
   kubernetes:
@@ -23,9 +23,9 @@ software:
   nodejs:
     config_prefix: '{{ home_dir }}/.npm-global/'
   mvn:
-    version: '3.5.2'
+    version: '3.5.3'
   terraform:
-    url: 'https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_linux_amd64.zip'
+    url: 'https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
   virtualbox:
@@ -33,23 +33,23 @@ software:
 
   # Jetbrains
   datagrip:
-    version: 'datagrip-2017.3.2'
-    config_dir: '.DataGrip2017.3'
+    version: 'datagrip-2018.1.4'
+    config_dir: '.DataGrip2018.1'
   goland:
     version: 'goland-2017.3'
     config_dir: '.GoLand2017.3'
   idea:
-    version: 'ideaIC-2018.1'
+    version: 'ideaIC-2018.1.4'
     config_dir: '.IdeaIC2018.1'
   pycharm:
-    version: 'pycharm-community-2018.1.1'
+    version: 'pycharm-community-2018.1.4'
     config_dir: '.PyCharmCE2018.1'
   rider:
-    version: 'Rider-2017.2.1'
-    config_dir: '.Rider2017.2'
+    version: 'Rider-2018.1.4'
+    config_dir: '.Rider2018.1'
   rubymine:
-    version: 'RubyMine-2017.3'
-    config_dir: '.RubyMine2017.3'
+    version: 'RubyMine-2018.1.4'
+    config_dir: '.RubyMine2018.1'
   webstorm:
-    version: 'WebStorm-2018.1'
+    version: 'WebStorm-2018.1.4'
     config_dir: '.WebStorm2018.1'

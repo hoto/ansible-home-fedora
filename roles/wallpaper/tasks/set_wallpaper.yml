@@ -2,7 +2,7 @@
 - name: my wallpaper is present
   get_url:
     url: 'https://i.imgur.com/RWQKEw5.jpg'
-    dest: '{{ temp_dir }}/wallpaper.jpg'
+    dest: '{{ temp_dir }}/wallpaper.png'
 
 # we could use `dconf dump / | grep -C 5 "/desktop/"`
 # cat /usr/share/backgrounds/f27/default/f27.xml
@@ -11,6 +11,6 @@
     src: '{{ temp_dir }}/wallpaper.png'
     dest: '{{ item }}'
   with_items:
-    - '/usr/share/backgrounds/f27/default/tv-wide/f27.jpg'
-    - '/usr/share/backgrounds/f27/default/wide/f27.jpg'
+    - '/usr/share/backgrounds/f28/default/tv-wide/f28.png'
+    - '/usr/share/backgrounds/f28/default/wide/f28.png'
   become: yes

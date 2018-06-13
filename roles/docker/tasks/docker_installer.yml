@@ -19,13 +19,6 @@
   register: docker_installation
   become: yes
 
-- name: docker storage setup service is masked, it's not needed with zfs
-  service:
-    name: docker-storage-setup
-    state: stopped
-    masked: yes
-  become: yes
-
 - name: restart docker service if installation changed
   service:
     name: docker

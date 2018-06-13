@@ -47,7 +47,7 @@
     - gitk
     - docker
     - docker_compose
-    - vsc
+    #- vsc
     - vlc
     - gpick
     - spotify
@@ -59,12 +59,12 @@
     - webstorm
     - java
     - idea
-    - pycharm
-    - goland
-    - rider
-    - datagrip
-    - rubymine
+      #- pycharm
+      #- goland
+      #- rider
+      #- datagrip
+      #- rubymine
     - gimp
-    - atom
-    - vagrant
-    - virtualbox
+      #- atom
+      #- vagrant
+      #- virtualbox
