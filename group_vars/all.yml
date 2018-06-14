@@ -39,7 +39,7 @@ software:
     version: 'goland-2017.3'
     config_dir: '.GoLand2017.3'
   idea:
-    version: 'ideaIC-2018.1.4'
+    version: 'ideaIC-2018.1.5'
     config_dir: '.IdeaIC2018.1'
   pycharm:
     version: 'pycharm-community-2018.1.4'
