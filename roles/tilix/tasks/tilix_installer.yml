@@ -1,11 +1,5 @@
 ---
 # https://github.com/gnunn1/tilix
-- name: tilix repo is added
-  copy:
-    src: heikoada-terminix.repo
-    dest: /etc/yum.repos.d/heikoada-terminix.repo
-  become: yes
-
 - name: tilix is present
   dnf:
     name: tilix
