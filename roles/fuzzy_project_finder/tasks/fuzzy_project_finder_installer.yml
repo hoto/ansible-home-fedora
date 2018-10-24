@@ -4,11 +4,6 @@
     path: '{{ home_dir }}/.fuzzy-project-finder'
     state: directory
 
-- name: fuzzy-project-finder config folder is created
-  file:
-    path: '{{ home_dir }}/.fuzzy-project-finder'
-    state: directory
-
 - name: hoto/fuzzy-project-finder is present
   npm:
     name: fuzzy-project-finder

@@ -51,5 +51,5 @@ software:
     version: 'RubyMine-2018.1.4'
     config_dir: '.RubyMine2018.1'
   webstorm:
-    version: 'WebStorm-2018.1.4'
-    config_dir: '.WebStorm2018.1'
+    version: 'WebStorm-2018.2.3'
+    config_dir: '.WebStorm2018.2'
