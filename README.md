@@ -11,7 +11,7 @@ Add ssh key to bitbucket and github.
 
 Clone this repo:
 
-    git clone git@bitbucket.org:hoto/ansible-home-fedora.git
+    git clone git@github.com:hoto/ansible-home-fedora.git
 
 Install ansible and dependencies:
 
