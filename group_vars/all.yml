@@ -42,8 +42,8 @@ software:
     version: 'ideaIC-2018.1.5'
     config_dir: '.IdeaIC2018.1'
   idea_ultimate:
-    version: 'ideaIU-2018.2.6'
-    config_dir: '.IdeaIC2018.2'
+    version: 'ideaIU-2018.3'
+    config_dir: '.IdeaIC2018.3'
   pycharm:
     version: 'pycharm-community-2018.1.4'
     config_dir: '.PyCharmCE2018.1'
