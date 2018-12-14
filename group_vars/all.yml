@@ -11,8 +11,6 @@ virtualenv:
   envs_dir: '{{ home_dir }}/envs'
 
 software:
-  gradle:
-    version: '4.10.2'
   kubernetes:
     minikube:
       url: 'https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64'
@@ -20,14 +18,13 @@ software:
       url: 'https://github.com/kubernetes/kops/releases/download/1.5.3/kops-linux-amd64'
   nodejs:
     config_prefix: '{{ home_dir }}/.npm-global/'
-  mvn:
-    version: '3.6.0'
   terraform:
     url: 'https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.2'
+
   datagrip:
     version: 'datagrip-2018.1.4'
     config_dir: '.DataGrip2018.1'

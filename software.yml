@@ -47,7 +47,7 @@
     - docker
     - docker_compose
     - gpick
-    - peek
+      #- peek # broken, use flatpack
     - fuse_exfat
     - terraform
     - sdkman

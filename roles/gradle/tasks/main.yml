@@ -1,4 +1,0 @@
----
-- import_tasks: gradle_installer.yml
-  tags:
-  - gradle

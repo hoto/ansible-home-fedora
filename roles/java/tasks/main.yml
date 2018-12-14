@@ -1,4 +1,0 @@
----
-- import_tasks: java_installer.yml
-  tags:
-    - java

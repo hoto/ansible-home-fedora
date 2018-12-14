@@ -1,4 +1,0 @@
----
-- import_tasks: mvn_installer.yml
-  tags:
-  - mvn
