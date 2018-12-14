@@ -25,7 +25,7 @@ software:
   mvn:
     version: '3.6.0'
   terraform:
-    url: 'https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip'
+    url: 'https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip'
   vagrant:
     url: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
   virtualbox:
@@ -39,11 +39,11 @@ software:
     version: 'goland-2017.3'
     config_dir: '.GoLand2017.3'
   idea:
-    version: 'ideaIC-2018.1.5'
-    config_dir: '.IdeaIC2018.1'
-  idea_ultimate:
-    version: 'ideaIU-2018.3'
+    version: 'ideaIC-2018.3.1'
     config_dir: '.IdeaIC2018.3'
+  idea_ultimate:
+    version: 'ideaIU-2018.3.1'
+    config_dir: '.IntelliJIdea2018.3'
   pycharm:
     version: 'pycharm-community-2018.1.4'
     config_dir: '.PyCharmCE2018.1'
