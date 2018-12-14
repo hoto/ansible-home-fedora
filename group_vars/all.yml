@@ -11,8 +11,6 @@ virtualenv:
   envs_dir: '{{ home_dir }}/envs'
 
 software:
-  docker_compose:
-    version: '1.21.2'
   gradle:
     version: '4.10.2'
   kubernetes:

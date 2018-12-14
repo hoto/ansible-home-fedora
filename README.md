@@ -38,11 +38,5 @@ Install software:
     ansible-playbook software.yml -K
 
 TODO:
-- add desktop to explorer bookmarks and remove others /home/andrzej.rehmann/.config/gtk-3.0/bookmars
-- /home/andrzej.rehmann/.config/gtk-3.0/user-dirs.dirs
 - enable night light 
-- install slack app
-- showing icons on desktop does not work for fedora 28 anymore, fix it
-- change the  initial login fedora icon to text https://fedoramagazine.org/howto-change-the-plymouth-theme/
-- symlinks for desktop and downloads
 - add automatic build for testing installation of the software

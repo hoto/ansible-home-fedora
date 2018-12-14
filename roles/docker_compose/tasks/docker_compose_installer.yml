@@ -1,7 +1,18 @@
 ---
+- name: get latest release number
+  uri:
+    url: "https://api.github.com/repos/docker/compose/releases/latest"
+    method: GET
+    status_code: 200
+    timeout: 10
+  register: releases
+
+- set_fact:
+    binary_url: "{{ releases.json | json_query('assets[?name==`docker-compose-Linux-x86_64`].browser_download_url | [0]') }}"
+
 - name: Docker Compose is present
   get_url:
-    url: 'https://github.com/docker/compose/releases/download/{{ software.docker_compose.version }}/docker-compose-Linux-x86_64'
+    url: '{{ binary_url }}'
     dest: '/usr/local/bin/docker-compose'
   become: yes
 
