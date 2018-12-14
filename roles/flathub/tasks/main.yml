@@ -1,0 +1,3 @@
+---
+- include: flathub_installer.yml
+  tags: flathub

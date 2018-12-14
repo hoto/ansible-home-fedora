@@ -10,9 +10,3 @@
   shell: bash install.sh
   args:
     chdir: "{{ temp_dir }}/powerline-fonts/"
-  register: result
-
-- name: Show script result
-  debug:
-      var: result
-

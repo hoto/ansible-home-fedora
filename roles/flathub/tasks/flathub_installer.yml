@@ -1,0 +1,9 @@
+---
+# this is broken as of today but was fixed in latest ansible which i don't have yet
+- name: enable flathub repository
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
+  become: true
