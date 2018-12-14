@@ -1,0 +1,4 @@
+---
+- import_tasks: oh_my_zsh_installer.yml
+  tags:
+    - oh_my_zsh

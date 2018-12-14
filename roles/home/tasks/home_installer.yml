@@ -1,10 +1,10 @@
 ---
-- name: my home repo is cloned
-  git: 
-    repo: git@github.com:hoto/home.git
-    accept_hostkey: yes
-    update: yes
-    dest: "{{ projects_dir }}/hoto/home"
+#- name: my home repo is cloned
+#  git:
+#    repo: git@github.com:hoto/home.git
+#    accept_hostkey: yes
+#    update: yes
+#    dest: "{{ projects_dir }}/hoto/home"
 
 - name: folders for my configs are present
   file:
@@ -41,16 +41,18 @@
     - .bash/git-aware-prompt/prompt.sh
     - .bash/ps1.sh
     - .bashrc
+    - .config/Code/User/settings.json
     - .config/autostart/ignore-lid-switch-tweak.desktop
     - .config/autostart/setxkbmap.desktop
-    - .config/Code/User/settings.json
     - .config/terminix/schemes/terminix-dark.json
     - .gitattributes
-    - .gitignore_global
     - .gitconfig
+    - .gitignore_global
     - .ideavimrc
+    - .profile
     - .screenrc
+    - .tmux.conf
     - .vim/plugin/vagrant.vim
     - .vim/snippets/javascript.snippets
     - .vimrc
-    - .tmux.conf
+    - .zshrc

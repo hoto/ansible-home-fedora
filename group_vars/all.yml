@@ -1,11 +1,11 @@
 ---
-user: '{{ ansible_user_id }}'              # your user
-group: '{{ user }}'                        # your user's primary group
-home: "{{ '/home' if ansible_os_family == 'RedHat' else'/Users' }}"
-home_dir: '{{ home }}/{{ user }}'          # your user's homedir
-projects_dir: '{{ home_dir }}/projects'    # folder with your (git) projects
-local_soft_dir: '{{ home_dir }}/software'  # where to save local installations of software (webstorm, pycharm etc.)
-temp_dir: '/tmp'                           # temporary dir for downoaded files
+user: '{{ ansible_user_id }}'
+group: '{{ user }}'
+home: "{{ '/home' if ansible_os_family == 'RedHat' else'/Users' }}" # fedora or mac
+home_dir: '{{ home }}/{{ user }}'
+projects_dir: '{{ home_dir }}/projects'
+local_soft_dir: '{{ home_dir }}/software'
+temp_dir: '/tmp'
 
 virtualenv:
   envs_dir: '{{ home_dir }}/envs'
@@ -28,8 +28,6 @@ software:
     url: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
   virtualbox:
     version: 'VirtualBox-5.2'
-
-  # Jetbrains
   datagrip:
     version: 'datagrip-2018.1.4'
     config_dir: '.DataGrip2018.1'

@@ -1,0 +1,16 @@
+---
+- name: oh-my-zsh repo is cloned
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: '{{home_dir}}/.oh-my-zsh'
+
+- name: zsh is installed
+  dnf:
+    name: zsh
+    state: latest
+  become: yes
+
+- name: set zsh as default shell
+  command: usermod -s /usr/bin/zsh {{ user }}
+  become: yes
+

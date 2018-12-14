@@ -40,3 +40,8 @@ Install software:
 TODO:
 - enable night light 
 - add automatic build for testing installation of the software
+- zsh and oh-my-zsh configs as aliases
+- load return code script in oh-my-zsh
+- disable animations from gnome tweaks (for speed)
+- clone all my github repos
+- install slack using flackpack
