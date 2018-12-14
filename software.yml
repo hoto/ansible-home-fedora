@@ -38,7 +38,6 @@
     - nodejs
     - nvm
     - oh_my_zsh
-    - sdkman
     - fuzzy_project_finder
     - yarn
     - gr
@@ -51,6 +50,8 @@
     - peek
     - fuse_exfat
     - terraform
+    - sdkman
+    - sdkman_packages
     - idea
       #- webstorm
       #- pycharm
@@ -60,9 +61,9 @@
       #- rubymine
     - gimp
       #- atom
+      #- vsc
       #- vagrant
       #- virtualbox
-      #- vsc
     - slack
     - spotify
     - vlc

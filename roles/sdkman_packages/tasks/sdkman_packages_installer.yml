@@ -1,0 +1,10 @@
+---
+- name: install packages
+  command: bash -lc "sdk install {{ item }}"
+  with_items:
+    - groovy
+    - kotlin
+    - gradle
+    - maven
+    - java 8.0.191-oracle
+
