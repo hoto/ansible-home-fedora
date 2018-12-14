@@ -3,6 +3,7 @@
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
     dest: '{{home_dir}}/.oh-my-zsh'
+    depth: 1
 
 - name: zsh is installed
   dnf:
@@ -14,3 +15,7 @@
   command: usermod -s /usr/bin/zsh {{ user }}
   become: yes
 
+- name: bullet-train theme is present
+  get_url:
+    url: 'http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme'
+    dest: '{{ home_dir }}/.oh-my-zsh/custom/themes/bullet-train.zsh-theme'
