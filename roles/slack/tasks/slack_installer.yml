@@ -1,0 +1,11 @@
+---
+- name: slack rpm is present
+  get_url:
+    url: "https://downloads.slack-edge.com/linux_releases/slack-3.3.3-0.1.fc21.x86_64.rpm"
+    dest: "{{ temp_dir }}/slack.rpm"
+
+- name: slack is installed
+  dnf:
+    name: "{{ temp_dir }}/slack.rpm"
+  become: yes
+
