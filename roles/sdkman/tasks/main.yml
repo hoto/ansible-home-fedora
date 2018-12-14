@@ -1,0 +1,4 @@
+---
+- import_tasks: sdkman_installer.yml
+  tags:
+    - sdkman

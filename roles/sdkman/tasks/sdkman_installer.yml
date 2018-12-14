@@ -1,0 +1,16 @@
+---
+- name: sdkman is installed
+  get_url:
+    url: "https://get.sdkman.io"
+    dest: "{{ temp_dir }}/sdkman_install.sh"
+    mode: 0775
+
+- name: sdkman is installed
+  script: "{{ temp_dir }}/sdkman_install.sh"
+  args:
+    executable: '/bin/bash'
+
+- name: init sdkman
+  script: "{{ home_dir }}/.sdkman/bin/sdkman-init.sh"
+  args:
+    executable: '/bin/bash'

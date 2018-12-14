@@ -45,3 +45,5 @@ TODO:
 - disable animations from gnome tweaks (for speed)
 - clone all my github repos
 - install slack using flackpack
+- fix hstr on zsh
+- configure bullet-train colors https://github.com/caiogondim/bullet-train.zsh
