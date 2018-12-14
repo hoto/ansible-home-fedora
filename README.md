@@ -38,12 +38,11 @@ Install software:
     ansible-playbook software.yml -K
 
 TODO:
-- enable night light 
-- add automatic build for testing installation of the software
-- zsh and oh-my-zsh configs as aliases
-- load return code script in oh-my-zsh
-- disable animations from gnome tweaks (for speed)
+- configure bullet-train colors https://github.com/caiogondim/bullet-train.zsh
+- fix hstr on zsh
 - clone all my github repos
 - install slack using flackpack
-- fix hstr on zsh
-- configure bullet-train colors https://github.com/caiogondim/bullet-train.zsh
+- enable night light 
+- load return code script in oh-my-zsh
+- disable animations from gnome tweaks (for speed)
+- add automatic build for testing installation of the software
