@@ -47,9 +47,9 @@
     - docker
     - docker_compose
     - gpick
-      #- peek # broken, use flatpack
+      #- peek # TODO: broken, use flatpack
     - fuse_exfat
-    - terraform
+    - terraform # TODO: get latest version using API
     - sdkman
     - sdkman_packages
     - idea
