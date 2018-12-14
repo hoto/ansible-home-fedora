@@ -10,13 +10,11 @@
     - bookmarks
     - vim
     - lastpass
-    - ovpn
     - red_root
     - mc
     - keybindings
     - caps_to_escape
     - show_minimize_button
-    - show_icons_on_desktop
     - enable_fedora_extensions
     - disable_suspend_on_lid_close
     - top_bar_show_date
@@ -39,6 +37,8 @@
     - tilix
     - nodejs
     - nvm
+    - oh_my_zsh
+    - sdkman
     - fuzzy_project_finder
     - yarn
     - gr
@@ -47,18 +47,12 @@
     - gitk
     - docker
     - docker_compose
-    #- vsc
-    - vlc
     - gpick
-    - spotify
     - peek
     - fuse_exfat
-    - gradle
-    - mvn
     - terraform
-    - webstorm
-    - java
     - idea
+      #- webstorm
       #- pycharm
       #- goland
       #- rider
@@ -68,3 +62,7 @@
       #- atom
       #- vagrant
       #- virtualbox
+      #- vsc
+    - slack
+    - spotify
+    - vlc

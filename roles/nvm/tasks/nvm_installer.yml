@@ -1,9 +1,4 @@
 ---
 - name: nvm is present
-  shell: wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-  register: result
-
-- name: show script result
-  debug:
-      var: result
+  shell: wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
