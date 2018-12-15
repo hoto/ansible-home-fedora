@@ -18,6 +18,7 @@
     - enable_fedora_extensions
     - disable_suspend_on_lid_close
     - top_bar_show_date
+    - disable_animations
     - hstr
     - ack
     - htop

@@ -1,0 +1,4 @@
+---
+- import_tasks: disable_animations.yml
+  tags:
+    - disable_animations

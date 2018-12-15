@@ -1,0 +1,4 @@
+# Start: `gnome-tweaks -v` then check terminal output for values
+---
+- name: disable animations
+  shell: gsettings set org.gnome.desktop.interface enable-animations false

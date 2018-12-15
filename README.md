@@ -40,5 +40,4 @@ Install software:
 TODO:
 - install slack using flackpack
 - enable night light 
-- disable animations from gnome tweaks (for speed)
 - add automatic build for testing installation of the software
