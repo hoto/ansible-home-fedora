@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name={{ software_human_name }}
-GenericName=Jetbrains {{ software_human_name }}
-Exec={{ software_name }}
-Icon={{ software_bin_dir }}/{{ software_name }}.png
-Type=Application
-Terminal=false

@@ -52,19 +52,10 @@
     - vagrant
     - sdkman
     - sdkman_packages
-    - idea
-    #- webstorm
-    #- pycharm
-    #- goland
-    #- rider
-    #- datagrip
-    #- rubymine
     - gimp
-    #- atom
-    #- vsc
     #- virtualbox
-    #- peek # TODO: broken, use flatpack
-    #- flathub
+    #- peek # TODO: flathub is broken
+    #- flathub # TODO: broken as of today
     - slack
     - spotify
     - vlc

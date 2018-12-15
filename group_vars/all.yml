@@ -20,28 +20,3 @@ software:
     config_prefix: '{{ home_dir }}/.npm-global/'
   virtualbox:
     version: 'VirtualBox-5.2'
-
-  datagrip:
-    version: 'datagrip-2018.1.4'
-    config_dir: '.DataGrip2018.1'
-  goland:
-    version: 'goland-2017.3'
-    config_dir: '.GoLand2017.3'
-  idea:
-    version: 'ideaIC-2018.3.1'
-    config_dir: '.IdeaIC2018.3'
-  idea_ultimate:
-    version: 'ideaIU-2018.3.1'
-    config_dir: '.IntelliJIdea2018.3'
-  pycharm:
-    version: 'pycharm-community-2018.1.4'
-    config_dir: '.PyCharmCE2018.1'
-  rider:
-    version: 'Rider-2018.1.4'
-    config_dir: '.Rider2018.1'
-  rubymine:
-    version: 'RubyMine-2018.1.4'
-    config_dir: '.RubyMine2018.1'
-  webstorm:
-    version: 'WebStorm-2018.2.3'
-    config_dir: '.WebStorm2018.2'

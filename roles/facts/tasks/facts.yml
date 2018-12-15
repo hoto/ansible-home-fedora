@@ -1,13 +1,13 @@
 ---
 
-- name: Display variables/facts known for this host
+- name: configuration
   debug:
     msg:
       - ansible_user_id = {{ ansible_user_id }}
       - user = {{ user }}
       - group = {{ group }}
       - home_dir = {{ home_dir }}
-      - projects_dir = {{ projects_dir }}       <= this is where your git projects resides
-      - local_soft_dir = {{ local_soft_dir }}   <= this is where your software will be installed
-      - temp_dir = {{ temp_dir }}               <= ansible will download stuff here
-      - ansible_kernel = {{ ansible_kernel }}   <= this should be the same as output from `uname -r`
+      - projects_dir = {{ projects_dir }}
+      - local_soft_dir = {{ local_soft_dir }}
+      - temp_dir = {{ temp_dir }}
+      - ansible_kernel = {{ ansible_kernel }}

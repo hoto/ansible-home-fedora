@@ -1,5 +1,0 @@
----
-- import_tasks: rubymine_installer.yml
-  tags:
-  - rubymine
-  - jetbrains

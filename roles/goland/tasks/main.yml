@@ -1,5 +1,0 @@
----
-- import_tasks: goland_installer.yml
-  tags:
-  - goland
-  - jetbrains
