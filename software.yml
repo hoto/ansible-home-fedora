@@ -19,6 +19,7 @@
     - disable_suspend_on_lid_close
     - top_bar_show_date
     - disable_animations
+    - center_new_windows
     - hstr
     - ack
     - htop

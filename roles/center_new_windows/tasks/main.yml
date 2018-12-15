@@ -1,0 +1,4 @@
+---
+- import_tasks: center_new_windows.yml
+  tags:
+    - center_new_windows

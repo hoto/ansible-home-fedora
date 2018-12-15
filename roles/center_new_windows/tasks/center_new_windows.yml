@@ -1,0 +1,4 @@
+# Start: `gnome-tweaks -v` then check terminal output for values
+---
+- name: center new windows
+  shell: gsettings set org.gnome.mutter center-new-windows true
