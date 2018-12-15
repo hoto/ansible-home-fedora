@@ -1,9 +1,19 @@
 ---
+- name: get latest terraform version id
+  uri:
+    url: 'https://checkpoint-api.hashicorp.com/v1/check/terraform'
+    method: GET
+    status_code: 200
+    timeout: 10
+  register: release
+
+- set_fact:
+    version: "{{ release.json | json_query('current_version') }}"
+
 - name: terraform is present
   get_url:
-    url: '{{ software.terraform.url }}'
+    url: 'https://releases.hashicorp.com/terraform/{{ version }}/terraform_{{ version }}_linux_amd64.zip'
     dest: '/tmp/terraform.zip'
-    validate_certs: False
 
 - name: terraform is unzipped
   unarchive:
