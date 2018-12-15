@@ -47,24 +47,24 @@
     - docker
     - docker_compose
     - gpick
-      #- peek # TODO: broken, use flatpack
     - fuse_exfat
-    - terraform # TODO: get latest version using API
+    - terraform
+    - vagrant
     - sdkman
     - sdkman_packages
     - idea
-      #- webstorm
-      #- pycharm
-      #- goland
-      #- rider
-      #- datagrip
-      #- rubymine
+    #- webstorm
+    #- pycharm
+    #- goland
+    #- rider
+    #- datagrip
+    #- rubymine
     - gimp
-      #- atom
-      #- vsc
-      #- vagrant
-      #- virtualbox
-      #- flathub
+    #- atom
+    #- vsc
+    #- virtualbox
+    #- peek # TODO: broken, use flatpack
+    #- flathub
     - slack
     - spotify
     - vlc

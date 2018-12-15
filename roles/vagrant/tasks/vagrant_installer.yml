@@ -1,5 +1,22 @@
 ---
+- name: get latest vagrant version id
+  uri:
+    url: 'https://checkpoint-api.hashicorp.com/v1/check/vagrant'
+    method: GET
+    status_code: 200
+    timeout: 10
+  register: release
+
+- set_fact:
+    version: "{{ release.json | json_query('current_version') }}"
+
+- name: vagrant is present
+  get_url:
+    # l: 'https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.rpm'
+    url: 'https://releases.hashicorp.com/vagrant/{{ version }}/vagrant_{{ version }}_x86_64.rpm'
+    dest: '/tmp/vagrant.rpm'
+
 - name: Vagrant is present
   dnf:
-    name: "{{ software.vagrant.url }}"
+    name: '/tmp/vagrant.rpm'
   become: yes
