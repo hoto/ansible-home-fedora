@@ -39,4 +39,5 @@ Install software:
 
 TODO:
 - install slack using flackpack
-- add automatic build for testing installation of the software
+- install peek using flackpack
+- add CI
