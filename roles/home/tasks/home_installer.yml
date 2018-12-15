@@ -1,10 +1,10 @@
 ---
-#- name: my home repo is cloned
-#  git:
-#    repo: git@github.com:hoto/home.git
-#    accept_hostkey: yes
-#    update: yes
-#    dest: "{{ projects_dir }}/hoto/home"
+- name: my home repo is cloned
+  git:
+    repo: git@github.com:hoto/home.git
+    accept_hostkey: yes
+    update: yes
+    dest: "{{ projects_dir }}/hoto/home"
 
 - name: folders for my configs are present
   file:

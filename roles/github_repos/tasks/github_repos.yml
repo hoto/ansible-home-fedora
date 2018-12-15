@@ -1,0 +1,19 @@
+---
+- name: list my github repos
+  uri:
+    url: 'https://api.github.com/users/hoto/repos'
+    method: GET
+    response: 200
+  register: repos_json
+
+- set_fact:
+    repos: "{{ repos_json.json | json_query('[].name') }}"
+
+- name: my github repos are cloned
+  git:
+    repo: git@github.com:hoto/{{ item }}.git
+    accept_hostkey: yes
+    update: no
+    dest: "{{ projects_dir }}/hoto/{{ item }}"
+  with_items: '{{ repos }}'
+

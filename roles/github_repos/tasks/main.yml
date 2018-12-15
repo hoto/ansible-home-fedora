@@ -1,0 +1,4 @@
+---
+- import_tasks: github_repos.yml
+  tags:
+    - github_repos

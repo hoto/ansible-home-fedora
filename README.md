@@ -38,7 +38,6 @@ Install software:
     ansible-playbook software.yml -K
 
 TODO:
-- clone all my github repos
 - install slack using flackpack
 - enable night light 
 - disable animations from gnome tweaks (for speed)
