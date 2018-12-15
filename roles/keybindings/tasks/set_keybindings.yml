@@ -96,12 +96,24 @@
     - increase-text-size []
     - toggle-contrast []
 
-- name: tilix shortcut is set part1
+- name: prepare tilix shortcut
   shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/{{ item.key }} "{{ item.value }}"
   with_items:
     - { key: name, value: "'tilix'"}
     - { key: binding, value: "'<Primary><Alt>t'"}
     - { key: command, value: "'tilix'"}
 
-- name: tilix shortcut is set part2
-  shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+- name: prepare jetbrains-toolbox shortcut
+  shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/{{ item.key }} "{{ item.value }}"
+  with_items:
+    - { key: name, value: "'jetbrains-toolbox'"}
+    - { key: binding, value: "'<Primary><Alt><Shift>k'"}
+    - { key: command, value: "'jetbrains-toolbox'"}
+
+- name: set custom shortcut
+  shell: >-
+    dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings \
+      "[ \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'] \
+      "
