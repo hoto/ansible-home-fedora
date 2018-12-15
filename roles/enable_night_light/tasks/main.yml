@@ -1,0 +1,4 @@
+---
+- import_tasks: enable_night_light.yml
+  tags:
+    - enable_night_light

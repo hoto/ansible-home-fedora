@@ -17,6 +17,7 @@
     - show_minimize_button
     - enable_fedora_extensions
     - disable_suspend_on_lid_close
+    - enable_night_light
     - top_bar_show_date
     - disable_animations
     - center_new_windows

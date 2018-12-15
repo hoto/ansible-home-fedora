@@ -39,5 +39,4 @@ Install software:
 
 TODO:
 - install slack using flackpack
-- enable night light 
 - add automatic build for testing installation of the software
