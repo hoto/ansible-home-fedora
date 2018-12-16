@@ -9,7 +9,7 @@
     path: '{{ home_dir }}/go/bin'
     state: directory
 
-- name: go lang is present
+- name: golang is present
   dnf:
     name: golang
     state: latest
