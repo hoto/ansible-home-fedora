@@ -17,5 +17,7 @@
     src: tilix.dconf
     dest: /tmp/tilix.dconf
 
+# dump profiles configs:
+# dconf dump /com/gexperts/Tilix/ > roles/tilix/files/tilix.dconf
 - name: tilix custom configuration is loaded
   shell: dconf load /com/gexperts/Tilix/ < /tmp/tilix.dconf
