@@ -24,10 +24,9 @@ Install chrome:
 
     ansible-playbook chrome.yml -K
 
-Add ssh key to github and bitbucket:
+Add ssh key to github:
 
     https://github.com/settings/keys
-    https://bitbucket.org/account/user/hoto/ssh-keys/
 
 Clone and setup my home repos:
 

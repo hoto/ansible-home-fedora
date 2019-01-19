@@ -1,7 +1,7 @@
 ---
 - name: my home-private repo is cloned
   git:
-    repo: git@bitbucket.org:hoto/home-private.git
+    repo: git@github.com:hoto/home-private.git
     accept_hostkey: yes
     update: yes
     dest: "{{ projects_dir }}/hoto/home-private"
