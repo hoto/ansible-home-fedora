@@ -1,0 +1,4 @@
+---
+- import_tasks: golang_installer.yml
+  tags:
+    - golang

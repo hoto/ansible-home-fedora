@@ -1,0 +1,17 @@
+---
+- name: go src dir is present
+  file:
+    path: '{{ home_dir }}/go/src'
+    state: directory
+
+- name: go bin dir is present
+  file:
+    path: '{{ home_dir }}/go/bin'
+    state: directory
+
+- name: go lang is present
+  dnf:
+    name: golang
+    state: latest
+  become: true
+

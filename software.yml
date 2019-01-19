@@ -52,6 +52,7 @@
     - fuse_exfat
     - terraform
     - vagrant
+    - golang
     - sdkman
     - sdkman_packages
     - gimp
