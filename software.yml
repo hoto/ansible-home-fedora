@@ -41,7 +41,6 @@
     - nodejs
     - nvm
     - oh_my_zsh
-    - fuzzy_project_finder
     - yarn
     - gr
     - aws_cli
