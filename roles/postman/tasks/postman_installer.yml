@@ -1,0 +1,39 @@
+---
+- name: set latest version fact
+  set_fact:
+    postman_install_dir: '{{ local_soft_dir }}/postman/'
+
+- name: postman directory exists
+  file:
+    path: '{{ postman_install_dir }}'
+    state: 'directory'
+    owner: '{{ user }}'
+    group: '{{ group }}'
+
+- name: postman tar is downloaded
+  get_url:
+    url: 'https://dl.pstmn.io/download/latest/linux64'
+    dest: '{{ temp_dir }}/postman.tar.gz'
+
+- name: postman tar is unarchived
+  unarchive:
+    src: '{{ temp_dir }}/postman.tar.gz'
+    dest: '{{ postman_install_dir }}'
+    creates: '{{ postman_install_dir }}/app/Postman'
+    extra_opts:
+      - '--strip-components=1'
+    remote_src: yes
+
+- name: symlink to postman binary is created
+  file:
+    state: link
+    src: '{{ postman_install_dir }}/app/Postman'
+    dest: '/usr/local/bin/Postman'
+    follow: no
+  become: yes
+
+- name: postman desktop file is created
+  template:
+    src: Postman.desktop.j2
+    dest: '/usr/share/applications/Postman.desktop'
+  become: yes

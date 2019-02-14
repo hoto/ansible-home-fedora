@@ -57,6 +57,7 @@
     - sdkman_packages
     - golang
     - gimp
+    - postman
     #- virtualbox
     #- peek # TODO: flathub is broken
     #- flathub # TODO: broken as of today
