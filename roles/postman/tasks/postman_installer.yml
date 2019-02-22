@@ -1,7 +1,7 @@
 ---
 - name: set latest version fact
   set_fact:
-    postman_install_dir: '{{ local_soft_dir }}/postman/'
+    postman_install_dir: '{{ local_soft_dir }}/postman'
 
 - name: postman directory exists
   file:
@@ -37,3 +37,6 @@
     src: Postman.desktop.j2
     dest: '/usr/share/applications/Postman.desktop'
   become: yes
+
+- name: associate postman with xdg
+  shell: xdg-mime default Postman.desktop x-scheme-handler/postman
