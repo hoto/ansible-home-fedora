@@ -1,6 +1,7 @@
 ---
+# https://docs.snapcraft.io/installing-snap-on-fedora/6755
 - name: snap is present
   dnf:
-    name: snap
+    name: snapd
     state: latest
   become: yes
