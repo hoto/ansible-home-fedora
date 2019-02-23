@@ -1,0 +1,4 @@
+---
+- import_tasks: snap_installer.yml
+  tags:
+    - snap

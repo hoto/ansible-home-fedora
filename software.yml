@@ -46,6 +46,7 @@
     - aws_cli
     - aws_shell
     - gitk
+    - snap
     - docker
     - docker_compose
     - gpick

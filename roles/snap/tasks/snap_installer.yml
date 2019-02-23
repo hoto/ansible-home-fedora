@@ -1,0 +1,6 @@
+---
+- name: snap is present
+  dnf:
+    name: snap
+    state: latest
+  become: yes
