@@ -1,0 +1,7 @@
+---
+- name: audacity is present
+  dnf:
+    name: audacity
+    state: latest
+  become: yes
+

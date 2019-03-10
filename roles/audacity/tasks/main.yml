@@ -1,0 +1,4 @@
+---
+- import_tasks: audacity_installer.yml
+  tags:
+    - audacity
