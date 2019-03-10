@@ -1,0 +1,12 @@
+---
+- name: obs is present
+  dnf:
+    name: obs-studio
+    state: latest
+  become: yes
+
+- name: nvidia-cuda is present
+  dnf:
+    name: xorg-x11-drv-nvidia-cuda
+    state: latest
+  become: yes
