@@ -59,6 +59,7 @@
     - golang
     - gimp
     - postman
+    - uninstall_libreoffice
     #- virtualbox
     #- peek # TODO: flathub is broken
     #- flathub # TODO: broken as of today

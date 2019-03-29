@@ -1,0 +1,4 @@
+---
+- import_tasks: libreoffice_uninstaller.yml
+  tags:
+    - uninstall_libreoffice

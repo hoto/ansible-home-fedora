@@ -1,0 +1,12 @@
+---
+- name: list installed packages
+  dnf: 
+    list: installed 
+  register: installed_packages 
+  become: yes
+
+- name: libreoffice is absent
+  dnf: 
+    name: "{{ installed_packages.results | selectattr('name', 'search', '^libreoffice') | map(attribute='name') | list }}" 
+    state: absent 
+  become: yes
