@@ -37,6 +37,7 @@
     - arc_icons
     - powerline_fonts
     - terminal_config
+    - inotify
     - tilix
     - nodejs
     - nvm
