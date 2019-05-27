@@ -1,0 +1,4 @@
+---
+- import_tasks: flameshot_installer.yml
+  tags:
+    - flameshot

@@ -1,0 +1,7 @@
+---
+# https://github.com/lupoDharkael/flameshot
+- name: flameshot is present
+  dnf:
+    name: flameshot
+    state: latest
+  become: yes

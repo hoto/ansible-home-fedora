@@ -59,11 +59,12 @@
     - sdkman_packages
     - golang
     - gimp
+    - flameshot
     - postman
     - uninstall_libreoffice
     #- virtualbox
-    #- peek # TODO: flathub is broken
     #- flathub # TODO: broken as of today
+    #- peek # TODO: flathub is broken
     - slack
     - spotify
     - vlc

@@ -110,10 +110,19 @@
     - { key: binding, value: "'<Primary><Alt><Shift>k'"}
     - { key: command, value: "'jetbrains-toolbox'"}
 
+
+- name: prepare flameshot shortcut
+  shell: dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/{{ item.key }} "{{ item.value }}"
+  with_items:
+    - { key: name, value: "'flameshot'"}
+    - { key: binding, value: "'<Primary><Alt><Shift>f'"}
+    - { key: command, value: "'flameshot gui'"}
+
 - name: set custom shortcut
   shell: >-
     dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings \
       "[ \
         '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', \
-        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'] \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/'] \
       "
