@@ -53,8 +53,7 @@
     - gpick
     - fuse_exfat
     - terraform
-    - vagrant
-    - golang
+    #- vagrant
     - sdkman
     - sdkman_packages
     - golang
@@ -68,6 +67,6 @@
     - slack
     - spotify
     - vlc
-    - audacity
-    - obs
+    #- audacity
+    #- obs
     - github_repos
