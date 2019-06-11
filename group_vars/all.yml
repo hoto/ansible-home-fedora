@@ -6,6 +6,7 @@ home_dir: '{{ home }}/{{ user }}'
 projects_dir: '{{ home_dir }}/projects'
 local_soft_dir: '{{ home_dir }}/software'
 temp_dir: '/tmp'
+ansible_python_interpreter: /usr/bin/python3
 
 virtualenv:
   envs_dir: '{{ home_dir }}/envs'

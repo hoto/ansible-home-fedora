@@ -18,7 +18,7 @@ Clone this repo:
 
 Install ansible and dependencies:
 
-    sudo dnf install ansible python-dnf libselinux-python
+    sudo dnf install ansible libselinux-python
 
 Install chrome:
 
