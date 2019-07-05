@@ -7,6 +7,7 @@
     - facts
     - ping
     - remove_folders
+    - disable_alert_sound
     - bookmarks
     - vim
     - lastpass

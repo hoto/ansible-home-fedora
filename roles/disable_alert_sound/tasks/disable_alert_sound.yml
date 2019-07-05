@@ -1,0 +1,4 @@
+# dconf dump /org/gnome/desktop/sound/
+---
+- name: disable alert sound
+  shell: dconf write /org/gnome/desktop/sound/event-sounds "false"

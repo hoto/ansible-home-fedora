@@ -1,0 +1,4 @@
+---
+- import_tasks: disable_alert_sound.yml
+  tags:
+    - disable_alert_sound
