@@ -70,4 +70,5 @@
     - vlc
     #- audacity
     #- obs
+    - kubectl
     - github_repos

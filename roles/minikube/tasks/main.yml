@@ -1,9 +1,4 @@
 ---
-- import_tasks: kubectl_installer.yml
-  tags:
-  - kubernetes
-  - kubectl
-
 - import_tasks: minikube_installer.yml
   tags:
   - kubernetes
