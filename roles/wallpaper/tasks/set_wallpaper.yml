@@ -15,5 +15,7 @@
   with_items:
     - '/usr/share/backgrounds/f{{ fedora_version }}/default/tv-wide/f{{ fedora_version }}.png'
     - '/usr/share/backgrounds/f{{ fedora_version }}/default/wide/f{{ fedora_version }}.png'
+    - '/usr/share/backgrounds/f{{ fedora_version }}/default/standard/f{{ fedora_version }}.png'
+    - '/usr/share/backgrounds/f{{ fedora_version }}/default/normalish/f{{ fedora_version }}.png'
   become: yes
 
