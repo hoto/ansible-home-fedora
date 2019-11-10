@@ -1,4 +1,7 @@
----
+- name: set zsh custom path
+  set_fact:
+    zsh_custom: '{{ home_dir }}/.oh-my-zsh/custom'
+
 - name: oh-my-zsh repo is cloned
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
@@ -18,4 +21,16 @@
 - name: bullet-train theme is present
   get_url:
     url: 'http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme'
-    dest: '{{ home_dir }}/.oh-my-zsh/custom/themes/bullet-train.zsh-theme'
+    dest: '{{ zsh_custom }}/themes/bullet-train.zsh-theme'
+
+- name: zsh auto suggestion plugin is cloned
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: '{{ zsh_custom }}/plugins/zsh-autosuggestions'
+    depth: 1
+
+- name: zsh syntax highlishting plugin is cloned
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: '{{ zsh_custom }}/plugins/zsh-syntax-highlighting'
+    depth: 1

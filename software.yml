@@ -71,4 +71,4 @@
     #- audacity
     #- obs
     - kubectl
-    - github_repos
+    #- github_repos
