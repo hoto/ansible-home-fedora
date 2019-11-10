@@ -19,6 +19,9 @@ Clone this repo:
     cd ~/projects/github/hoto
     git clone https://github.com/hoto/ansible-home-fedora.git
 
+    git remote remove origin
+    git remote add origin git@github.com:hoto/ansible-home-fedora.git
+
 Install ansible and dependencies:
 
     sudo dnf install ansible
