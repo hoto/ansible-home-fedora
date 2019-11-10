@@ -34,7 +34,7 @@ Add ssh key to github:
 
     https://github.com/settings/keys
 
-Clone and setup home and home-private:
+Clone and setup symlinks for `home` and `home-private` repos:
 
     ansible-playbook home.yml
 
