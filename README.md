@@ -34,13 +34,9 @@ Add ssh key to github:
 
     https://github.com/settings/keys
 
-Clone and setup home:
+Clone and setup home and home-private:
 
     ansible-playbook home.yml
-
-Set ssh config permissions:
-
-    chmod 600 ~/.ssh/config
 
 Install software:
 
@@ -49,7 +45,6 @@ Install software:
 TODO:
 - install slack using flackpack
 - install peek using flackpack
-- fix ~/.ssh/config symlink permissions issues
 - add jetbrains toolbox installation
 - add fuzzy-repo-finder installation
 - add CI
