@@ -4,6 +4,7 @@ group: '{{ user }}'
 home: "{{ '/home' if ansible_os_family == 'RedHat' else'/Users' }}" # fedora or mac
 home_dir: '{{ home }}/{{ user }}'
 projects_dir: '{{ home_dir }}/projects'
+my_projects_dir: "{{ projects_dir }}/github/hoto"
 local_soft_dir: '{{ home_dir }}/software'
 temp_dir: '/tmp'
 ansible_python_interpreter: /usr/bin/python3

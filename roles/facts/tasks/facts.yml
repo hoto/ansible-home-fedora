@@ -8,6 +8,7 @@
       - group = {{ group }}
       - home_dir = {{ home_dir }}
       - projects_dir = {{ projects_dir }}
+      - my_projects_dir = {{ my_projects_dir }}
       - local_soft_dir = {{ local_soft_dir }}
       - temp_dir = {{ temp_dir }}
       - ansible_kernel = {{ ansible_kernel }}

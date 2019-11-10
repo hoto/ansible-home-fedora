@@ -1,10 +1,14 @@
 ---
+- name: set repo path
+  set_fact:
+    home_private_repo_path: "{{ my_projects_dir }}/home-private"
+
 - name: my home-private repo is cloned
   git:
     repo: git@github.com:hoto/home-private.git
     accept_hostkey: yes
     update: yes
-    dest: "{{ projects_dir }}/hoto/home-private"
+    dest: "{{ home_private_repo_path }}"
 
 - name: folders for my configs are present
   file:
@@ -17,7 +21,7 @@
 
 - name: symlinks to my configs are present
   file:
-    src: "{{ projects_dir }}/hoto/home-private/{{ item.src }}"
+    src: "{{ home_private_repo_path }}/{{ item.src }}"
     dest: "{{ home_dir }}/{{ item.dest }}"
     state: link
     mode: 0600

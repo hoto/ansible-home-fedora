@@ -9,16 +9,19 @@ Set hostname:
 
 Generate ssh keys:
 
+    export HOSTNAME=$(hostname)
     ssh-keygen -C $USER@$HOSTNAME
     ssh-keygen -o -a 100 -t ed25519 -C $USER@$HOSTNAME
     
 Clone this repo:
 
+    mkdir -p ~/projects/github/hoto
+    cd ~/projects/github/hoto
     git clone https://github.com/hoto/ansible-home-fedora.git
 
 Install ansible and dependencies:
 
-    sudo dnf install ansible libselinux-python
+    sudo dnf install ansible
 
 Install chrome:
 
@@ -28,7 +31,7 @@ Add ssh key to github:
 
     https://github.com/settings/keys
 
-Clone and setup my home repos:
+Clone and setup home:
 
     ansible-playbook home.yml
 
