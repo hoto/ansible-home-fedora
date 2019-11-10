@@ -96,10 +96,10 @@
     - toggle-overview "['<Alt>space']"
 
 # gsettings list-recursively | grep media-keys
-- name: semove unused media-keys keybindings/shortcuts
+- name: set media-keys keybindings/shortcuts
   shell: gsettings set org.gnome.settings-daemon.plugins.media-keys {{ item }}
   with_items:
-    - home '<Super>e'
+    - home "['<Super>e']"
     - help []
     - search []
     - calculator []
