@@ -49,3 +49,4 @@ TODO:
 - add fuzzy-repo-finder installation
 - add CI
 - remove python 3 as interpreter, it should now be the default used by ansible
+- disable automatic suspend (hibernation)
