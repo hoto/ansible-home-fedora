@@ -48,3 +48,4 @@ TODO:
 - add jetbrains toolbox installation
 - add fuzzy-repo-finder installation
 - add CI
+- remove python 3 as interpreter, it should now be the default used by ansible
