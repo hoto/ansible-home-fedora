@@ -3,6 +3,10 @@ Playbooks that bootstrap my many fedora laptops so that I can go and sip yorkshi
 
 ### Start
 
+Update os:
+
+    sudo dnf update -y
+
 Set hostname:
 
     hostnamectl set-hostname <name>
