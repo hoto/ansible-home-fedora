@@ -1,20 +1,31 @@
 ---
-- name: docker group is present
-  group:
-    name: docker
+- name: docker-ce repo is added
+  get_url:
+    url: 'https://download.docker.com/linux/fedora/docker-ce.repo'
+    dest: '/etc/yum.repos.d/docker-ce.repo'
+  become: yes
+
+- name: dnf-plugins-core is present
+  dnf:
+    name: dnf-plugins-core
     state: present
   become: yes
 
-- name: current user is in the docker group
-  user:
-    name: '{{ user }}'
-    groups: docker
-    append: yes
+- name: containerd.io is present
+  dnf:
+    name: containerd.io
+    state: present
   become: yes
 
-- name: docker is present
+- name: docker-ce-cli is present
   dnf:
-    name: docker
+    name: docker-ce-cli
+    state: present
+  become: yes
+
+- name: docker-ce is present
+  dnf:
+    name: docker-ce
     state: present
   register: docker_installation
   become: yes
