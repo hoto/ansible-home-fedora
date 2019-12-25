@@ -1,0 +1,4 @@
+---
+- import_tasks: bat_installer.yml
+  tags:
+    - bat

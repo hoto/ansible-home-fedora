@@ -1,0 +1,6 @@
+---
+- name: bat is present
+  dnf:
+    name: bat
+    state: latest
+  become: yes

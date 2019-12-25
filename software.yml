@@ -25,6 +25,7 @@
     - hstr
     - ack
     - htop
+    - bat
     - unzip
     - yubikey_personalization_gui
     - jq
