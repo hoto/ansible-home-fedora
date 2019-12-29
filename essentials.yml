@@ -1,0 +1,44 @@
+---
+- name: installs my many software
+  gather_facts: yes
+  hosts: local
+
+  roles:
+    - facts
+    - ping
+    - remove_folders
+    - disable_alert_sound
+    - bookmarks
+    - vim
+    - lastpass
+    - red_root
+    - mc
+    - keybindings
+    - caps_to_escape
+    - show_minimize_button
+    - enable_fedora_extensions
+    - disable_suspend_on_lid_close
+    - enable_night_light
+    - top_bar_show_date
+    - disable_animations
+    - center_new_windows
+    - hstr
+    - ack
+    - htop
+    - bat
+    - unzip
+    - jq
+    - tmux
+    - iftop
+    - ncdu
+    - virtualenv
+    - wallpaper
+    - gnome_tweak_tools
+    - arc_icons
+    - powerline_fonts
+    - terminal_config
+    - inotify
+    - tilix
+    - oh_my_zsh
+    - fuse_exfat
+    - uninstall_libreoffice

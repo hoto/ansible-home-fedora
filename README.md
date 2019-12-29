@@ -44,6 +44,7 @@ Clone and setup symlinks for `home` and `home-private` repos:
 
 Install software:
 
+    ansible-playbook essentials.yml -K
     ansible-playbook software.yml -K
 
 TODO:

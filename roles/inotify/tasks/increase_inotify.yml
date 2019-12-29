@@ -5,7 +5,7 @@
   sysctl:
     sysctl_file: /etc/sysctl.d/60-jetbrains.conf
     name: fs.inotify.max_user_watches
-    value: 524288
+    value: "524288"
     reload: yes
     state: present
   become: yes

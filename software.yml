@@ -4,46 +4,10 @@
   hosts: local
 
   roles:
-    - facts
-    - ping
-    - remove_folders
-    - disable_alert_sound
-    - bookmarks
-    - vim
-    - lastpass
-    - red_root
-    - mc
-    - keybindings
-    - caps_to_escape
-    - show_minimize_button
-    - enable_fedora_extensions
-    - disable_suspend_on_lid_close
-    - enable_night_light
-    - top_bar_show_date
-    - disable_animations
-    - center_new_windows
-    - hstr
-    - ack
-    - htop
-    - bat
-    - unzip
     - yubikey_personalization_gui
-    - jq
-    - tmux
-    - iftop
-    - ncdu
-    - virtualenv
     - pygmentize
-    - wallpaper
-    - gnome_tweak_tools
-    - arc_icons
-    - powerline_fonts
-    - terminal_config
-    - inotify
-    - tilix
     - nodejs
     - nvm
-    - oh_my_zsh
     - yarn
     - gr
     - aws_cli
@@ -53,7 +17,6 @@
     - docker
     - docker_compose
     - gpick
-    - fuse_exfat
     - terraform
     #- vagrant
     - sdkman
@@ -62,7 +25,6 @@
     - gimp
     - flameshot
     - postman
-    - uninstall_libreoffice
     #- virtualbox
     #- flathub # TODO: broken as of today
     #- peek # TODO: flathub is broken
