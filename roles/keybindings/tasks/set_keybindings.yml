@@ -1,4 +1,10 @@
 ---
+# gsettings list-recursively | /usr/bin/grep "org.gnome.shell.window-switcher"
+- name: set keybindings/shortcuts for window-swticher
+  shell: gsettings set org.gnome.shell.window-switcher {{ item }}
+  with_items:
+    - current-workspace-only false
+
 # gsettings list-recursively | /usr/bin/grep "org.gnome.desktop.wm.keybindings" | cut -d' ' -f2- | sort
 - name: remove unused keybindings/shortcuts part1
   shell: gsettings set org.gnome.desktop.wm.keybindings {{ item }}
