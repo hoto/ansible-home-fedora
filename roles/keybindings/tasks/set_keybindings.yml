@@ -1,5 +1,5 @@
 ---
-# gsettings list-recursively | grep keybindings
+# gsettings list-recursively | /usr/bin/grep "org.gnome.desktop.wm.keybindings" | cut -d' ' -f2- | sort
 - name: remove unused keybindings/shortcuts part1
   shell: gsettings set org.gnome.desktop.wm.keybindings {{ item }}
   with_items:
@@ -7,6 +7,7 @@
     - always-on-top []
     - begin-move []
     - begin-resize []
+    - close "['<Alt>F4']"
     - cycle-group []
     - cycle-group-backward []
     - cycle-panels []
@@ -19,30 +20,30 @@
     - maximize-vertically []
     - minimize []
     - move-to-center []
-    - move-to-corner-ne  []
-    - move-to-corner-nw  []
+    - move-to-corner-ne []
+    - move-to-corner-nw []
     - move-to-corner-se []
     - move-to-corner-sw []
-    - move-to-monitor-down  []
+    - move-to-monitor-down []
     - move-to-monitor-left []
     - move-to-monitor-right []
     - move-to-monitor-up []
-    - move-to-side-e  []
+    - move-to-side-e []
     - move-to-side-n []
     - move-to-side-s []
-    - move-to-side-w  []
-    - move-to-workspace-1  []
-    - move-to-workspace-10  []
+    - move-to-side-w []
+    - move-to-workspace-1 []
+    - move-to-workspace-2 []
+    - move-to-workspace-3 []
+    - move-to-workspace-4 []
+    - move-to-workspace-5 []
+    - move-to-workspace-6 []
+    - move-to-workspace-7 []
+    - move-to-workspace-8 []
+    - move-to-workspace-9 []
+    - move-to-workspace-10 []
     - move-to-workspace-11 []
-    - move-to-workspace-12  []
-    - move-to-workspace-2  []
-    - move-to-workspace-3  []
-    - move-to-workspace-4  []
-    - move-to-workspace-5  []
-    - move-to-workspace-6  []
-    - move-to-workspace-7  []
-    - move-to-workspace-8  []
-    - move-to-workspace-9  []
+    - move-to-workspace-12 []
     - move-to-workspace-down []
     - move-to-workspace-last []
     - move-to-workspace-left []
@@ -52,9 +53,16 @@
     - panel-run-dialog []
     - raise []
     - raise-or-lower []
-    - set-spew-mark  []
+    - set-spew-mark []
+    - show-desktop []
+    - switch-applications-backward "['<Shift><Super>Tab']"
+    - switch-applications "['<Super>Tab']"
+    - switch-group-backward "['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']"
+    - switch-group "['<Super>Above_Tab', '<Alt>Above_Tab']"
     - switch-input-source []
     - switch-input-source-backward []
+    - switch-panels-backward "['<Shift><Control><Alt>Tab']"
+    - switch-panels "['<Control><Alt>Tab']"
     - switch-to-workspace-1 "['<Super>1']"
     - switch-to-workspace-2 "['<Super>2']"
     - switch-to-workspace-3 "['<Super>3']"
@@ -72,10 +80,10 @@
     - switch-to-workspace-left []
     - switch-to-workspace-right []
     - switch-to-workspace-up []
-    - switch-windows  []
-    - switch-windows-backward  []
-    - toggle-above  []
-    - toggle-fullscreen  []
+    - switch-windows "['<Alt>Tab']"
+    - switch-windows-backward "['<Shift><Alt>Tab']"
+    - toggle-above []
+    - toggle-fullscreen []
     - toggle-maximized "['<Super>Up']"
     - toggle-on-all-workspaces []
     - toggle-shaded []

@@ -1,5 +1,5 @@
 # Ansible playbooks for my Fedora 28 laptops
-Playbooks that bootstrap my many fedora laptops so that I can go and sip yorkshire tea while the ansible is doing all the tedious work.
+Playbooks that bootstrap my many fedora laptops so that I can go and sip yorkshire tea while ansible is doing all the tedious work.
 
 ### Start
 
