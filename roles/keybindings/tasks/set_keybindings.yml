@@ -5,6 +5,12 @@
   with_items:
     - current-workspace-only false
 
+# gsettings list-recursively | grep Tilix
+- name: set keybindings/shortcuts for tilix
+  shell: gsettings set com.gexperts.Tilix.Keybindings {{ item }}
+  with_items:
+    - nautilus-open []
+
 # gsettings list-recursively | /usr/bin/grep "org.gnome.desktop.wm.keybindings" | cut -d' ' -f2- | sort
 - name: remove unused keybindings/shortcuts part1
   shell: gsettings set org.gnome.desktop.wm.keybindings {{ item }}
