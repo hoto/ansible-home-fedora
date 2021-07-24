@@ -40,5 +40,5 @@
     - inotify
     - tilix
     - oh_my_zsh
-    - fuse_exfat
+#   - fuse_exfat
     - uninstall_libreoffice

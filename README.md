@@ -47,6 +47,11 @@ Install software:
     ansible-playbook essentials.yml -K
     ansible-playbook software.yml -K
 
+Generate GPG key and add it to github and git:
+
+* https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key
+* https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/telling-git-about-your-signing-key
+
 TODO:
 - install slack using flackpack
 - install peek using flackpack
