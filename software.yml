@@ -8,8 +8,8 @@
     - pygmentize
     - nodejs
     - nvm
-    - yarn
-    - gr
+    #- yarn
+    #- gr
     - aws_cli
     - aws_shell
     - gitk
@@ -28,10 +28,10 @@
     #- virtualbox
     #- flathub # TODO: broken as of today
     #- peek # TODO: flathub is broken
-    - slack
-    - spotify
+    #- slack
+    #- spotify
     - vlc
     #- audacity
     #- obs
-    - kubectl
+    #- kubectl
     #- github_repos
