@@ -30,6 +30,8 @@
     - { src: '.ssh/config', dest: '.ssh/config'}
     - { src: '.aws/config', dest: '.aws/config'}
     - { src: '.grconfig.json', dest: '.grconfig.json'}
+    - { src: '.config/alacritty.toml', dest: '.config/alacritty.toml'}
+    - { src: '.hammerspoon/init.lua', dest: '.hammerspoon/init.lua'}
 
 - name: ssh config mode is 600
   file:

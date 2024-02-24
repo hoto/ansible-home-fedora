@@ -4,5 +4,4 @@
   hosts: local
 
   roles:
-    - home
     - home_private
